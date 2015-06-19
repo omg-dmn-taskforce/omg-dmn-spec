@@ -215,7 +215,7 @@
 			<xsd:extension base="tExpression">
 				<xsd:choice minOccurs="0" maxOccurs="1">
 					<xsd:element name="text" type="xsd:string"/>
-					<xsd:element ref="Import"/>
+					<xsd:element name="importedValues" type="tImportedValues"/>
 				</xsd:choice>
 				<xsd:attribute name="expressionLanguage" type="xsd:anyURI" use="optional"/>
 			</xsd:extension>
@@ -288,6 +288,16 @@
 			<xsd:element name="condition" type="xsd:IDREFS" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element name="conclusion" type="xsd:IDREFS" minOccurs="0" maxOccurs="unbounded"/>
 		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="tImportedValues">
+		<xsd:complexContent>
+			<xsd:extension base="tImport">
+				<xsd:sequence>
+					<xsd:element name="importedElement" type="xsd:string"/>
+				</xsd:sequence>
+				<xsd:attribute name="expressionLanguage" type="xsd:anyURI"/>
+			</xsd:extension>
+		</xsd:complexContent>
 	</xsd:complexType>
 	<xsd:simpleType name="DecisionTableOrientation">
 		<xsd:restriction base="xsd:string">
