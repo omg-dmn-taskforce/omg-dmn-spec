@@ -40,6 +40,8 @@
 				<xsd:attribute name="expressionLanguage" type="xsd:anyURI" use="optional" default="http://www.omg.org/spec/FEEL/20140401"/>
 				<xsd:attribute name="typeLanguage" type="xsd:anyURI" use="optional" default="http://www.omg.org/spec/FEEL/20140401"/>
 				<xsd:attribute name="namespace" type="xsd:anyURI" use="required"/>
+				<xsd:attribute name="exporter" type="xsd:string" use="optional"/>
+				<xsd:attribute name="exporterVersion" type="xsd:string" use="optional"/>
 			</xsd:extension>
 		</xsd:complexContent>
 	</xsd:complexType>
