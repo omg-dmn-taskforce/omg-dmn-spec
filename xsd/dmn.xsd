@@ -302,6 +302,58 @@
 			</xsd:extension>
 		</xsd:complexContent>
 	</xsd:complexType>
+	<xsd:element name="artifact" type="tArtifact" abstract="true" substitutionGroup="DRGElement"/>
+	<xsd:complexType name="tArtifact">
+		<xsd:complexContent>
+			<xsd:extension base="tDRGElement"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:element name="textAnnotation" type="tTextAnnotation" substitutionGroup="artifact"/>
+	<xsd:complexType name="tTextAnnotation">
+		<xsd:complexContent>
+			<xsd:extension base="tArtifact">
+				<xsd:sequence>
+					<xsd:element ref="text" minOccurs="0" maxOccurs="1"/>
+				</xsd:sequence>
+				<xsd:attribute name="textFormat" type="xsd:string" default="text/plain"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:element name="text" type="tText"/>
+	<xsd:complexType name="tText" mixed="true">
+		<xsd:sequence>
+			<xsd:any namespace="##any" processContents="lax" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="group" type="tGroup" substitutionGroup="artifact"/>
+	<xsd:complexType name="tGroup">
+		<xsd:complexContent>
+			<xsd:extension base="tArtifact">
+				<xsd:sequence>
+					<xsd:element name="elementCollectionRef" type="tDMNElementReference"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:element name="association" type="tAssociation" substitutionGroup="artifact"/>
+	<xsd:complexType name="tAssociation">
+		<xsd:complexContent>
+			<xsd:extension base="tArtifact">
+				<xsd:sequence>
+					<xsd:element name="sourceRef" type="tDMNElementReference"/>
+					<xsd:element name="targetRef" type="tDMNElementReference"/>
+				</xsd:sequence>
+				<xsd:attribute name="associationDirection" type="tAssociationDirection" default="None"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:simpleType name="tAssociationDirection">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="None"/>
+			<xsd:enumeration value="One"/>
+			<xsd:enumeration value="Both"/>
+		</xsd:restriction>
+	</xsd:simpleType>
 	<xsd:simpleType name="DecisionTableOrientation">
 		<xsd:restriction base="xsd:string">
 			<xsd:enumeration value="Rule-as-Row"/>
