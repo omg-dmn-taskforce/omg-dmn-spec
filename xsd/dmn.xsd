@@ -181,12 +181,7 @@
 	<xsd:element name="Expression" type="tExpression" abstract="true"/>
 	<xsd:complexType name="tExpression">
 		<xsd:complexContent>
-			<xsd:extension base="tDMNElement">
-				<xsd:sequence>
-					<xsd:element name="inputVariable" type="xsd:IDREF" minOccurs="0" maxOccurs="unbounded"/>
-					<xsd:element name="itemDefinition" type="tDMNElementReference" minOccurs="0" maxOccurs="1"/>
-				</xsd:sequence>
-			</xsd:extension>
+			<xsd:extension base="tDMNElement"/>
 		</xsd:complexContent>
 	</xsd:complexType>
 	<xsd:element name="ItemDefinition" type="tItemDefinition"/>
