@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 rel. 2 sp2 (x64) (http://www.altova.com) by Bruce Silver (private) -->
+<xs:schema xmlns="http://example.org/branches" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://example.org/branches" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="branches" type="branchesType">
+		<xs:annotation>
+			<xs:documentation>Comment describing your root element</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:complexType name="branchesType">
+		<xs:sequence>
+			<xs:element name="branch" minOccurs="0" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="location" type="xs:string"/>
+						<xs:element name="hours">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="Weekday">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element name="openTime" type="xs:time" minOccurs="0"/>
+												<xs:element name="closeTime" type="xs:time" minOccurs="0"/>
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="Saturday">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element name="openTime" type="xs:time" minOccurs="0"/>
+												<xs:element name="closeTime" type="xs:time" minOccurs="0"/>
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="Sunday">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element name="openTime" type="xs:time" minOccurs="0"/>
+												<xs:element name="closeTime" type="xs:time" minOccurs="0"/>
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

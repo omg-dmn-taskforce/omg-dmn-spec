@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 rel. 2 sp2 (x64) (http://www.altova.com) by Bruce Silver (private) -->
+<Definitions id="latecharge" name="Late Charge Example" xmlns="http://www.omg.org/spec/DMN/20130901" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:n1="http://example.org/branches" namespace="http://example.org" xsi:schemaLocation="http://www.omg.org/spec/DMN/20130901 dmn3.xsd">
+	<Import namespace="http://example.org/branches" importType="http://www.w3.org/2001/XMLSchema" locationURI="branches.xsd"/>
+	<ItemDefinition id="tString" name="tString">
+		<typeDefinition>string</typeDefinition>
+	</ItemDefinition>
+	<ItemDefinition id="tNumber" name="tNumber">
+		<typeDefinition>number</typeDefinition>
+	</ItemDefinition>
+	<ItemDefinition id="tTime" name="tTime">
+		<typeDefinition>time</typeDefinition>
+	</ItemDefinition>
+	<ItemDefinition id="tDateTime" name="tDateTime">
+		<typeDefinition>date-time</typeDefinition>
+	</ItemDefinition>
+	<ItemDefinition id="tDTDuration" name="tDTDuration">
+		<typeDefinition>days and time duration</typeDefinition>
+	</ItemDefinition>
+	<ItemDefinition id="tCarGroup" name="tCarGroup">
+		<typeDefinition>string</typeDefinition>
+		<allowedValue>
+			<text>"economy"</text>
+		</allowedValue>
+		<allowedValue>
+			<text>"compact"</text>
+		</allowedValue>
+		<allowedValue>
+			<text>"mid-sized"</text>
+		</allowedValue>
+		<allowedValue>
+			<text>"full-sized"</text>
+		</allowedValue>
+	</ItemDefinition>
+	<ItemDefinition id="tTariffs" name="tariffsType">
+		<itemComponent name="car group">
+			<itemDefinition href="#tCarGroup"/>
+		</itemComponent>
+		<itemComponent name="hourly">
+			<itemDefinition href="#tNumber"/>
+		</itemComponent>
+		<itemComponent name="daily">
+			<itemDefinition href="#tNumber"/>
+		</itemComponent>
+	</ItemDefinition>
+	<ItemDefinition id="tBranchesRelation" name="branchesRelationType">
+		<typeRef href="branches.xsd#branches"/>
+	</ItemDefinition>
+	<ItemDefinition id="tRental" name="rentalType">
+		<itemComponent name="car group">
+			<itemDefinition href="#tCarGroup"/>
+		</itemComponent>
+		<itemComponent name="scheduled return date-time">
+			<itemDefinition href="#tDate-Time"/>
+		</itemComponent>
+	</ItemDefinition>
+	<ItemDefinition id="tReturned" name="returnedType">
+		<itemComponent name="date-time">
+			<itemDefinition href="#tDateTime"/>
+		</itemComponent>
+		<itemComponent name="location">
+			<itemDefinition href="#tString"/>
+		</itemComponent>
+	</ItemDefinition>
+	<Decision id="dec01" name="late charge">
+		<InformationItem id="_lateCharge" name="late charge">
+			<itemDefinition href="#tNumber"/>
+		</InformationItem>
+		<informationRequirement>
+			<requiredInput href="#iRental"/>
+		</informationRequirement>
+		<informationRequirement>
+			<requiredInput href="#iReturned"/>
+		</informationRequirement>
+		<informationRequirement>
+			<requiredDecision href="#dBranches"/>
+		</informationRequirement>
+		<Context id="cLateCharge" name="late charge expression">
+			<contextEntry>
+				<InformationItem id="tariffs" name="tariffs">
+					<itemDefinition href="#tTariffs"/>
+				</InformationItem>
+				<Relation>
+					<!--my changes to tRelation, Gary didn't like:
+					<valueList name="car group">
+						<text>"economy"</text>
+						<text>"compact"</text>
+						<text>"mid-sized"</text>
+						<text>"full-sized"</text>
+					</valueList>
+					<valueList name="hourly">
+						<text>5</text>
+						<text>6</text>
+						<text>7</text>
+						<text>8</text>
+					</valueList>
+					<valueList name="daily">
+						<text>40</text>
+						<text>50</text>
+						<text>60</text>
+						<text>70</text>
+					</valueList> -->
+					<column>
+						<LiteralExpression>
+							<text>car group</text>
+						</LiteralExpression>
+					</column>
+					<column>
+						<LiteralExpression>
+							<text>hourly</text>
+						</LiteralExpression>
+					</column>
+					<column>
+						<LiteralExpression>
+							<text>daily</text>
+						</LiteralExpression>
+					</column>
+					<List>
+						<LiteralExpression>
+							<text>"economy"</text>
+						</LiteralExpression>
+						<LiteralExpression>
+							<text>5</text>
+						</LiteralExpression>
+						<LiteralExpression>
+							<text>40</text>
+						</LiteralExpression>
+					</List>
+					<List>
+						<LiteralExpression>
+							<text>"compact"</text>
+						</LiteralExpression>
+						<LiteralExpression>
+							<text>6</text>
+						</LiteralExpression>
+						<LiteralExpression>
+							<text>50</text>
+						</LiteralExpression>
+					</List>
+					<List>
+						<LiteralExpression>
+							<text>"mid-sized"</text>
+						</LiteralExpression>
+						<LiteralExpression>
+							<text>7</text>
+						</LiteralExpression>
+						<LiteralExpression>
+							<text>60</text>
+						</LiteralExpression>
+					</List>
+					<List>
+						<LiteralExpression>
+							<text>"full-sized"</text>
+						</LiteralExpression>
+						<LiteralExpression>
+							<text>8</text>
+						</LiteralExpression>
+						<LiteralExpression>
+							<text>70</text>
+						</LiteralExpression>
+					</List>
+					<!-- don't blame me for this one!-->
+				</Relation>
+			</contextEntry>
+			<contextEntry>
+				<FunctionDefinition id="fnDayOfWeek" name="day of week">
+					<LiteralExpression>
+						<text>function(date1) ( (date(date1) - date("2015-01-04")) / 7).days - (floor((date(date1) - date("2015-01-04")) / 7)).days + 1</text>
+					</LiteralExpression>
+				</FunctionDefinition>
+			</contextEntry>
+			<contextEntry>
+				<InformationItem id="dayOfWeek" name="day of week">
+					<itemDefinition href="#tNumber"/>
+				</InformationItem>
+				<LiteralExpression>
+					<text>day of week(returned.date-time)</text>
+				</LiteralExpression>
+			</contextEntry>
+			<contextEntry>
+				<InformationItem id="tariff" name="tariff">
+					<itemDefinition href="#tNumber"/>
+				</InformationItem>
+				<LiteralExpression id="xTariff">
+					<text>tariffs[car group = rental.car group]</text>
+				</LiteralExpression>
+			</contextEntry>
+			<contextEntry>
+				<InformationItem id="myBranch" name="myBranch">
+					<itemDefinition href="#tString"/>
+				</InformationItem>
+				<LiteralExpression id="xBranch">
+					<!-- here "branches" refers to the InformationItem named branches, line 75, populated by decision id=dBranches, line 290, which in turn is populated by XML import-->
+					<text>branches[location = returned.location]</text>
+				</LiteralExpression>
+			</contextEntry>
+			<contextEntry>
+				<InformationItem id="closingTime" name="closing time">
+					<itemDefinition href="#tTime"/>
+				</InformationItem>
+				<DecisionTable id="DT1" name="closing time">
+					<clause name="day of week">
+						<inputExpression id="ixDayOfWeek">
+							<text>day of week</text>
+						</inputExpression>
+						<inputEntry id="ie1.1">
+							<text>1</text>
+						</inputEntry>
+						<inputEntry id="ie1.2">
+							<text>[2..6]</text>
+						</inputEntry>
+						<inputEntry id="ie1.3">
+							<text>7</text>
+						</inputEntry>
+					</clause>
+					<clause name="closing time">
+						<outputEntry id="oe1.1">
+							<text>myBranch.hours.Sunday.closeTime</text>
+						</outputEntry>
+						<outputEntry id="oe1.2">
+							<text>myBranch.hours.Weekday.closeTime</text>
+						</outputEntry>
+						<outputEntry id="oe1.3">
+							<text>myBranch.hours.Saturday.closeTime</text>
+						</outputEntry>
+					</clause>
+					<rule>
+						<condition>ie1.1</condition>
+						<conclusion>oe1.1</conclusion>
+					</rule>
+					<rule>
+						<condition>ie1.2</condition>
+						<conclusion>oe1.2</conclusion>
+					</rule>
+					<rule>
+						<condition>ie1.3</condition>
+						<conclusion>oe1.3</conclusion>
+					</rule>
+				</DecisionTable>
+			</contextEntry>
+			<contextEntry>
+				<InformationItem id="returnedTime" name="returned time">
+					<itemDefinition href="#tTime"/>
+				</InformationItem>
+				<LiteralExpression id="xReturnedTime">
+					<text>time(returned.date-time)</text>
+				</LiteralExpression>
+			</contextEntry>
+			<contextEntry>
+				<InformationItem id="oneHour" name="one hour">
+					<itemDefinition href="#tDTDuration"/>
+				</InformationItem>
+				<LiteralExpression id="xOneHour">
+					<text>duration("PT1H")</text>
+				</LiteralExpression>
+			</contextEntry>
+			<contextEntry>
+				<InformationItem id="oneDay" name="one day">
+					<itemDefinition href="#tDTDuration"/>
+				</InformationItem>
+				<LiteralExpression id="xOneDay">
+					<text>duration("P1D")</text>
+				</LiteralExpression>
+			</contextEntry>
+			<contextEntry>
+				<InformationItem id="gracePeriod" name="grace period">
+					<itemDefinition href="#tDTDuration"/>
+				</InformationItem>
+				<LiteralExpression id="xGracePeriod">
+					<text>max(min(closing time - returned time, one hour), 0)</text>
+				</LiteralExpression>
+			</contextEntry>
+			<contextEntry>
+				<InformationItem id="returnedDateTime" name="returned date-time">
+					<itemDefinition href="#tDateTime"/>
+				</InformationItem>
+				<LiteralExpression id="xReturnedDateTime">
+					<text>returned.date-time + grace period</text>
+				</LiteralExpression>
+			</contextEntry>
+			<contextEntry>
+				<InformationItem id="lateHours" name="late hours">
+					<itemDefinition href="#tNumber"/>
+				</InformationItem>
+				<LiteralExpression id="xLateHours">
+					<text>(returned date-time - rental.scheduled returned date-time) / one hour</text>
+				</LiteralExpression>
+			</contextEntry>
+			<contextEntry>
+				<InformationItem id="lateDays" name="late days">
+					<itemDefinition href="#tNumber"/>
+				</InformationItem>
+				<LiteralExpression id="xLateDays">
+					<text>floor(returned date-time - rental.scheduled returned date-time) / one day</text>
+				</LiteralExpression>
+			</contextEntry>
+			<contextEntry>
+				<InformationItem id="lateCharge" name="late charge">
+					<itemDefinition href="#tNumber"/>
+				</InformationItem>
+				<DecisionTable id="DT2" name="late charge" isComplete="true" hitPolicy="UNIQUE">
+					<clause>
+						<inputExpression id="ixLateHours" name="late hours">
+							<text>late hours</text>
+						</inputExpression>
+						<inputEntry id="ie2.1">
+							<text>&lt;=0</text>
+						</inputEntry>
+						<inputEntry id="ie2.2">
+							<text>(0..5]</text>
+						</inputEntry>
+						<inputEntry id="ie2.3">
+							<text>&gt;5</text>
+						</inputEntry>
+					</clause>
+					<clause name="late charge">
+						<outputEntry id="oe2.1">
+							<text>0</text>
+						</outputEntry>
+						<outputEntry id="oe2.2">
+							<text>late hours * tariff.hourly</text>
+						</outputEntry>
+						<outputEntry id="oe2.3">
+							<text>(late days + 1) * tariff.daily</text>
+						</outputEntry>
+					</clause>
+					<rule>
+						<condition>ie2.1</condition>
+						<conclusion>oe2.1</conclusion>
+					</rule>
+					<rule>
+						<condition>ie2.2</condition>
+						<conclusion>oe2.2</conclusion>
+					</rule>
+					<rule>
+						<condition>ie2.3</condition>
+						<conclusion>oe2.3</conclusion>
+					</rule>
+				</DecisionTable>
+			</contextEntry>
+		</Context>
+	</Decision>
+	<InputData id="iRental" name="rental">
+		<InformationItem id="_rental" name="rental">
+			<itemDefinition href="#tRental"/>
+		</InformationItem>
+	</InputData>
+	<InputData id="iReturned" name="returned">
+		<InformationItem id="_returned" name="returned">
+			<itemDefinition href="#tReturned"/>
+		</InformationItem>
+	</InputData>
+	<Decision id="dBranches" name="branches">
+		<InformationItem id="_branches" name="branches">
+			<itemDefinition href="#tBranchesRelation"/>
+		</InformationItem>
+		<LiteralExpression>
+			<importedValues namespace="http://example.org/branches" importType="http://www.w3.org/TR/xml/" locationURI="branchInfo.xml" expressionLanguage="http://www.w3.org/TR/xpath20/">
+				<!--for imported Relation, the imported Element is the row list, i.e. //n1:branch, not n1:branches -->
+				<importedElement>//n1:branch</importedElement>
+			</importedValues>
+		</LiteralExpression>
+	</Decision>
+</Definitions>
