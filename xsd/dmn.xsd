@@ -226,7 +226,7 @@
 							</xsd:sequence>
 						</xsd:complexType>
 					</xsd:element>
-					<xsd:element ref="Import"/>
+					<xsd:element ref="importedValues"/>
 				</xsd:choice>
 				<xsd:attribute name="expressionLanguage" type="xsd:anyURI" use="optional"/>
 			</xsd:extension>
@@ -300,6 +300,17 @@
 			<xsd:element name="condition" type="xsd:IDREF" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element name="conclusion" type="xsd:IDREF" minOccurs="0" maxOccurs="unbounded"/>
 		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="importedValues" type="tImportedValues" substitutionGroup="Import"/>
+	<xsd:complexType name="tImportedValues">
+		<xsd:complexContent>
+			<xsd:extension base="tImport">
+				<xsd:sequence>
+					<xsd:element name="importedElement" type="xsd:string"/>
+				</xsd:sequence>
+				<xsd:attribute name="expressionLanguage" type="xsd:anyURI"/>
+			</xsd:extension>
+		</xsd:complexContent>
 	</xsd:complexType>
 	<xsd:simpleType name="DecisionTableOrientation">
 		<xsd:restriction base="xsd:string">
