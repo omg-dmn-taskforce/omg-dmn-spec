@@ -253,8 +253,9 @@
 		<xsd:complexContent>
 			<xsd:extension base="tExpression">
 				<xsd:sequence>
-					<xsd:element name="clause" type="tClause" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element name="input" type="tDTInput" minOccurs="0" maxOccurs="unbounded"/>
 					<!-- NB: when the hit policy is FIRST or RULE ORDER, the ordering of the rules is significant and MUST be preserved -->
+					<xsd:element name="output" type="tDTOutput" maxOccurs="unbounded"/>
 					<xsd:element name="rule" type="tDecisionRule" minOccurs="0" maxOccurs="unbounded"/>
 				</xsd:sequence>
 				<xsd:attribute name="hitPolicy" type="HitPolicy" use="optional" default="UNIQUE"/>
@@ -266,28 +267,18 @@
 		</xsd:complexContent>
 	</xsd:complexType>
 	<xsd:complexType name="tClause">
-		<xsd:sequence>
-			<xsd:choice>
-				<xsd:sequence>
-					<xsd:element name="inputExpression" type="tExpression" minOccurs="0" maxOccurs="1"/>
-					<xsd:element name="inputEntry" type="tExpression" minOccurs="0" maxOccurs="unbounded"/>
-				</xsd:sequence>
-				<xsd:sequence>
-					<xsd:element name="outputDefinition" type="tDMNElementReference" minOccurs="0" maxOccurs="1"/>
-					<!-- NB: When the isOrdered attribute is "true", the ordering of the output entries is significant and MUST be preserved -->
-					<xsd:element name="outputEntry" type="tExpression" minOccurs="0" maxOccurs="unbounded"/>
-				</xsd:sequence>
-			</xsd:choice>
-		</xsd:sequence>
+		<xsd:attribute name="id"/>
 		<xsd:attribute name="name" type="xsd:string" use="optional"/>
-		<xsd:attribute name="isOrdered" type="xsd:boolean" use="optional" default="false"/>
+		<!-- NB: When the isOrdered attribute is "true", the ordering of the output entries is significant and MUST be preserved -->
 		<!-- NB: irOrdered MUST be true iff the hit policy of the containing decision table is PRIORITY or OUTPUT ORDER -->
 	</xsd:complexType>
 	<xsd:complexType name="tDecisionRule">
 		<xsd:sequence>
-			<xsd:element name="condition" type="xsd:IDREFS" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element name="conclusion" type="xsd:IDREFS" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="inputEntry" type="tLiteralExpression" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="outputEntry" type="tLiteralExpression" minOccurs="0" maxOccurs="unbounded"/>
 		</xsd:sequence>
+		<xsd:attribute name="id" type="xsd:ID"/>
+		<xsd:attribute name="isOrdered" type="xsd:boolean"/>
 	</xsd:complexType>
 	<xsd:complexType name="tImportedValues">
 		<xsd:complexContent>
@@ -325,4 +316,26 @@
 			<xsd:enumeration value="MAX"/>
 		</xsd:restriction>
 	</xsd:simpleType>
+	<xsd:complexType name="tDTOutput">
+		<xsd:complexContent>
+			<xsd:extension base="tClause">
+				<xsd:sequence>
+					<!-- NB: When the isOrdered attribute is "true", the ordering of the output entries is significant and MUST be preserved -->
+					<xsd:element name="outputDefinition" type="tDMNElementReference" minOccurs="0"/>
+					<xsd:element name="outputValue" type="tLiteralExpression" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element name="defaultOutputEntry" type="tLiteralExpression" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="tDTInput">
+		<xsd:complexContent>
+			<xsd:extension base="tClause">
+				<xsd:sequence>
+					<xsd:element name="inputExpression" type="tLiteralExpression"/>
+					<xsd:element name="inputValue" type="tLiteralExpression" minOccurs="0" maxOccurs="unbounded"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
 </xsd:schema>
