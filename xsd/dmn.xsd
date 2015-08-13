@@ -288,6 +288,7 @@
 					<xsd:element name="outputDefinition" type="tDMNElementReference" minOccurs="0" maxOccurs="1"/>
 					<!-- NB: When the isOrdered attribute is "true", the ordering of the output entries is significant and MUST be preserved -->
 					<xsd:element name="outputEntry" type="tLiteralExpression" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element name="defaultOutputEntry" type="tLiteralExpression" minOccurs="0"/>
 				</xsd:sequence>
 			</xsd:choice>
 		</xsd:sequence>
