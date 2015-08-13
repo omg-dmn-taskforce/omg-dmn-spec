@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 rel. 2 sp2 (x64) (http://www.altova.com) by Bruce Silver (private) -->
 <xsd:schema xmlns="http://www.omg.org/spec/DMN/20130901" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.omg.org/spec/DMN/20130901" elementFormDefault="qualified">
 	<xsd:element name="DMNElement" type="tDMNElement" abstract="true"/>
 	<xsd:complexType name="tDMNElement">
@@ -204,7 +205,7 @@
 							</xsd:element>
 							<xsd:element name="typeRef" type="tDMNElementReference"/>
 						</xsd:choice>
-						<xsd:element name="allowedValue" type="tExpression" minOccurs="0" maxOccurs="unbounded"/>
+						<xsd:element name="allowedValue" type="tLiteralExpression" minOccurs="0" maxOccurs="unbounded"/>
 					</xsd:sequence>
 					<xsd:element name="itemComponent" type="tItemComponent" minOccurs="0" maxOccurs="unbounded"/>
 				</xsd:choice>
@@ -285,13 +286,13 @@
 		<xsd:sequence>
 			<xsd:choice>
 				<xsd:sequence>
-					<xsd:element name="inputExpression" type="tExpression" minOccurs="0" maxOccurs="1"/>
-					<xsd:element name="inputEntry" type="tExpression" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element name="inputExpression" type="tLiteralExpression" minOccurs="0" maxOccurs="1"/>
+					<xsd:element name="inputEntry" type="tLiteralExpression" minOccurs="0" maxOccurs="unbounded"/>
 				</xsd:sequence>
 				<xsd:sequence>
 					<xsd:element name="outputDefinition" type="tDMNElementReference" minOccurs="0" maxOccurs="1"/>
 					<!-- NB: When the isOrdered attribute is "true", the ordering of the output entries is significant and MUST be preserved -->
-					<xsd:element name="outputEntry" type="tExpression" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element name="outputEntry" type="tLiteralExpression" minOccurs="0" maxOccurs="unbounded"/>
 				</xsd:sequence>
 			</xsd:choice>
 		</xsd:sequence>
