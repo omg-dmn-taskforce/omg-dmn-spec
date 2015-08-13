@@ -123,9 +123,8 @@
 		<xsd:complexContent>
 			<xsd:extension base="tDRGElement">
 				<xsd:sequence>
-					<xsd:element ref="InformationItem" minOccurs="0" maxOccurs="unbounded"/>
 					<!-- the parameters -->
-					<xsd:element ref="Expression" minOccurs="0" maxOccurs="1"/>
+					<xsd:element ref="FunctionDefinition" minOccurs="0" maxOccurs="1"/>
 					<!-- the body -->
 					<xsd:element name="knowledgeRequirement" type="tKnowledgeRequirement" minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element name="authorityRequirement" type="tAuthorityRequirement" minOccurs="0" maxOccurs="unbounded"/>
