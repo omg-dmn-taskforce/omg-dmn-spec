@@ -297,8 +297,8 @@
 	</xsd:complexType>
 	<xsd:complexType name="tDecisionRule">
 		<xsd:sequence>
-			<xsd:element name="condition" type="xsd:IDREFS" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element name="conclusion" type="xsd:IDREFS" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="condition" type="xsd:IDREF" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="conclusion" type="xsd:IDREF" minOccurs="0" maxOccurs="unbounded"/>
 		</xsd:sequence>
 	</xsd:complexType>
 	<xsd:simpleType name="DecisionTableOrientation">
