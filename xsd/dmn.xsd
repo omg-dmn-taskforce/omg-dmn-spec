@@ -74,7 +74,7 @@
 				<xsd:sequence>
 					<xsd:element name="question" type="xsd:string" minOccurs="0" maxOccurs="1"/>
 					<xsd:element name="allowedAnswers" type="xsd:string" minOccurs="0" maxOccurs="1"/>
-					<xsd:element name="outputDefinition" type="tDMNElementReference" minOccurs="0" maxOccurs="1"/>
+					<xsd:element ref="InformationItem" minOccurs="0"/>
 					<xsd:element name="informationRequirement" type="tInformationRequirement" minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element name="knowledgeRequirement" type="tKnowledgeRequirement" minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element name="authorityRequirement" type="tAuthorityRequirement" minOccurs="0" maxOccurs="unbounded"/>
@@ -138,7 +138,7 @@
 		<xsd:complexContent>
 			<xsd:extension base="tDRGElement">
 				<xsd:sequence>
-					<xsd:element name="itemDefinition" type="tDMNElementReference" minOccurs="0" maxOccurs="1"/>
+					<xsd:element ref="InformationItem" minOccurs="0"/>
 				</xsd:sequence>
 			</xsd:extension>
 		</xsd:complexContent>
@@ -158,7 +158,6 @@
 	</xsd:complexType>
 	<xsd:complexType name="tInformationRequirement">
 		<xsd:sequence>
-			<xsd:element ref="InformationItem" minOccurs="0" maxOccurs="1"/>
 			<!-- the variable -->
 			<xsd:choice minOccurs="1" maxOccurs="1">
 				<xsd:element name="requiredDecision" type="tDMNElementReference"/>
