@@ -177,13 +177,7 @@
 				<xsd:choice>
 					<xsd:sequence>
 						<xsd:choice minOccurs="0" maxOccurs="1">
-							<xsd:element name="typeDefinition">
-								<xsd:complexType mixed="true">
-									<xsd:sequence>
-										<xsd:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
-									</xsd:sequence>
-								</xsd:complexType>
-							</xsd:element>
+							<xsd:element name="typeDefinition" type="xsd:string"/>
 							<xsd:element name="typeRef" type="tDMNElementReference"/>
 						</xsd:choice>
 						<xsd:element name="allowedValue" type="tUnaryTests" minOccurs="0" maxOccurs="unbounded"/>
@@ -206,13 +200,7 @@
 		<xsd:complexContent>
 			<xsd:extension base="tExpression">
 				<xsd:choice minOccurs="0" maxOccurs="1">
-					<xsd:element name="text">
-						<xsd:complexType mixed="true">
-							<xsd:sequence>
-								<xsd:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
-							</xsd:sequence>
-						</xsd:complexType>
-					</xsd:element>
+					<xsd:element name="text" type="xsd:string"/>
 					<xsd:element ref="importedValues"/>
 				</xsd:choice>
 				<xsd:attribute name="expressionLanguage" type="xsd:anyURI" use="optional"/>
@@ -322,12 +310,7 @@
 			</xsd:extension>
 		</xsd:complexContent>
 	</xsd:complexType>
-	<xsd:element name="text" type="tText"/>
-	<xsd:complexType name="tText" mixed="true">
-		<xsd:sequence>
-			<xsd:any namespace="##any" processContents="lax" minOccurs="0"/>
-		</xsd:sequence>
-	</xsd:complexType>
+	<xsd:element name="text" type="xsd:string"/>
 	<xsd:element name="group" type="tGroup" substitutionGroup="artifact"/>
 	<xsd:complexType name="tGroup">
 		<xsd:complexContent>
