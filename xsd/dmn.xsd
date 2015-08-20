@@ -7,29 +7,16 @@
 			<xsd:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
 		</xsd:sequence>
 		<xsd:attribute name="id" type="xsd:ID" use="required"/>
-		<xsd:attribute name="name" type="xsd:string" use="optional"/>
 		<xsd:anyAttribute namespace="##other" processContents="lax"/>
 	</xsd:complexType>
-	<xsd:complexType name="tNamedDMNElement">
-		<xsd:complexContent>
-			<xsd:restriction base="tDMNElement">
-				<xsd:sequence>
-					<xsd:element name="description" type="xsd:string" minOccurs="0" maxOccurs="1"/>
-					<xsd:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
-				</xsd:sequence>
-				<xsd:attribute name="id" type="xsd:ID" use="required"/>
-				<xsd:attribute name="name" type="xsd:string" use="required"/>
-				<xsd:anyAttribute namespace="##other" processContents="lax"/>
-			</xsd:restriction>
-		</xsd:complexContent>
-	</xsd:complexType>
+	<xsd:element name="NamedElement" type="tNamedElement" substitutionGroup="DMNElement"/>
 	<xsd:complexType name="tDMNElementReference">
 		<xsd:attribute name="href" type="xsd:anyURI" use="required"/>
 	</xsd:complexType>
-	<xsd:element name="Definitions" type="tDefinitions"/>
+	<xsd:element name="Definitions" type="tDefinitions" substitutionGroup="NamedElement"/>
 	<xsd:complexType name="tDefinitions">
 		<xsd:complexContent>
-			<xsd:extension base="tDMNElement">
+			<xsd:extension base="tNamedElement">
 				<xsd:sequence>
 					<xsd:element ref="Import" minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element ref="ItemDefinition" minOccurs="0" maxOccurs="unbounded"/>
@@ -51,20 +38,20 @@
 		<xsd:attribute name="locationURI" type="xsd:anyURI" use="optional"/>
 		<xsd:attribute name="importType" type="xsd:anyURI" use="required"/>
 	</xsd:complexType>
-	<xsd:element name="ElementCollection" type="tElementCollection"/>
+	<xsd:element name="ElementCollection" type="tElementCollection" substitutionGroup="NamedElement"/>
 	<xsd:complexType name="tElementCollection">
 		<xsd:complexContent>
-			<xsd:extension base="tDMNElement">
+			<xsd:extension base="tNamedElement">
 				<xsd:sequence>
 					<xsd:element name="drgElement" type="tDMNElementReference" minOccurs="0" maxOccurs="unbounded"/>
 				</xsd:sequence>
 			</xsd:extension>
 		</xsd:complexContent>
 	</xsd:complexType>
-	<xsd:element name="DRGElement" type="tDRGElement" abstract="true"/>
+	<xsd:element name="DRGElement" type="tDRGElement" abstract="true" substitutionGroup="NamedElement"/>
 	<xsd:complexType name="tDRGElement">
 		<xsd:complexContent>
-			<xsd:extension base="tDMNElement"/>
+			<xsd:extension base="tNamedElement"/>
 		</xsd:complexContent>
 	</xsd:complexType>
 	<xsd:element name="Decision" type="tDecision" substitutionGroup="DRGElement"/>
@@ -93,7 +80,7 @@
 	<xsd:element name="BusinessContextElement" type="tBusinessContextElement" abstract="true"/>
 	<xsd:complexType name="tBusinessContextElement">
 		<xsd:complexContent>
-			<xsd:extension base="tDMNElement">
+			<xsd:extension base="tNamedElement">
 				<xsd:attribute name="URI" type="xsd:anyURI" use="optional"/>
 			</xsd:extension>
 		</xsd:complexContent>
@@ -183,10 +170,10 @@
 			<xsd:extension base="tDMNElement"/>
 		</xsd:complexContent>
 	</xsd:complexType>
-	<xsd:element name="ItemDefinition" type="tItemDefinition"/>
+	<xsd:element name="ItemDefinition" type="tItemDefinition" substitutionGroup="NamedElement"/>
 	<xsd:complexType name="tItemDefinition">
 		<xsd:complexContent>
-			<xsd:extension base="tDMNElement">
+			<xsd:extension base="tNamedElement">
 				<xsd:choice>
 					<xsd:sequence>
 						<xsd:choice minOccurs="0" maxOccurs="1">
@@ -236,10 +223,10 @@
 			<xsd:element name="parameter" type="tDMNElementReference" minOccurs="1" maxOccurs="1"/>
 		</xsd:sequence>
 	</xsd:complexType>
-	<xsd:element name="InformationItem" type="tInformationItem"/>
+	<xsd:element name="InformationItem" type="tInformationItem" substitutionGroup="NamedElement"/>
 	<xsd:complexType name="tInformationItem">
 		<xsd:complexContent>
-			<xsd:extension base="tNamedDMNElement">
+			<xsd:extension base="tNamedElement">
 				<xsd:sequence>
 					<xsd:element name="itemDefinition" type="tDMNElementReference" minOccurs="0" maxOccurs="1"/>
 				</xsd:sequence>
@@ -389,4 +376,17 @@
 			</xsd:extension>
 		</xsd:complexContent>
 	</xsd:complexType>
+<<<<<<< HEAD
+=======
+	<xsd:simpleType name="tUnaryTests">
+		<xsd:restriction base="xsd:string"/>
+	</xsd:simpleType>
+	<xsd:complexType name="tNamedElement">
+		<xsd:complexContent>
+			<xsd:extension base="tDMNElement">
+				<xsd:attribute name="name" type="xsd:string" use="required"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+>>>>>>> 9fc20cb... DMN11-92/DMN11-105 define NamedElement subclass of DMNElement
 </xsd:schema>
