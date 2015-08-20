@@ -176,24 +176,15 @@
 			<xsd:extension base="tNamedElement">
 				<xsd:choice>
 					<xsd:sequence>
-						<xsd:choice minOccurs="0" maxOccurs="1">
-							<xsd:element name="typeDefinition" type="xsd:string"/>
-							<xsd:element name="typeRef" type="tDMNElementReference"/>
-						</xsd:choice>
-						<xsd:element name="allowedValue" type="tUnaryTests" minOccurs="0" maxOccurs="unbounded"/>
+						<xsd:element name="typeRef" type="xsd:QName"/>
+						<xsd:element name="allowedValues" type="tUnaryTests" minOccurs="0"/>
 					</xsd:sequence>
-					<xsd:element name="itemComponent" type="tItemComponent" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element name="itemComponent" type="tItemDefinition" minOccurs="0" maxOccurs="unbounded"/>
 				</xsd:choice>
 				<xsd:attribute name="typeLanguage" type="xsd:anyURI" use="optional"/>
 				<xsd:attribute name="isCollection" type="xsd:boolean" use="optional" default="false"/>
 			</xsd:extension>
 		</xsd:complexContent>
-	</xsd:complexType>
-	<xsd:complexType name="tItemComponent">
-		<xsd:sequence>
-			<xsd:element name="itemDefinition" type="tDMNElementReference" minOccurs="1" maxOccurs="1"/>
-		</xsd:sequence>
-		<xsd:attribute name="name" type="xsd:string" use="required"/>
 	</xsd:complexType>
 	<xsd:element name="LiteralExpression" type="tLiteralExpression" substitutionGroup="Expression"/>
 	<xsd:complexType name="tLiteralExpression">
@@ -228,7 +219,7 @@
 		<xsd:complexContent>
 			<xsd:extension base="tNamedElement">
 				<xsd:sequence>
-					<xsd:element name="itemDefinition" type="tDMNElementReference" minOccurs="0" maxOccurs="1"/>
+					<xsd:element name="itemDefinition" type="xsd:QName" minOccurs="0" maxOccurs="1"/>
 				</xsd:sequence>
 			</xsd:extension>
 			<!-- NB: the name attribute is "required" for information items -->
@@ -371,7 +362,7 @@
 			<xsd:extension base="tClause">
 				<xsd:sequence>
 					<!-- NB: When the isOrdered attribute is "true", the ordering of the output entries is significant and MUST be preserved -->
-					<xsd:element name="outputDefinition" type="tDMNElementReference" minOccurs="0"/>
+					<xsd:element name="outputDefinition" type="xsd:QName" minOccurs="0"/>
 					<xsd:element name="outputValue" type="tUnaryTests" minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element name="defaultOutputEntry" type="tLiteralExpression" minOccurs="0"/>
 				</xsd:sequence>
