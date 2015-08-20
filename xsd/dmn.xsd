@@ -469,16 +469,6 @@
 		</xsd:complexContent>
 	</xsd:complexType>
 	<xsd:simpleType name="tUnaryTests">
-		<xsd:restriction base="xsd:string">
-			<!--name-->
-			<!--number-->
-			<!--dateTime-->
-			<!--stringLiteral-->
-			<!--unaryTests1 = \((name|number|literal|dateTime)\)
-			     unaryTests2 = \((gtOrLt)(name|number|dateTime)\)
-                 unaryTests3 = \((intervalStart)(name|number|dateTime)..(name|number|dateTime)(intervalEnd)\)
-                 unaryTests4 = not? \((unaryTests1|unaryTests2|unaryTests3)(,(unaryTests1|unaryTests2|unaryTests3))*\)
-					 -->
-		</xsd:restriction>
+		<xsd:restriction base="xsd:string"/>
 	</xsd:simpleType>
 </xsd:schema>
