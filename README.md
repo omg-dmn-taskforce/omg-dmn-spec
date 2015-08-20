@@ -19,8 +19,8 @@ Each JIRA issue of a ballot contains links to Git commits. These commits are che
 
 One can check if an issue is mentioned in a commit using:
 
-    git log --all | grep 89
-    git log --all | grep 11-89 -B4
+    git log --grep 89
+    git log --grep 11-89 -B4
 
 The branch for the ballot is pushed to GitHub using:
 
@@ -32,3 +32,8 @@ In the commit message one may add links back to JIRA:
 Issue: http://solitaire.omg.org/browse/DMN11-30
 Proposal: http://solitaire.omg.org/browse/DMN11-95
 ```
+
+Committing changes on behalf of someone else:
+
+    git commit --author="Bruce Silver <bruce@example.com>" --template=commit-message-template.txt
+    git commit --author="Bruce Silver <bruce@example.com>" --reedit-message=HEAD
