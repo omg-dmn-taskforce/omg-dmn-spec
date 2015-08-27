@@ -19,8 +19,8 @@ Each JIRA issue of a ballot contains links to Git commits. These commits are che
 
 One can check if an issue is mentioned in a commit using:
 
-    git log --grep 89
-    git log --grep 11-89 -B4
+    git log --all --grep 89
+    git log --all --grep 11-89
 
 The branch for the ballot is pushed to GitHub using:
 
