@@ -219,9 +219,7 @@
 	<xsd:complexType name="tInformationItem">
 		<xsd:complexContent>
 			<xsd:extension base="tNamedElement">
-				<xsd:sequence>
-					<xsd:element name="itemDefinition" type="xsd:QName" minOccurs="0" maxOccurs="1"/>
-				</xsd:sequence>
+				<xsd:attribute name="typeRef" type="xsd:QName"/>
 			</xsd:extension>
 			<!-- NB: the name attribute is "required" for information items -->
 		</xsd:complexContent>
