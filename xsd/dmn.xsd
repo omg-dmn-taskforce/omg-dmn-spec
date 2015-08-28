@@ -361,10 +361,10 @@
 			<xsd:extension base="tClause">
 				<xsd:sequence>
 					<!-- NB: When the isOrdered attribute is "true", the ordering of the output entries is significant and MUST be preserved -->
-					<xsd:element name="outputDefinition" type="xsd:QName" minOccurs="0"/>
 					<xsd:element name="outputValues" type="tUnaryTests" minOccurs="0"/>
 					<xsd:element name="defaultOutputEntry" type="tLiteralExpression" minOccurs="0"/>
 				</xsd:sequence>
+				<xsd:attribute name="typeRef" type="xsd:QName"/>
 			</xsd:extension>
 		</xsd:complexContent>
 	</xsd:complexType>
