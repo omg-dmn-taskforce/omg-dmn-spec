@@ -21,6 +21,7 @@
 					<xsd:element ref="Import" minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element ref="ItemDefinition" minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element ref="DRGElement" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element ref="artifact" minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element ref="ElementCollection" minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element ref="BusinessContextElement" minOccurs="0" maxOccurs="unbounded"/>
 				</xsd:sequence>
@@ -284,10 +285,10 @@
 			</xsd:extension>
 		</xsd:complexContent>
 	</xsd:complexType>
-	<xsd:element name="artifact" type="tArtifact" abstract="true" substitutionGroup="DRGElement"/>
+	<xsd:element name="artifact" type="tArtifact" abstract="true" substitutionGroup="DMNElement"/>
 	<xsd:complexType name="tArtifact">
 		<xsd:complexContent>
-			<xsd:extension base="tDRGElement"/>
+			<xsd:extension base="tDMNElement"/>
 		</xsd:complexContent>
 	</xsd:complexType>
 	<xsd:element name="textAnnotation" type="tTextAnnotation" substitutionGroup="artifact"/>
@@ -302,16 +303,6 @@
 		</xsd:complexContent>
 	</xsd:complexType>
 	<xsd:element name="text" type="xsd:string"/>
-	<xsd:element name="group" type="tGroup" substitutionGroup="artifact"/>
-	<xsd:complexType name="tGroup">
-		<xsd:complexContent>
-			<xsd:extension base="tArtifact">
-				<xsd:sequence>
-					<xsd:element name="elementCollectionRef" type="tDMNElementReference"/>
-				</xsd:sequence>
-			</xsd:extension>
-		</xsd:complexContent>
-	</xsd:complexType>
 	<xsd:element name="association" type="tAssociation" substitutionGroup="artifact"/>
 	<xsd:complexType name="tAssociation">
 		<xsd:complexContent>
