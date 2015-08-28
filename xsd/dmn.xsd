@@ -243,7 +243,7 @@
 		</xsd:complexContent>
 	</xsd:complexType>
 	<xsd:complexType name="tClause">
-		<xsd:attribute name="id"/>
+		<xsd:attribute name="id" type="xsd:ID"/>
 		<xsd:attribute name="name" type="xsd:string" use="optional"/>
 		<!-- NB: When the isOrdered attribute is "true", the ordering of the output entries is significant and MUST be preserved -->
 		<!-- NB: irOrdered MUST be true iff the hit policy of the containing decision table is PRIORITY or OUTPUT ORDER -->
@@ -362,7 +362,7 @@
 				<xsd:sequence>
 					<!-- NB: When the isOrdered attribute is "true", the ordering of the output entries is significant and MUST be preserved -->
 					<xsd:element name="outputDefinition" type="xsd:QName" minOccurs="0"/>
-					<xsd:element name="outputValue" type="tUnaryTests" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element name="outputValues" type="tUnaryTests" minOccurs="0"/>
 					<xsd:element name="defaultOutputEntry" type="tLiteralExpression" minOccurs="0"/>
 				</xsd:sequence>
 			</xsd:extension>
@@ -373,7 +373,7 @@
 			<xsd:extension base="tClause">
 				<xsd:sequence>
 					<xsd:element name="inputExpression" type="tLiteralExpression"/>
-					<xsd:element name="inputValue" type="tUnaryTests" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element name="inputValues" type="tUnaryTests" minOccurs="0"/>
 				</xsd:sequence>
 			</xsd:extension>
 		</xsd:complexContent>
