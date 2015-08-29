@@ -168,7 +168,9 @@
 	<xsd:element name="Expression" type="tExpression" abstract="true"/>
 	<xsd:complexType name="tExpression">
 		<xsd:complexContent>
-			<xsd:extension base="tDMNElement"/>
+			<xsd:extension base="tDMNElement">
+				<xsd:attribute name="typeRef" type="xsd:QName"/>
+			</xsd:extension>
 		</xsd:complexContent>
 	</xsd:complexType>
 	<xsd:element name="ItemDefinition" type="tItemDefinition" substitutionGroup="NamedElement"/>
