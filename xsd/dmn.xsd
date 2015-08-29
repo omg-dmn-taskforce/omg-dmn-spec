@@ -247,7 +247,6 @@
 				<xsd:attribute name="hitPolicy" type="HitPolicy" use="optional" default="UNIQUE"/>
 				<xsd:attribute name="aggregation" type="BuiltinAggregator" use="optional"/>
 				<xsd:attribute name="preferedOrientation" type="DecisionTableOrientation" use="optional" default="Rule-as-Row"/>
-				<xsd:attribute name="isComplete" type="xsd:boolean" use="optional" default="false"/>
 			</xsd:extension>
 		</xsd:complexContent>
 	</xsd:complexType>
