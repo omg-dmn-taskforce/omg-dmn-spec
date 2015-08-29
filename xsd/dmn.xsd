@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 rel. 2 sp2 (x64) (http://www.altova.com) by Bruce Silver (private) -->
 <xsd:schema xmlns="http://www.omg.org/spec/DMN/20130901" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.omg.org/spec/DMN/20130901" elementFormDefault="qualified">
 	<xsd:element name="DMNElement" type="tDMNElement" abstract="true"/>
 	<xsd:complexType name="tDMNElement">
@@ -238,7 +239,6 @@
 				<xsd:attribute name="aggregation" type="BuiltinAggregator" use="optional"/>
 				<xsd:attribute name="preferedOrientation" type="DecisionTableOrientation" use="optional" default="Rule-as-Row"/>
 				<xsd:attribute name="isComplete" type="xsd:boolean" use="optional" default="false"/>
-				<xsd:attribute name="isConsistent" type="xsd:boolean" use="optional" default="false"/>
 			</xsd:extension>
 		</xsd:complexContent>
 	</xsd:complexType>
