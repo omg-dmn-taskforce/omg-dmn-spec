@@ -115,6 +115,7 @@
 					<!-- the parameters -->
 					<xsd:element ref="FunctionDefinition" minOccurs="0" maxOccurs="1"/>
 					<!-- the body -->
+					<xsd:element ref="InformationItem" minOccurs="0"/>
 					<xsd:element name="knowledgeRequirement" type="tKnowledgeRequirement" minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element name="authorityRequirement" type="tAuthorityRequirement" minOccurs="0" maxOccurs="unbounded"/>
 				</xsd:sequence>
