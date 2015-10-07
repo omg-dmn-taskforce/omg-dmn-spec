@@ -376,17 +376,4 @@
 			</xsd:extension>
 		</xsd:complexContent>
 	</xsd:complexType>
-<<<<<<< HEAD
-=======
-	<xsd:simpleType name="tUnaryTests">
-		<xsd:restriction base="xsd:string"/>
-	</xsd:simpleType>
-	<xsd:complexType name="tNamedElement">
-		<xsd:complexContent>
-			<xsd:extension base="tDMNElement">
-				<xsd:attribute name="name" type="xsd:string" use="required"/>
-			</xsd:extension>
-		</xsd:complexContent>
-	</xsd:complexType>
->>>>>>> 9fc20cb... DMN11-92/DMN11-105 define NamedElement subclass of DMNElement
 </xsd:schema>
