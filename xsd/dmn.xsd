@@ -338,7 +338,7 @@
 	</xsd:simpleType>
 	<xsd:complexType name="tOutputClause">
 		<xsd:sequence>
-			<!-- NB: When the isOrdered attribute is "true", the ordering of the output entries is significant and MUST be preserved -->
+			<!-- NB: when the hit policy is PRIORITY or OUTPUT ORDER, the ordering of the output values is significant and MUST be preserved -->
 			<xsd:element name="outputValues" type="tUnaryTests" minOccurs="0"/>
 			<xsd:element name="defaultOutputEntry" type="tLiteralExpression" minOccurs="0"/>
 		</xsd:sequence>
