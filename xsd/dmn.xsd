@@ -240,6 +240,7 @@
 				<xsd:attribute name="hitPolicy" type="HitPolicy" use="optional" default="UNIQUE"/>
 				<xsd:attribute name="aggregation" type="BuiltinAggregator" use="optional"/>
 				<xsd:attribute name="preferedOrientation" type="DecisionTableOrientation" use="optional" default="Rule-as-Row"/>
+				<xsd:attribute name="outputLabel" type="xsd:string" use="optional"/>
 			</xsd:extension>
 		</xsd:complexContent>
 	</xsd:complexType>
