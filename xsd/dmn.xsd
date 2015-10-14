@@ -252,15 +252,7 @@
 	</xsd:complexType>
 	<xsd:complexType name="tDecisionRule">
 		<xsd:sequence>
-			<xsd:element name="inputEntry" minOccurs="0" maxOccurs="unbounded">
-				<xsd:complexType>
-					<xsd:simpleContent>
-						<xsd:extension base="tUnaryTests">
-							<xsd:attribute name="inputRef" type="xsd:IDREF"/>
-						</xsd:extension>
-					</xsd:simpleContent>
-				</xsd:complexType>
-			</xsd:element>
+			<xsd:element name="inputEntry" type="tUnaryTests" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element name="outputEntry" maxOccurs="unbounded">
 				<xsd:complexType>
 					<xsd:complexContent>
