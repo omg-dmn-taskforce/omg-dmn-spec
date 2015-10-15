@@ -232,9 +232,9 @@
 		<xsd:complexContent>
 			<xsd:extension base="tExpression">
 				<xsd:sequence>
-					<xsd:element name="input" type="tDTInput" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element name="InputClause" type="tInputClause" minOccurs="0" maxOccurs="unbounded"/>
 					<!-- NB: when the hit policy is FIRST or RULE ORDER, the ordering of the rules is significant and MUST be preserved -->
-					<xsd:element name="output" type="tDTOutput" maxOccurs="unbounded"/>
+					<xsd:element name="OutputClause" type="tOutputClause" maxOccurs="unbounded"/>
 					<xsd:element name="rule" type="tDecisionRule" minOccurs="0" maxOccurs="unbounded"/>
 				</xsd:sequence>
 				<xsd:attribute name="hitPolicy" type="HitPolicy" use="optional" default="UNIQUE"/>
@@ -350,7 +350,7 @@
 			<xsd:enumeration value="MAX"/>
 		</xsd:restriction>
 	</xsd:simpleType>
-	<xsd:complexType name="tDTOutput">
+	<xsd:complexType name="tOutputClause">
 		<xsd:complexContent>
 			<xsd:extension base="tClause">
 				<xsd:sequence>
@@ -362,7 +362,7 @@
 			</xsd:extension>
 		</xsd:complexContent>
 	</xsd:complexType>
-	<xsd:complexType name="tDTInput">
+	<xsd:complexType name="tInputClause">
 		<xsd:complexContent>
 			<xsd:extension base="tClause">
 				<xsd:sequence>
