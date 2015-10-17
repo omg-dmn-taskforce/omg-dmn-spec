@@ -120,22 +120,22 @@
 			</input>
 			<output name="Strategy"/>
 			<rule>
-				<inputEntry inputRef="ix_Strategy.Eligibility">"INELIGIBLE"</inputEntry>
-				<inputEntry inputRef="ix_Strategy.BureauCall">-</inputEntry>
+				<inputEntry>"INELIGIBLE"</inputEntry>
+				<inputEntry>-</inputEntry>
 				<outputEntry>
 					<text>"DECLINE"</text>
 				</outputEntry>
 			</rule>
 			<rule>
-				<inputEntry inputRef="ix_Strategy.Eligibility">"ELIGIBLE"</inputEntry>
-				<inputEntry inputRef="ix_Strategy.BureauCall">"FULL","MINI"</inputEntry>
+				<inputEntry>"ELIGIBLE"</inputEntry>
+				<inputEntry>"FULL","MINI"</inputEntry>
 				<outputEntry>
 					<text>"BUREAU"</text>
 				</outputEntry>
 			</rule>
 			<rule>
-				<inputEntry inputRef="ix_Strategy.Eligibility">"ELIGIBLE"</inputEntry>
-				<inputEntry inputRef="ix_Strategy.BureauCall">"NONE"</inputEntry>
+				<inputEntry>"ELIGIBLE"</inputEntry>
+				<inputEntry>"NONE"</inputEntry>
 				<outputEntry>
 					<text>"THROUGH"</text>
 				</outputEntry>
