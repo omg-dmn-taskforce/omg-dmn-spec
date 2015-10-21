@@ -249,8 +249,6 @@
 			<xsd:element name="inputEntry" type="tUnaryTests" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element name="outputEntry" type="tLiteralExpression" maxOccurs="unbounded"/>
 		</xsd:sequence>
-		<xsd:attribute name="id" type="xsd:ID"/>
-		<xsd:attribute name="isOrdered" type="xsd:boolean"/>
 	</xsd:complexType>
 	<xsd:element name="importedValues" type="tImportedValues" substitutionGroup="Import"/>
 	<xsd:complexType name="tImportedValues">
@@ -342,7 +340,6 @@
 			<xsd:element name="outputValues" type="tUnaryTests" minOccurs="0"/>
 			<xsd:element name="defaultOutputEntry" type="tLiteralExpression" minOccurs="0"/>
 		</xsd:sequence>
-		<xsd:attribute name="id" type="xsd:ID"/>
 		<xsd:attribute name="name" type="xsd:string" use="optional"/>
 		<xsd:attribute name="typeRef" type="xsd:QName"/>
 	</xsd:complexType>
