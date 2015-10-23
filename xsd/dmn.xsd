@@ -7,6 +7,7 @@
 			<xsd:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
 		</xsd:sequence>
 		<xsd:attribute name="id" type="xsd:ID" use="optional"/>
+		<xsd:attribute name="label" type="xsd:string" use="optional"/>
 		<xsd:anyAttribute namespace="##other" processContents="lax"/>
 	</xsd:complexType>
 	<xsd:element name="NamedElement" type="tNamedElement" substitutionGroup="DMNElement"/>
@@ -245,10 +246,14 @@
 		</xsd:complexContent>
 	</xsd:complexType>
 	<xsd:complexType name="tDecisionRule">
-		<xsd:sequence>
-			<xsd:element name="inputEntry" type="tUnaryTests" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element name="outputEntry" type="tLiteralExpression" maxOccurs="unbounded"/>
-		</xsd:sequence>
+		<xsd:complexContent>
+			<xsd:extension base="tDMNElement">
+				<xsd:sequence>
+					<xsd:element name="inputEntry" type="tUnaryTests" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element name="outputEntry" type="tLiteralExpression" maxOccurs="unbounded"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
 	</xsd:complexType>
 	<xsd:element name="importedValues" type="tImportedValues" substitutionGroup="Import"/>
 	<xsd:complexType name="tImportedValues">
@@ -335,19 +340,27 @@
 		</xsd:restriction>
 	</xsd:simpleType>
 	<xsd:complexType name="tOutputClause">
-		<xsd:sequence>
-			<!-- NB: when the hit policy is PRIORITY or OUTPUT ORDER, the ordering of the output values is significant and MUST be preserved -->
-			<xsd:element name="outputValues" type="tUnaryTests" minOccurs="0"/>
-			<xsd:element name="defaultOutputEntry" type="tLiteralExpression" minOccurs="0"/>
-		</xsd:sequence>
-		<xsd:attribute name="name" type="xsd:string" use="optional"/>
-		<xsd:attribute name="typeRef" type="xsd:QName"/>
+		<xsd:complexContent>
+			<xsd:extension base="tDMNElement">
+				<xsd:sequence>
+					<!-- NB: When the isOrdered attribute is "true", the ordering of the output entries is significant and MUST be preserved -->
+					<xsd:element name="outputValues" type="tUnaryTests" minOccurs="0"/>
+					<xsd:element name="defaultOutputEntry" type="tLiteralExpression" minOccurs="0"/>
+				</xsd:sequence>
+				<xsd:attribute name="name" type="xsd:string" use="optional"/>
+				<xsd:attribute name="typeRef" type="xsd:QName"/>
+			</xsd:extension>
+		</xsd:complexContent>
 	</xsd:complexType>
 	<xsd:complexType name="tInputClause">
-		<xsd:sequence>
-			<xsd:element name="inputExpression" type="tLiteralExpression"/>
-			<xsd:element name="inputValues" type="tUnaryTests" minOccurs="0"/>
-		</xsd:sequence>
+		<xsd:complexContent>
+			<xsd:extension base="tDMNElement">
+				<xsd:sequence>
+					<xsd:element name="inputExpression" type="tLiteralExpression"/>
+					<xsd:element name="inputValues" type="tUnaryTests" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
 	</xsd:complexType>
 	<xsd:element name="Context" type="tContext" substitutionGroup="Expression"/>
 	<xsd:complexType name="tContext">
