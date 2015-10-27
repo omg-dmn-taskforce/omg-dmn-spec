@@ -424,4 +424,17 @@
 			</xsd:extension>
 		</xsd:complexContent>
 	</xsd:complexType>
+	<xsd:element name="DecisionService" type="tDecisionService" substitutionGroup="NamedElement"/>
+	<xsd:complexType name="tDecisionService">
+		<xsd:complexContent>
+			<xsd:extension base="tNamedElement">
+				<xsd:sequence>
+					<xsd:element name="outputDecision" type="tDMNElementReference" maxOccurs="unbounded"/>
+					<xsd:element name="encapsulatedDecision" type="tDMNElementReference" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element name="inputDecision" type="tDMNElementReference" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element name="inputData" type="tDMNElementReference" minOccurs="0" maxOccurs="unbounded"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
 </xsd:schema>
