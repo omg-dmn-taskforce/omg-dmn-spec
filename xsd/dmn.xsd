@@ -25,11 +25,11 @@
 		<xsd:complexContent>
 			<xsd:extension base="tNamedElement">
 				<xsd:sequence>
-					<xsd:element ref="Import" minOccurs="0" maxOccurs="unbounded"/>
-					<xsd:element ref="ItemDefinition" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element name="Import" type="tImport" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element name="ItemDefinition" type="tItemDefinition" minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element ref="DRGElement" minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element ref="artifact" minOccurs="0" maxOccurs="unbounded"/>
-					<xsd:element ref="ElementCollection" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element name="ElementCollection" type="tElementCollection" minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element ref="BusinessContextElement" minOccurs="0" maxOccurs="unbounded"/>
 				</xsd:sequence>
 				<xsd:attribute name="expressionLanguage" type="xsd:anyURI" use="optional" default="http://www.omg.org/spec/FEEL/20140401"/>
@@ -69,7 +69,7 @@
 				<xsd:sequence>
 					<xsd:element name="question" type="xsd:string" minOccurs="0" maxOccurs="1"/>
 					<xsd:element name="allowedAnswers" type="xsd:string" minOccurs="0" maxOccurs="1"/>
-					<xsd:element ref="InformationItem" minOccurs="0"/>
+					<xsd:element name="InformationItem" type="tInformationItem" minOccurs="0"/>
 					<xsd:element name="informationRequirement" type="tInformationRequirement" minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element name="knowledgeRequirement" type="tKnowledgeRequirement" minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element name="authorityRequirement" type="tAuthorityRequirement" minOccurs="0" maxOccurs="unbounded"/>
@@ -120,9 +120,9 @@
 			<xsd:extension base="tDRGElement">
 				<xsd:sequence>
 					<!-- the parameters -->
-					<xsd:element ref="FunctionDefinition" minOccurs="0" maxOccurs="1"/>
+					<xsd:element name="FunctionDefinition" type="tFunctionDefinition" minOccurs="0" maxOccurs="1"/>
 					<!-- the body -->
-					<xsd:element ref="InformationItem" minOccurs="0"/>
+					<xsd:element name="InformationItem" type="tInformationItem" minOccurs="0"/>
 					<xsd:element name="knowledgeRequirement" type="tKnowledgeRequirement" minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element name="authorityRequirement" type="tAuthorityRequirement" minOccurs="0" maxOccurs="unbounded"/>
 				</xsd:sequence>
@@ -134,7 +134,7 @@
 		<xsd:complexContent>
 			<xsd:extension base="tDRGElement">
 				<xsd:sequence>
-					<xsd:element ref="InformationItem" minOccurs="0"/>
+					<xsd:element name="InformationItem" type="tInformationItem" minOccurs="0"/>
 				</xsd:sequence>
 			</xsd:extension>
 		</xsd:complexContent>
@@ -203,7 +203,7 @@
 			<xsd:extension base="tExpression">
 				<xsd:choice minOccurs="0" maxOccurs="1">
 					<xsd:element name="text" type="xsd:string"/>
-					<xsd:element ref="importedValues"/>
+					<xsd:element name="importedValues" type="tImportedValues"/>
 				</xsd:choice>
 				<xsd:attribute name="expressionLanguage" type="xsd:anyURI" use="optional"/>
 			</xsd:extension>
@@ -284,7 +284,7 @@
 		<xsd:complexContent>
 			<xsd:extension base="tArtifact">
 				<xsd:sequence>
-					<xsd:element ref="text" minOccurs="0" maxOccurs="1"/>
+					<xsd:element name="text" type="xsd:string" minOccurs="0" maxOccurs="1"/>
 				</xsd:sequence>
 				<xsd:attribute name="textFormat" type="xsd:string" default="text/plain"/>
 			</xsd:extension>
@@ -371,7 +371,7 @@
 	</xsd:complexType>
 	<xsd:complexType name="tContextEntry">
 		<xsd:sequence>
-			<xsd:element ref="InformationItem" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="InformationItem" type="tInformationItem" minOccurs="0" maxOccurs="1"/>
 			<!-- the variable -->
 			<xsd:element ref="Expression" minOccurs="1" maxOccurs="1"/>
 			<!-- the value -->
@@ -382,7 +382,7 @@
 		<xsd:complexContent>
 			<xsd:extension base="tExpression">
 				<xsd:sequence>
-					<xsd:element ref="InformationItem" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element name="InformationItem" type="tInformationItem" minOccurs="0" maxOccurs="unbounded"/>
 					<!-- the formal parameters -->
 					<xsd:element ref="Expression" minOccurs="0" maxOccurs="1"/>
 					<!-- the body -->
@@ -396,7 +396,7 @@
 			<xsd:extension base="tExpression">
 				<xsd:sequence>
 					<xsd:element name="column" type="tInformationItem" minOccurs="0" maxOccurs="unbounded"/>
-					<xsd:element ref="List" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element name="List" type="tList" minOccurs="0" maxOccurs="unbounded"/>
 				</xsd:sequence>
 			</xsd:extension>
 		</xsd:complexContent>
