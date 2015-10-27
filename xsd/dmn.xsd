@@ -285,16 +285,6 @@
 		</xsd:complexContent>
 	</xsd:complexType>
 	<xsd:element name="text" type="xsd:string"/>
-	<xsd:element name="group" type="tGroup" substitutionGroup="artifact"/>
-	<xsd:complexType name="tGroup">
-		<xsd:complexContent>
-			<xsd:extension base="tArtifact">
-				<xsd:sequence>
-					<xsd:element name="elementCollectionRef" type="tDMNElementReference"/>
-				</xsd:sequence>
-			</xsd:extension>
-		</xsd:complexContent>
-	</xsd:complexType>
 	<xsd:element name="association" type="tAssociation" substitutionGroup="artifact"/>
 	<xsd:complexType name="tAssociation">
 		<xsd:complexContent>
