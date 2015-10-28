@@ -16,21 +16,21 @@
 		<xsd:attribute name="label" type="xsd:string" use="optional"/>
 		<xsd:anyAttribute namespace="##other" processContents="lax"/>
 	</xsd:complexType>
-	<xsd:element name="NamedElement" type="tNamedElement" substitutionGroup="DMNElement"/>
+	<xsd:element name="namedElement" type="tNamedElement" substitutionGroup="DMNElement"/>
 	<xsd:complexType name="tDMNElementReference">
 		<xsd:attribute name="href" type="xsd:anyURI" use="required"/>
 	</xsd:complexType>
-	<xsd:element name="Definitions" type="tDefinitions" substitutionGroup="NamedElement"/>
+	<xsd:element name="definitions" type="tDefinitions" substitutionGroup="namedElement"/>
 	<xsd:complexType name="tDefinitions">
 		<xsd:complexContent>
 			<xsd:extension base="tNamedElement">
 				<xsd:sequence>
-					<xsd:element ref="Import" minOccurs="0" maxOccurs="unbounded"/>
-					<xsd:element name="ItemDefinition" type="tItemDefinition" minOccurs="0" maxOccurs="unbounded"/>
-					<xsd:element ref="DRGElement" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element ref="import" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element name="itemDefinition" type="tItemDefinition" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element ref="drgElement" minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element ref="artifact" minOccurs="0" maxOccurs="unbounded"/>
-					<xsd:element name="ElementCollection" type="tElementCollection" minOccurs="0" maxOccurs="unbounded"/>
-					<xsd:element ref="BusinessContextElement" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element name="elementCollection" type="tElementCollection" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element ref="businessContextElement" minOccurs="0" maxOccurs="unbounded"/>
 				</xsd:sequence>
 				<xsd:attribute name="expressionLanguage" type="xsd:anyURI" use="optional" default="http://www.omg.org/spec/FEEL/20140401"/>
 				<xsd:attribute name="typeLanguage" type="xsd:anyURI" use="optional" default="http://www.omg.org/spec/FEEL/20140401"/>
@@ -40,13 +40,13 @@
 			</xsd:extension>
 		</xsd:complexContent>
 	</xsd:complexType>
-	<xsd:element name="Import" type="tImport"/>
+	<xsd:element name="import" type="tImport"/>
 	<xsd:complexType name="tImport">
 		<xsd:attribute name="namespace" type="xsd:anyURI" use="required"/>
 		<xsd:attribute name="locationURI" type="xsd:anyURI" use="optional"/>
 		<xsd:attribute name="importType" type="xsd:anyURI" use="required"/>
 	</xsd:complexType>
-	<xsd:element name="ElementCollection" type="tElementCollection" substitutionGroup="NamedElement"/>
+	<xsd:element name="elementCollection" type="tElementCollection" substitutionGroup="namedElement"/>
 	<xsd:complexType name="tElementCollection">
 		<xsd:complexContent>
 			<xsd:extension base="tNamedElement">
@@ -56,13 +56,13 @@
 			</xsd:extension>
 		</xsd:complexContent>
 	</xsd:complexType>
-	<xsd:element name="DRGElement" type="tDRGElement" abstract="true" substitutionGroup="NamedElement"/>
+	<xsd:element name="drgElement" type="tDRGElement" abstract="true" substitutionGroup="namedElement"/>
 	<xsd:complexType name="tDRGElement">
 		<xsd:complexContent>
 			<xsd:extension base="tNamedElement"/>
 		</xsd:complexContent>
 	</xsd:complexType>
-	<xsd:element name="Decision" type="tDecision" substitutionGroup="DRGElement"/>
+	<xsd:element name="decision" type="tDecision" substitutionGroup="drgElement"/>
 	<xsd:complexType name="tDecision">
 		<xsd:complexContent>
 			<xsd:extension base="tDRGElement">
@@ -79,13 +79,13 @@
 					<xsd:element name="decisionOwner" type="tDMNElementReference" minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element name="usingProcess" type="tDMNElementReference" minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element name="usingTask" type="tDMNElementReference" minOccurs="0" maxOccurs="unbounded"/>
-					<xsd:element ref="Expression" minOccurs="0" maxOccurs="1"/>
+					<xsd:element ref="expression" minOccurs="0" maxOccurs="1"/>
 					<!-- the decision logic -->
 				</xsd:sequence>
 			</xsd:extension>
 		</xsd:complexContent>
 	</xsd:complexType>
-	<xsd:element name="BusinessContextElement" type="tBusinessContextElement" abstract="true"/>
+	<xsd:element name="businessContextElement" type="tBusinessContextElement" abstract="true"/>
 	<xsd:complexType name="tBusinessContextElement">
 		<xsd:complexContent>
 			<xsd:extension base="tNamedElement">
@@ -93,7 +93,7 @@
 			</xsd:extension>
 		</xsd:complexContent>
 	</xsd:complexType>
-	<xsd:element name="PerformanceIndicator" type="tPerformanceIndicator" substitutionGroup="BusinessContextElement"/>
+	<xsd:element name="performanceIndicator" type="tPerformanceIndicator" substitutionGroup="businessContextElement"/>
 	<xsd:complexType name="tPerformanceIndicator">
 		<xsd:complexContent>
 			<xsd:extension base="tBusinessContextElement">
@@ -103,7 +103,7 @@
 			</xsd:extension>
 		</xsd:complexContent>
 	</xsd:complexType>
-	<xsd:element name="OrganizationUnit" type="tOrganizationUnit" substitutionGroup="BusinessContextElement"/>
+	<xsd:element name="organizationUnit" type="tOrganizationUnit" substitutionGroup="businessContextElement"/>
 	<xsd:complexType name="tOrganizationUnit">
 		<xsd:complexContent>
 			<xsd:extension base="tBusinessContextElement">
@@ -114,7 +114,7 @@
 			</xsd:extension>
 		</xsd:complexContent>
 	</xsd:complexType>
-	<xsd:element name="BusinessKnowledgeModel" type="tBusinessKnowledgeModel" substitutionGroup="DRGElement"/>
+	<xsd:element name="businessKnowledgeModel" type="tBusinessKnowledgeModel" substitutionGroup="drgElement"/>
 	<xsd:complexType name="tBusinessKnowledgeModel">
 		<xsd:complexContent>
 			<xsd:extension base="tDRGElement">
@@ -129,7 +129,7 @@
 			</xsd:extension>
 		</xsd:complexContent>
 	</xsd:complexType>
-	<xsd:element name="InputData" type="tInputData" substitutionGroup="DRGElement"/>
+	<xsd:element name="inputData" type="tInputData" substitutionGroup="drgElement"/>
 	<xsd:complexType name="tInputData">
 		<xsd:complexContent>
 			<xsd:extension base="tDRGElement">
@@ -139,7 +139,7 @@
 			</xsd:extension>
 		</xsd:complexContent>
 	</xsd:complexType>
-	<xsd:element name="KnowledgeSource" type="tKnowledgeSource" substitutionGroup="DRGElement"/>
+	<xsd:element name="knowledgeSource" type="tKnowledgeSource" substitutionGroup="drgElement"/>
 	<xsd:complexType name="tKnowledgeSource">
 		<xsd:complexContent>
 			<xsd:extension base="tDRGElement">
@@ -173,7 +173,7 @@
 			<xsd:element name="requiredAuthority" type="tDMNElementReference"/>
 		</xsd:choice>
 	</xsd:complexType>
-	<xsd:element name="Expression" type="tExpression" abstract="true"/>
+	<xsd:element name="expression" type="tExpression" abstract="true"/>
 	<xsd:complexType name="tExpression">
 		<xsd:complexContent>
 			<xsd:extension base="tDMNElement">
@@ -181,7 +181,7 @@
 			</xsd:extension>
 		</xsd:complexContent>
 	</xsd:complexType>
-	<xsd:element name="ItemDefinition" type="tItemDefinition" substitutionGroup="NamedElement"/>
+	<xsd:element name="itemDefinition" type="tItemDefinition" substitutionGroup="namedElement"/>
 	<xsd:complexType name="tItemDefinition">
 		<xsd:complexContent>
 			<xsd:extension base="tNamedElement">
@@ -197,7 +197,7 @@
 			</xsd:extension>
 		</xsd:complexContent>
 	</xsd:complexType>
-	<xsd:element name="LiteralExpression" type="tLiteralExpression" substitutionGroup="Expression"/>
+	<xsd:element name="literalExpression" type="tLiteralExpression" substitutionGroup="expression"/>
 	<xsd:complexType name="tLiteralExpression">
 		<xsd:complexContent>
 			<xsd:extension base="tExpression">
@@ -209,7 +209,7 @@
 			</xsd:extension>
 		</xsd:complexContent>
 	</xsd:complexType>
-	<xsd:element name="Invocation" type="tInvocation" substitutionGroup="Expression"/>
+	<xsd:element name="invocation" type="tInvocation" substitutionGroup="expression"/>
 	<xsd:complexType name="tInvocation">
 		<xsd:complexContent>
 			<xsd:extension base="tExpression">
@@ -222,11 +222,11 @@
 	</xsd:complexType>
 	<xsd:complexType name="tBinding">
 		<xsd:sequence>
-			<xsd:element ref="Expression" minOccurs="0" maxOccurs="1"/>
+			<xsd:element ref="expression" minOccurs="0" maxOccurs="1"/>
 			<xsd:element name="parameter" type="tDMNElementReference" minOccurs="1" maxOccurs="1"/>
 		</xsd:sequence>
 	</xsd:complexType>
-	<xsd:element name="InformationItem" type="tInformationItem" substitutionGroup="NamedElement"/>
+	<xsd:element name="informationItem" type="tInformationItem" substitutionGroup="namedElement"/>
 	<xsd:complexType name="tInformationItem">
 		<xsd:complexContent>
 			<xsd:extension base="tNamedElement">
@@ -235,7 +235,7 @@
 			<!-- NB: the name attribute is "required" for information items -->
 		</xsd:complexContent>
 	</xsd:complexType>
-	<xsd:element name="DecisionTable" type="tDecisionTable" substitutionGroup="Expression"/>
+	<xsd:element name="decisionTable" type="tDecisionTable" substitutionGroup="expression"/>
 	<xsd:complexType name="tDecisionTable">
 		<xsd:complexContent>
 			<xsd:extension base="tExpression">
@@ -262,7 +262,7 @@
 			</xsd:extension>
 		</xsd:complexContent>
 	</xsd:complexType>
-	<xsd:element name="importedValues" type="tImportedValues" substitutionGroup="Import"/>
+	<xsd:element name="importedValues" type="tImportedValues" substitutionGroup="import"/>
 	<xsd:complexType name="tImportedValues">
 		<xsd:complexContent>
 			<xsd:extension base="tImport">
@@ -358,7 +358,7 @@
 			</xsd:extension>
 		</xsd:complexContent>
 	</xsd:complexType>
-	<xsd:element name="Context" type="tContext" substitutionGroup="Expression"/>
+	<xsd:element name="context" type="tContext" substitutionGroup="expression"/>
 	<xsd:complexType name="tContext">
 		<xsd:complexContent>
 			<xsd:extension base="tExpression">
@@ -372,24 +372,24 @@
 		<xsd:sequence>
 			<xsd:element name="variable" type="tInformationItem" minOccurs="0" maxOccurs="1"/>
 			<!-- the variable -->
-			<xsd:element ref="Expression" minOccurs="1" maxOccurs="1"/>
+			<xsd:element ref="expression" minOccurs="1" maxOccurs="1"/>
 			<!-- the value -->
 		</xsd:sequence>
 	</xsd:complexType>
-	<xsd:element name="FunctionDefinition" type="tFunctionDefinition" substitutionGroup="Expression"/>
+	<xsd:element name="functionDefinition" type="tFunctionDefinition" substitutionGroup="expression"/>
 	<xsd:complexType name="tFunctionDefinition">
 		<xsd:complexContent>
 			<xsd:extension base="tExpression">
 				<xsd:sequence>
 					<xsd:element name="formalParameter" type="tInformationItem" minOccurs="0" maxOccurs="unbounded"/>
 					<!-- the formal parameters -->
-					<xsd:element ref="Expression" minOccurs="0" maxOccurs="1"/>
+					<xsd:element ref="expression" minOccurs="0" maxOccurs="1"/>
 					<!-- the body -->
 				</xsd:sequence>
 			</xsd:extension>
 		</xsd:complexContent>
 	</xsd:complexType>
-	<xsd:element name="Relation" type="tRelation" substitutionGroup="Expression"/>
+	<xsd:element name="relation" type="tRelation" substitutionGroup="expression"/>
 	<xsd:complexType name="tRelation">
 		<xsd:complexContent>
 			<xsd:extension base="tExpression">
@@ -400,12 +400,12 @@
 			</xsd:extension>
 		</xsd:complexContent>
 	</xsd:complexType>
-	<xsd:element name="List" type="tList" substitutionGroup="Expression"/>
+	<xsd:element name="list" type="tList" substitutionGroup="expression"/>
 	<xsd:complexType name="tList">
 		<xsd:complexContent>
 			<xsd:extension base="tExpression">
 				<xsd:sequence>
-					<xsd:element ref="Expression" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element ref="expression" minOccurs="0" maxOccurs="unbounded"/>
 				</xsd:sequence>
 			</xsd:extension>
 		</xsd:complexContent>
@@ -423,7 +423,7 @@
 			</xsd:extension>
 		</xsd:complexContent>
 	</xsd:complexType>
-	<xsd:element name="DecisionService" type="tDecisionService" substitutionGroup="NamedElement"/>
+	<xsd:element name="decisionService" type="tDecisionService" substitutionGroup="namedElement"/>
 	<xsd:complexType name="tDecisionService">
 		<xsd:complexContent>
 			<xsd:extension base="tNamedElement">
