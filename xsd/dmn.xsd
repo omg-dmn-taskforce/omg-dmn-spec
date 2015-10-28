@@ -245,9 +245,9 @@
 					<xsd:element name="output" type="tOutputClause" maxOccurs="unbounded"/>
 					<xsd:element name="rule" type="tDecisionRule" minOccurs="0" maxOccurs="unbounded"/>
 				</xsd:sequence>
-				<xsd:attribute name="hitPolicy" type="HitPolicy" use="optional" default="UNIQUE"/>
-				<xsd:attribute name="aggregation" type="BuiltinAggregator" use="optional"/>
-				<xsd:attribute name="preferedOrientation" type="DecisionTableOrientation" use="optional" default="Rule-as-Row"/>
+				<xsd:attribute name="hitPolicy" type="tHitPolicy" use="optional" default="UNIQUE"/>
+				<xsd:attribute name="aggregation" type="tBuiltinAggregator" use="optional"/>
+				<xsd:attribute name="preferedOrientation" type="tDecisionTableOrientation" use="optional" default="Rule-as-Row"/>
 				<xsd:attribute name="outputLabel" type="xsd:string" use="optional"/>
 			</xsd:extension>
 		</xsd:complexContent>
@@ -309,14 +309,14 @@
 			<xsd:enumeration value="Both"/>
 		</xsd:restriction>
 	</xsd:simpleType>
-	<xsd:simpleType name="DecisionTableOrientation">
+	<xsd:simpleType name="tDecisionTableOrientation">
 		<xsd:restriction base="xsd:string">
 			<xsd:enumeration value="Rule-as-Row"/>
 			<xsd:enumeration value="Rule-as-Column"/>
 			<xsd:enumeration value="CrossTable"/>
 		</xsd:restriction>
 	</xsd:simpleType>
-	<xsd:simpleType name="HitPolicy">
+	<xsd:simpleType name="tHitPolicy">
 		<xsd:restriction base="xsd:string">
 			<xsd:enumeration value="UNIQUE"/>
 			<xsd:enumeration value="FIRST"/>
@@ -327,7 +327,7 @@
 			<xsd:enumeration value="OUTPUT ORDER"/>
 		</xsd:restriction>
 	</xsd:simpleType>
-	<xsd:simpleType name="BuiltinAggregator">
+	<xsd:simpleType name="tBuiltinAggregator">
 		<xsd:restriction base="xsd:string">
 			<xsd:enumeration value="SUM"/>
 			<xsd:enumeration value="COUNT"/>
