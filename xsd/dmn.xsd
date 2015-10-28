@@ -290,7 +290,6 @@
 			</xsd:extension>
 		</xsd:complexContent>
 	</xsd:complexType>
-	<xsd:element name="text" type="xsd:string"/>
 	<xsd:element name="association" type="tAssociation" substitutionGroup="artifact"/>
 	<xsd:complexType name="tAssociation">
 		<xsd:complexContent>
