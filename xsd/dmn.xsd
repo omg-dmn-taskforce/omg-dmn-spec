@@ -25,7 +25,7 @@
 		<xsd:complexContent>
 			<xsd:extension base="tNamedElement">
 				<xsd:sequence>
-					<xsd:element name="Import" type="tImport" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element ref="Import" minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element name="ItemDefinition" type="tItemDefinition" minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element ref="DRGElement" minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element ref="artifact" minOccurs="0" maxOccurs="unbounded"/>
