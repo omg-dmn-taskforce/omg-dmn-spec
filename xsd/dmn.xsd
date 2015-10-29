@@ -412,10 +412,14 @@
 		</xsd:complexContent>
 	</xsd:complexType>
 	<xsd:complexType name="tUnaryTests">
-		<xsd:sequence>
-			<xsd:element name="text" type="xsd:string"/>
-		</xsd:sequence>
-		<xsd:attribute name="expressionLanguage" type="xsd:anyURI" use="optional"/>
+		<xsd:complexContent>
+			<xsd:extension base="tDMNElement">
+				<xsd:sequence>
+					<xsd:element name="text" type="xsd:string"/>
+				</xsd:sequence>
+				<xsd:attribute name="expressionLanguage" type="xsd:anyURI" use="optional"/>
+			</xsd:extension>
+		</xsd:complexContent>
 	</xsd:complexType>
 	<xsd:complexType name="tNamedElement">
 		<xsd:complexContent>
