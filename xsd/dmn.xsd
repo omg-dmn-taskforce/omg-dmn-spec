@@ -16,7 +16,7 @@
 		<xsd:attribute name="label" type="xsd:string" use="optional"/>
 		<xsd:anyAttribute namespace="##other" processContents="lax"/>
 	</xsd:complexType>
-	<xsd:element name="NamedElement" type="tNamedElement" substitutionGroup="DMNElement"/>
+	<xsd:element name="NamedElement" type="tNamedElement" abstract="true" substitutionGroup="DMNElement"/>
 	<xsd:complexType name="tDMNElementReference">
 		<xsd:attribute name="href" type="xsd:anyURI" use="required"/>
 	</xsd:complexType>
