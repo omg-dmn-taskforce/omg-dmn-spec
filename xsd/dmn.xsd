@@ -25,7 +25,7 @@
 		<xsd:complexContent>
 			<xsd:extension base="tNamedElement">
 				<xsd:sequence>
-					<xsd:element ref="import" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element name="import" type="tImport" minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element name="itemDefinition" type="tItemDefinition" minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element ref="drgElement" minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element ref="artifact" minOccurs="0" maxOccurs="unbounded"/>
@@ -203,7 +203,7 @@
 			<xsd:extension base="tExpression">
 				<xsd:choice minOccurs="0" maxOccurs="1">
 					<xsd:element name="text" type="xsd:string"/>
-					<xsd:element name="imports" type="tImportedValues"/>
+					<xsd:element name="importedValues" type="tImportedValues"/>
 				</xsd:choice>
 				<xsd:attribute name="expressionLanguage" type="xsd:anyURI" use="optional"/>
 			</xsd:extension>
@@ -262,7 +262,6 @@
 			</xsd:extension>
 		</xsd:complexContent>
 	</xsd:complexType>
-	<xsd:element name="importedValues" type="tImportedValues" substitutionGroup="import"/>
 	<xsd:complexType name="tImportedValues">
 		<xsd:complexContent>
 			<xsd:extension base="tImport">
