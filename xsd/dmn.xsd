@@ -214,7 +214,8 @@
 		<xsd:complexContent>
 			<xsd:extension base="tExpression">
 				<xsd:sequence>
-					<xsd:element name="calledFunction" type="xsd:string" minOccurs="0"/>
+					<!-- calledFunction -->
+					<xsd:element ref="expression" minOccurs="0"/>
 					<xsd:element name="binding" type="tBinding" minOccurs="0" maxOccurs="unbounded"/>
 				</xsd:sequence>
 			</xsd:extension>
