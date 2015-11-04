@@ -245,7 +245,7 @@
 				</xsd:sequence>
 				<xsd:attribute name="hitPolicy" type="tHitPolicy" use="optional" default="UNIQUE"/>
 				<xsd:attribute name="aggregation" type="tBuiltinAggregator" use="optional"/>
-				<xsd:attribute name="preferedOrientation" type="tDecisionTableOrientation" use="optional" default="Rule-as-Row"/>
+				<xsd:attribute name="preferredOrientation" type="tDecisionTableOrientation" use="optional" default="Rule-as-Row"/>
 				<xsd:attribute name="outputLabel" type="xsd:string" use="optional"/>
 			</xsd:extension>
 		</xsd:complexContent>
