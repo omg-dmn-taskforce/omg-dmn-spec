@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema xmlns="http://www.omg.org/spec/DMN/20151101/dmn.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.omg.org/spec/DMN/20151101/dmn.xsd" elementFormDefault="qualified">
+<xsd:schema elementFormDefault="qualified"
+	xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/"
+	targetNamespace="http://www.omg.org/spec/DMN/20180521/MODEL/">
+
+	<xsd:import namespace="http://www.omg.org/spec/DMN/20180521/DMNDI/"
+	            schemaLocation="DMNDI.xsd">
+		<xsd:annotation>
+			<xsd:documentation>
+				Include the DMN Diagram Interchange (DI) schema
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:import>
+
 	<xsd:element name="DMNElement" type="tDMNElement" abstract="true"/>
 	<xsd:complexType name="tDMNElement">
 		<xsd:sequence>
@@ -31,6 +45,7 @@
 					<xsd:element ref="artifact" minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element name="elementCollection" type="tElementCollection" minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element ref="businessContextElement" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element ref="dmndi:DMNDI" minOccurs="0" maxOccurs="1"/>
 				</xsd:sequence>
 				<xsd:attribute name="expressionLanguage" type="xsd:anyURI" use="optional" default="http://www.omg.org/spec/FEEL/20140401"/>
 				<xsd:attribute name="typeLanguage" type="xsd:anyURI" use="optional" default="http://www.omg.org/spec/FEEL/20140401"/>

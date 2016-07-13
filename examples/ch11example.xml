@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<definitions namespace="http://www.omg.org/spec/DMN/20151101/ch11example.xml"
-	xmlns:ex="http://www.omg.org/spec/DMN/20151101/ch11example.xml"
+<definitions namespace="http://www.omg.org/spec/DMN/20180521/ch11example/"
+  xmlns:ex="http://www.omg.org/spec/DMN/2018052/ch11example/"
 	name="Loan Origination Decision Model" id="LoanOriginationModel"
-	xmlns="http://www.omg.org/spec/DMN/20151101/dmn.xsd">
+	xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/">
     <description>Implements model from chapter 11 of DMN 1.1 spec</description>
     <itemDefinition name="Applicant data" id="applicantData_t">
         <itemComponent name="Age" id="age_t">
