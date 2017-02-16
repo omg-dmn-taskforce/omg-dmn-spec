@@ -360,17 +360,22 @@
 		<xsd:complexContent>
 			<xsd:extension base="tExpression">
 				<xsd:sequence>
-					<xsd:element name="contextEntry" type="tContextEntry" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element ref="contextEntry" minOccurs="0" maxOccurs="unbounded"/>
 				</xsd:sequence>
 			</xsd:extension>
 		</xsd:complexContent>
 	</xsd:complexType>
+	<xsd:element name="contextEntry" type="tContextEntry" substitutionGroup="DMNElement"/>
 	<xsd:complexType name="tContextEntry">
-		<xsd:sequence>
-			<xsd:element name="variable" type="tInformationItem" minOccurs="0" maxOccurs="1"/>
-			<!-- value -->
-			<xsd:element ref="expression" minOccurs="1" maxOccurs="1"/>
-		</xsd:sequence>
+		<xsd:complexContent>
+			<xsd:extension base="tDMNElement">
+				<xsd:sequence>
+					<xsd:element name="variable" type="tInformationItem" minOccurs="0" maxOccurs="1"/>
+					<!-- value -->
+					<xsd:element ref="expression" minOccurs="1" maxOccurs="1"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
 	</xsd:complexType>
 	<xsd:element name="functionDefinition" type="tFunctionDefinition" substitutionGroup="expression"/>
 	<xsd:complexType name="tFunctionDefinition">
