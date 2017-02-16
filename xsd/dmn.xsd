@@ -43,6 +43,7 @@
 	<xsd:element name="import" type="tImport"/>
 	<xsd:complexType name="tImport">
 		<xsd:attribute name="namespace" type="xsd:anyURI" use="required"/>
+		<xsd:attribute name="name" type="xsd:string" use="required"/>
 		<xsd:attribute name="locationURI" type="xsd:anyURI" use="optional"/>
 		<xsd:attribute name="importType" type="xsd:anyURI" use="required"/>
 	</xsd:complexType>
@@ -174,7 +175,7 @@
 	<xsd:complexType name="tExpression">
 		<xsd:complexContent>
 			<xsd:extension base="tDMNElement">
-				<xsd:attribute name="typeRef" type="xsd:QName"/>
+				<xsd:attribute name="typeRef" type="xsd:string"/>
 			</xsd:extension>
 		</xsd:complexContent>
 	</xsd:complexType>
@@ -184,7 +185,7 @@
 			<xsd:extension base="tNamedElement">
 				<xsd:choice>
 					<xsd:sequence>
-						<xsd:element name="typeRef" type="xsd:QName"/>
+						<xsd:element name="typeRef" type="xsd:string"/>
 						<xsd:element name="allowedValues" type="tUnaryTests" minOccurs="0"/>
 					</xsd:sequence>
 					<xsd:element name="itemComponent" type="tItemDefinition" minOccurs="0" maxOccurs="unbounded"/>
@@ -229,7 +230,7 @@
 	<xsd:complexType name="tInformationItem">
 		<xsd:complexContent>
 			<xsd:extension base="tNamedElement">
-				<xsd:attribute name="typeRef" type="xsd:QName"/>
+				<xsd:attribute name="typeRef" type="xsd:string"/>
 			</xsd:extension>
 		</xsd:complexContent>
 	</xsd:complexType>
@@ -340,7 +341,7 @@
 					<xsd:element name="defaultOutputEntry" type="tLiteralExpression" minOccurs="0"/>
 				</xsd:sequence>
 				<xsd:attribute name="name" type="xsd:string" use="optional"/>
-				<xsd:attribute name="typeRef" type="xsd:QName"/>
+				<xsd:attribute name="typeRef" type="xsd:string"/>
 			</xsd:extension>
 		</xsd:complexContent>
 	</xsd:complexType>
