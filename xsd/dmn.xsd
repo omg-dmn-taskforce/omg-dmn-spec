@@ -272,6 +272,13 @@
 				<xsd:sequence>
 					<xsd:element name="inputEntry" type="tUnaryTests" minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element name="outputEntry" type="tLiteralExpression" maxOccurs="unbounded"/>
+					<xsd:element name="annotationEntry" minOccurs="0" maxOccurs="unbounded">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="text" type="xsd:string" minOccurs="0"/>
+							</xsd:sequence>
+						</xsd:complexType>
+					</xsd:element>
 				</xsd:sequence>
 			</xsd:extension>
 		</xsd:complexContent>
