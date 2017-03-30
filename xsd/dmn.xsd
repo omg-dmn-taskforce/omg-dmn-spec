@@ -151,25 +151,40 @@
 			</xsd:extension>
 		</xsd:complexContent>
 	</xsd:complexType>
+	<xsd:element name="informationRequirement" type="tInformationRequirement" substitutionGroup="DMNElement"/>
 	<xsd:complexType name="tInformationRequirement">
-		<xsd:sequence>
-			<xsd:choice minOccurs="1" maxOccurs="1">
-				<xsd:element name="requiredDecision" type="tDMNElementReference"/>
-				<xsd:element name="requiredInput" type="tDMNElementReference"/>
-			</xsd:choice>
-		</xsd:sequence>
+		<xsd:complexContent>
+			<xsd:extension base="tDMNElement">
+				<xsd:sequence>
+					<xsd:choice minOccurs="1" maxOccurs="1">
+						<xsd:element name="requiredDecision" type="tDMNElementReference"/>
+						<xsd:element name="requiredInput" type="tDMNElementReference"/>
+					</xsd:choice>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
 	</xsd:complexType>
+	<xsd:element name="knowledgeRequirement" type="tKnowledgeRequirement" substitutionGroup="DMNElement"/>
 	<xsd:complexType name="tKnowledgeRequirement">
-		<xsd:sequence>
-			<xsd:element name="requiredKnowledge" type="tDMNElementReference" minOccurs="1" maxOccurs="1"/>
-		</xsd:sequence>
+		<xsd:complexContent>
+			<xsd:extension base="tDMNElement">
+				<xsd:sequence>
+					<xsd:element name="requiredKnowledge" type="tDMNElementReference" minOccurs="1" maxOccurs="1"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
 	</xsd:complexType>
+	<xsd:element name="authorityRequirement" type="tAuthorityRequirement" substitutionGroup="DMNElement"/>
 	<xsd:complexType name="tAuthorityRequirement">
-		<xsd:choice minOccurs="1" maxOccurs="1">
-			<xsd:element name="requiredDecision" type="tDMNElementReference"/>
-			<xsd:element name="requiredInput" type="tDMNElementReference"/>
-			<xsd:element name="requiredAuthority" type="tDMNElementReference"/>
-		</xsd:choice>
+		<xsd:complexContent>
+			<xsd:extension base="tDMNElement">
+				<xsd:choice minOccurs="1" maxOccurs="1">
+					<xsd:element name="requiredDecision" type="tDMNElementReference"/>
+					<xsd:element name="requiredInput" type="tDMNElementReference"/>
+					<xsd:element name="requiredAuthority" type="tDMNElementReference"/>
+				</xsd:choice>
+			</xsd:extension>
+		</xsd:complexContent>
 	</xsd:complexType>
 	<xsd:element name="expression" type="tExpression" abstract="true"/>
 	<xsd:complexType name="tExpression">
