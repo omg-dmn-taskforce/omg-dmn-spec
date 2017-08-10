@@ -408,10 +408,18 @@
 					<!-- body -->
 					<xsd:element ref="expression" minOccurs="0" maxOccurs="1"/>
 				</xsd:sequence>
+			    <xsd:attribute name="kind" type="tFunctionKind" default="F"/>
 			</xsd:extension>
 		</xsd:complexContent>
 	</xsd:complexType>
-	<xsd:element name="relation" type="tRelation" substitutionGroup="expression"/>
+    <xsd:simpleType name="tFunctionKind">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="F"/>
+            <xsd:enumeration value="J"/>
+            <xsd:enumeration value="P"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:element name="relation" type="tRelation" substitutionGroup="expression"/>
 	<xsd:complexType name="tRelation">
 		<xsd:complexContent>
 			<xsd:extension base="tExpression">
