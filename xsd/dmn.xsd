@@ -408,9 +408,17 @@
 					<!-- body -->
 					<xsd:element ref="expression" minOccurs="0" maxOccurs="1"/>
 				</xsd:sequence>
+				<xsd:attribute name="kind" type="tFunctionKind" default="FEEL"/>
 			</xsd:extension>
 		</xsd:complexContent>
 	</xsd:complexType>
+	<xsd:simpleType name="tFunctionKind">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="FEEL"/>
+			<xsd:enumeration value="Java"/>
+			<xsd:enumeration value="PMML"/>
+		</xsd:restriction>
+	</xsd:simpleType>
 	<xsd:element name="relation" type="tRelation" substitutionGroup="expression"/>
 	<xsd:complexType name="tRelation">
 		<xsd:complexContent>
