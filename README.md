@@ -33,6 +33,7 @@ DMN12-/DMN12-
 Issue: http://solitaire.omg.org/browse/DMN12-
 Proposal: http://solitaire.omg.org/browse/DMN12-
 ```
+    git commit --template=commit-message-template.txt
 
 One can check if an issue is mentioned in a commit using:
 
