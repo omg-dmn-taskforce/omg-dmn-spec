@@ -1,0 +1,7 @@
+DMN 1.2 validation results:
+ fails to validate$
+ validates$
+element variable: Schemas validity error : Element '{http://www.omg.org/spec/DMN/20151101/dmn.xsd}variable': This element is not expected. Expected is one of ( {http://www.omg.org/spec/DMN/20151101/dmn.xsd}knowledgeRequirement, {http://www.omg.org/spec/DMN/20151101/dmn.xsd}authorityRequirement ).
+element DMNEdge: Schemas validity error : Element '{http://www.omg.org/spec/DMN/20151101/DMNDI}DMNEdge', attribute 'sourceDMNElementRef': The attribute 'sourceDMNElementRef' is not allowed.
+element DMNEdge: Schemas validity error : Element '{http://www.omg.org/spec/DMN/20151101/DMNDI}DMNEdge', attribute 'targetDMNElementRef': The attribute 'targetDMNElementRef' is not allowed.
+element DMNEdge: Schemas validity error : Element '{http://www.omg.org/spec/DMN/20151101/DMNDI}DMNEdge': The attribute 'dmnElementRef' is required but missing.
