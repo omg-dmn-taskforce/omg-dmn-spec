@@ -51,6 +51,7 @@
 				</xsd:sequence>
 				<xsd:attribute name="dmnElementRef" type="xsd:QName" use="required"/>
 				<xsd:attribute name="isListedInputData" type="xsd:boolean" use="optional"/>
+				<xsd:attribute name="isCollapsed" type="xsd:boolean" use="optional" default="false"/>
 			</xsd:extension>
 		</xsd:complexContent>
 	</xsd:complexType>
