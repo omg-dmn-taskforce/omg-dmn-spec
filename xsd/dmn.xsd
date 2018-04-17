@@ -31,6 +31,13 @@
 		<xsd:anyAttribute namespace="##other" processContents="lax"/>
 	</xsd:complexType>
 	<xsd:element name="namedElement" type="tNamedElement" abstract="true" substitutionGroup="DMNElement"/>
+	<xsd:complexType name="tNamedElement">
+		<xsd:complexContent>
+			<xsd:extension base="tDMNElement">
+				<xsd:attribute name="name" type="xsd:string" use="required"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
 	<xsd:complexType name="tDMNElementReference">
 		<xsd:attribute name="href" type="xsd:anyURI" use="required"/>
 	</xsd:complexType>
@@ -39,7 +46,7 @@
 		<xsd:complexContent>
 			<xsd:extension base="tNamedElement">
 				<xsd:sequence>
-					<xsd:element name="import" type="tImport" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element ref="import" minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element name="itemDefinition" type="tItemDefinition" minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element ref="drgElement" minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element ref="artifact" minOccurs="0" maxOccurs="unbounded"/>
@@ -55,12 +62,15 @@
 			</xsd:extension>
 		</xsd:complexContent>
 	</xsd:complexType>
-	<xsd:element name="import" type="tImport"/>
+	<xsd:element name="import" type="tImport" substitutionGroup="namedElement"/>
 	<xsd:complexType name="tImport">
-		<xsd:attribute name="namespace" type="xsd:anyURI" use="required"/>
-		<xsd:attribute name="name" type="xsd:string" use="required"/>
-		<xsd:attribute name="locationURI" type="xsd:anyURI" use="optional"/>
-		<xsd:attribute name="importType" type="xsd:anyURI" use="required"/>
+		<xsd:complexContent>
+			<xsd:extension base="tNamedElement">
+				<xsd:attribute name="namespace" type="xsd:anyURI" use="required"/>
+				<xsd:attribute name="locationURI" type="xsd:anyURI" use="optional"/>
+				<xsd:attribute name="importType" type="xsd:anyURI" use="required"/>
+			</xsd:extension>
+		</xsd:complexContent>
 	</xsd:complexType>
 	<xsd:element name="elementCollection" type="tElementCollection" substitutionGroup="namedElement"/>
 	<xsd:complexType name="tElementCollection">
@@ -472,13 +482,6 @@
 					<xsd:element name="text" type="xsd:string"/>
 				</xsd:sequence>
 				<xsd:attribute name="expressionLanguage" type="xsd:anyURI" use="optional"/>
-			</xsd:extension>
-		</xsd:complexContent>
-	</xsd:complexType>
-	<xsd:complexType name="tNamedElement">
-		<xsd:complexContent>
-			<xsd:extension base="tDMNElement">
-				<xsd:attribute name="name" type="xsd:string" use="required"/>
 			</xsd:extension>
 		</xsd:complexContent>
 	</xsd:complexType>
