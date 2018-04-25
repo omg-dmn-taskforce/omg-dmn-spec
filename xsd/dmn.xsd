@@ -290,6 +290,7 @@
 				<xsd:sequence>
 					<xsd:element name="input" type="tInputClause" minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element name="output" type="tOutputClause" maxOccurs="unbounded"/>
+					<xsd:element name="annotation" type="tRuleAnnotationClause"  minOccurs="0" maxOccurs="unbounded"/>
 					<!-- NB: when the hit policy is FIRST or RULE ORDER, the ordering of the rules is significant and MUST be preserved -->
 					<xsd:element name="rule" type="tDecisionRule" minOccurs="0" maxOccurs="unbounded"/>
 				</xsd:sequence>
@@ -300,22 +301,24 @@
 			</xsd:extension>
 		</xsd:complexContent>
 	</xsd:complexType>
+	<xsd:complexType name="tRuleAnnotationClause">
+		<xsd:attribute name="name" type="xsd:string"/>
+	</xsd:complexType>
 	<xsd:complexType name="tDecisionRule">
 		<xsd:complexContent>
 			<xsd:extension base="tDMNElement">
 				<xsd:sequence>
 					<xsd:element name="inputEntry" type="tUnaryTests" minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element name="outputEntry" type="tLiteralExpression" maxOccurs="unbounded"/>
-					<xsd:element name="annotationEntry" minOccurs="0" maxOccurs="unbounded">
-						<xsd:complexType>
-							<xsd:sequence>
-								<xsd:element name="text" type="xsd:string" minOccurs="0"/>
-							</xsd:sequence>
-						</xsd:complexType>
-					</xsd:element>
+					<xsd:element name="annotationEntry" type="tRuleAnnotation" minOccurs="0" maxOccurs="unbounded"/>
 				</xsd:sequence>
 			</xsd:extension>
 		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="tRuleAnnotation">
+		<xsd:sequence>
+			<xsd:element name="text" type="xsd:string" minOccurs="0"/>
+		</xsd:sequence>
 	</xsd:complexType>
 	<xsd:complexType name="tImportedValues">
 		<xsd:complexContent>
