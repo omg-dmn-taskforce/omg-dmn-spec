@@ -301,6 +301,28 @@
 			</xsd:extension>
 		</xsd:complexContent>
 	</xsd:complexType>
+	<xsd:complexType name="tInputClause">
+		<xsd:complexContent>
+			<xsd:extension base="tDMNElement">
+				<xsd:sequence>
+					<xsd:element name="inputExpression" type="tLiteralExpression"/>
+					<xsd:element name="inputValues" type="tUnaryTests" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="tOutputClause">
+		<xsd:complexContent>
+			<xsd:extension base="tDMNElement">
+				<xsd:sequence>
+					<xsd:element name="outputValues" type="tUnaryTests" minOccurs="0"/>
+					<xsd:element name="defaultOutputEntry" type="tLiteralExpression" minOccurs="0"/>
+				</xsd:sequence>
+				<xsd:attribute name="name" type="xsd:string" use="optional"/>
+				<xsd:attribute name="typeRef" type="xsd:string"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
 	<xsd:complexType name="tRuleAnnotationClause">
 		<xsd:attribute name="name" type="xsd:string"/>
 	</xsd:complexType>
@@ -320,6 +342,32 @@
 			<xsd:element name="text" type="xsd:string" minOccurs="0"/>
 		</xsd:sequence>
 	</xsd:complexType>
+	<xsd:simpleType name="tHitPolicy">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="UNIQUE"/>
+			<xsd:enumeration value="FIRST"/>
+			<xsd:enumeration value="PRIORITY"/>
+			<xsd:enumeration value="ANY"/>
+			<xsd:enumeration value="COLLECT"/>
+			<xsd:enumeration value="RULE ORDER"/>
+			<xsd:enumeration value="OUTPUT ORDER"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="tBuiltinAggregator">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="SUM"/>
+			<xsd:enumeration value="COUNT"/>
+			<xsd:enumeration value="MIN"/>
+			<xsd:enumeration value="MAX"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="tDecisionTableOrientation">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="Rule-as-Row"/>
+			<xsd:enumeration value="Rule-as-Column"/>
+			<xsd:enumeration value="CrossTable"/>
+		</xsd:restriction>
+	</xsd:simpleType>
 	<xsd:complexType name="tImportedValues">
 		<xsd:complexContent>
 			<xsd:extension base="tImport">
@@ -366,54 +414,6 @@
 			<xsd:enumeration value="Both"/>
 		</xsd:restriction>
 	</xsd:simpleType>
-	<xsd:simpleType name="tDecisionTableOrientation">
-		<xsd:restriction base="xsd:string">
-			<xsd:enumeration value="Rule-as-Row"/>
-			<xsd:enumeration value="Rule-as-Column"/>
-			<xsd:enumeration value="CrossTable"/>
-		</xsd:restriction>
-	</xsd:simpleType>
-	<xsd:simpleType name="tHitPolicy">
-		<xsd:restriction base="xsd:string">
-			<xsd:enumeration value="UNIQUE"/>
-			<xsd:enumeration value="FIRST"/>
-			<xsd:enumeration value="PRIORITY"/>
-			<xsd:enumeration value="ANY"/>
-			<xsd:enumeration value="COLLECT"/>
-			<xsd:enumeration value="RULE ORDER"/>
-			<xsd:enumeration value="OUTPUT ORDER"/>
-		</xsd:restriction>
-	</xsd:simpleType>
-	<xsd:simpleType name="tBuiltinAggregator">
-		<xsd:restriction base="xsd:string">
-			<xsd:enumeration value="SUM"/>
-			<xsd:enumeration value="COUNT"/>
-			<xsd:enumeration value="MIN"/>
-			<xsd:enumeration value="MAX"/>
-		</xsd:restriction>
-	</xsd:simpleType>
-	<xsd:complexType name="tOutputClause">
-		<xsd:complexContent>
-			<xsd:extension base="tDMNElement">
-				<xsd:sequence>
-					<xsd:element name="outputValues" type="tUnaryTests" minOccurs="0"/>
-					<xsd:element name="defaultOutputEntry" type="tLiteralExpression" minOccurs="0"/>
-				</xsd:sequence>
-				<xsd:attribute name="name" type="xsd:string" use="optional"/>
-				<xsd:attribute name="typeRef" type="xsd:string"/>
-			</xsd:extension>
-		</xsd:complexContent>
-	</xsd:complexType>
-	<xsd:complexType name="tInputClause">
-		<xsd:complexContent>
-			<xsd:extension base="tDMNElement">
-				<xsd:sequence>
-					<xsd:element name="inputExpression" type="tLiteralExpression"/>
-					<xsd:element name="inputValues" type="tUnaryTests" minOccurs="0"/>
-				</xsd:sequence>
-			</xsd:extension>
-		</xsd:complexContent>
-	</xsd:complexType>
 	<xsd:element name="context" type="tContext" substitutionGroup="expression"/>
 	<xsd:complexType name="tContext">
 		<xsd:complexContent>
