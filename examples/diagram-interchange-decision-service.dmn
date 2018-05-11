@@ -4,7 +4,6 @@
   name="Decision Service"
   namespace="http://www.omg.org/spec/DMN/20180521/diagram-interchange-decision-service/"
   xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/"
-  xsi:schemaLocation="http://www.omg.org/spec/DMN/20180521/MODEL/ ../xsd/dmn.xsd"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/"
   xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/"

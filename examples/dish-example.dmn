@@ -2,7 +2,6 @@
 <definitions id="dish-decisions" name="Dish Decisions"
   namespace="http://www.omg.org/spec/DMN/20180521/dish-example/"
   xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/"
-  xsi:schemaLocation="http://www.omg.org/spec/DMN/20180521/MODEL/ ../xsd/dmn.xsd"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/"
   xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/"
