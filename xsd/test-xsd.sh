@@ -13,7 +13,7 @@ validate_as_dmn_11() {
 }
 
 validate_as_dmn_12() {
-    migrate_to_dmn_12 "$1" | xmllint --schema "$XSD_DIR/dmn.xsd" --noout -
+    migrate_to_dmn_12 "$1" | xmllint --schema "$XSD_DIR/DMN12.xsd" --noout -
 }
 
 migrate_to_dmn_12() {
