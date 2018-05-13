@@ -6,7 +6,7 @@
 	targetNamespace="http://www.omg.org/spec/DMN/20180521/MODEL/">
 
 	<xsd:import namespace="http://www.omg.org/spec/DMN/20180521/DMNDI/"
-	            schemaLocation="DMNDI.xsd">
+	            schemaLocation="DMNDI12.xsd">
 		<xsd:annotation>
 			<xsd:documentation>
 				Include the DMN Diagram Interchange (DI) schema
