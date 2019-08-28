@@ -238,9 +238,21 @@
 						<xsd:element name="allowedValues" type="tUnaryTests" minOccurs="0"/>
 					</xsd:sequence>
 					<xsd:element name="itemComponent" type="tItemDefinition" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element name="functionItem" type="tFunctionItem" minOccurs="0" maxOccurs="1"/>
 				</xsd:choice>
 				<xsd:attribute name="typeLanguage" type="xsd:anyURI" use="optional"/>
 				<xsd:attribute name="isCollection" type="xsd:boolean" use="optional" default="false"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:element name="functionItem" type="tFunctionItem" substitutionGroup="namedElement"/>
+	<xsd:complexType name="tFunctionItem">
+		<xsd:complexContent>
+			<xsd:extension base="tNamedElement">
+				<xsd:sequence>
+					<xsd:element name="parameters" type="tInformationItem" minOccurs="0" maxOccurs="unbounded"/>
+				</xsd:sequence>
+				<xsd:attribute name="outputTypeRef" type="xsd:string"/>
 			</xsd:extension>
 		</xsd:complexContent>
 	</xsd:complexType>
