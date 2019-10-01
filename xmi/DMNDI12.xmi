@@ -6,11 +6,8 @@
       <xmi:exporter>MagicDraw Clean XMI Exporter</xmi:exporter>
       <xmi:exporterVersion>19.0 v4</xmi:exporterVersion>
    </xmi:documentation>
-   <uml:Model xmi:type="uml:Model" xmi:id="eee_1045467100313_135436_1" name="DMNDI">
-      <ownedComment xmi:type="uml:Comment" xmi:id="_18_1beta_8c90288_1415101994820_370998_4336"
-                    body="Author:rmueller.&#xA;Created:9/7/15 9:00 AM.&#xA;Title:.&#xA;Comment:.&#xA;">
-         <annotatedElement xmi:idref="eee_1045467100313_135436_1"/>
-      </ownedComment>
+   <uml:Package xmi:type="uml:Package" xmi:id="eee_1045467100313_135436_1" name="DMNDI"
+                  URI="https://www.omg.org/spec/DMN/20180521/DMNDI12.xmi">
       <packagedElement xmi:type="uml:Class" xmi:id="_18_1_f7a0369_1441609424894_950143_4144"
                        name="DMNDI">
          <ownedAttribute xmi:type="uml:Property" xmi:id="_18_1_f7a0369_1441609590996_234425_4260"
@@ -528,5 +525,5 @@
                    type="_18_1_f7a0369_1441611599176_588668_5191"
                    association="_19_0beta_610020e_1518100859299_792113_4762"/>
       </packagedElement>
-   </uml:Model>
+   </uml:Package>
 </xmi:XMI>
