@@ -384,6 +384,14 @@
 			<xsd:extension base="tDMNElement"/>
 		</xsd:complexContent>
 	</xsd:complexType>
+	<xsd:element name="group" type="tGroup" substitutionGroup="artifact"/>
+	<xsd:complexType name="tGroup">
+		<xsd:complexContent>
+			<xsd:extension base="tArtifact">
+				<xsd:attribute name="name" type="xsd:string" use="optional"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
 	<xsd:element name="textAnnotation" type="tTextAnnotation" substitutionGroup="artifact"/>
 	<xsd:complexType name="tTextAnnotation">
 		<xsd:complexContent>
