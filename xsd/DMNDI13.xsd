@@ -69,6 +69,8 @@
 					<xsd:element ref="dmndi:DMNLabel" minOccurs="0" maxOccurs="1"/>
 				</xsd:sequence>
 				<xsd:attribute name="dmnElementRef" type="xsd:QName" use="required"/>
+				<xsd:attribute name="sourceElement" type="xsd:QName" use="optional"/>
+				<xsd:attribute name="targetElement" type="xsd:QName" use="optional"/>
 			</xsd:extension>
 		</xsd:complexContent>
 	</xsd:complexType>
