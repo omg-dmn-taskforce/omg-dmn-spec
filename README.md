@@ -3,6 +3,14 @@ Machine-readable files of OMG's DMN specification
 
 The main goal of working with GitHub is to have a clear diff for each change to the DMN XML schema that can be linked in the DMN RTF report.
 
+## Namespace URIs
+
+Namespace URIs will change in every schema file that changes in a revision.
+The URIs are based on the RTF Report Due Date which can be found in the
+[Work in Progress page](https://www.omg.org/schedule/) of the revision.
+For example the DMN 1.3 RTF Report is due on November 11, 2019 and
+therefore the Namespace URI is `https://www.omg.org/spec/DMN/20191111/MODEL/`.
+
 How we work in this repository
 ------------------------------
 

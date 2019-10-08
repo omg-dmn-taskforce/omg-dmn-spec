@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema elementFormDefault="qualified"
-	xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/"
+	xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/"
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-	xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/"
-	targetNamespace="http://www.omg.org/spec/DMN/20180521/MODEL/">
+	xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/"
+	targetNamespace="https://www.omg.org/spec/DMN/20191111/MODEL/">
 
-	<xsd:import namespace="http://www.omg.org/spec/DMN/20180521/DMNDI/"
+	<xsd:import namespace="https://www.omg.org/spec/DMN/20191111/DMNDI/"
 	            schemaLocation="DMNDI13.xsd">
 		<xsd:annotation>
 			<xsd:documentation>
@@ -54,8 +54,8 @@
 					<xsd:element ref="businessContextElement" minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element ref="dmndi:DMNDI" minOccurs="0" maxOccurs="1"/>
 				</xsd:sequence>
-				<xsd:attribute name="expressionLanguage" type="xsd:anyURI" use="optional" default="http://www.omg.org/spec/DMN/20180521/FEEL/"/>
-				<xsd:attribute name="typeLanguage" type="xsd:anyURI" use="optional" default="http://www.omg.org/spec/DMN/20180521/FEEL/"/>
+				<xsd:attribute name="expressionLanguage" type="xsd:anyURI" use="optional" default="https://www.omg.org/spec/DMN/20191111/FEEL/"/>
+				<xsd:attribute name="typeLanguage" type="xsd:anyURI" use="optional" default="https://www.omg.org/spec/DMN/20191111/FEEL/"/>
 				<xsd:attribute name="namespace" type="xsd:anyURI" use="required"/>
 				<xsd:attribute name="exporter" type="xsd:string" use="optional"/>
 				<xsd:attribute name="exporterVersion" type="xsd:string" use="optional"/>
