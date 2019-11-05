@@ -1,0 +1,3 @@
+DMN 1.3 validation results:
+ fails to validate$
+ validates$
