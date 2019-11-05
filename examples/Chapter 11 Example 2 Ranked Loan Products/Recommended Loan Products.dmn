@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<semantic:definitions xmlns:semantic="http://www.omg.org/spec/DMN/20180521/MODEL/" id="_736fa164-03d8-429f-8318-4913a548c3a6" name="Recommended Loan Products" namespace="http://www.trisotech.com/definitions/_736fa164-03d8-429f-8318-4913a548c3a6" exporter="DMN Modeler" exporterVersion="6.2.3">
+<semantic:definitions xmlns:semantic="http://www.omg.org/spec/DMN/20180521/MODEL/" id="_736fa164-03d8-429f-8318-4913a548c3a6" name="Recommended Loan Products" namespace="http://www.trisotech.com/definitions/_736fa164-03d8-429f-8318-4913a548c3a6" exporter="DMN Modeler" exporterVersion="6.2.3" xmlns:include1="http://www.trisotech.com/definitions/_5c8b9296-96cf-4898-bba5-3a2d21d34eed">
 	<semantic:import namespace="http://www.trisotech.com/definitions/_5c8b9296-96cf-4898-bba5-3a2d21d34eed" name="Services" importType="http://www.omg.org/spec/DMN/20180521/MODEL/"/>
 	<semantic:itemDefinition name="tBorrower" label="tBorrower">
 		<semantic:itemComponent id="_b7dcc14d-510d-4628-a510-ca774208e501" name="Full Name">
