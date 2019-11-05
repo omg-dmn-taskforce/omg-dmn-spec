@@ -73,10 +73,10 @@
 		</semantic:allowedValues>
 	</semantic:itemDefinition>
 	<semantic:itemDefinition name="tLoanProduct" label="tLoanProduct">
-		<semantic:itemComponent id="_1833883f-633d-4212-920d-1954b412bea6" name="Date">
-			<semantic:typeRef>date</semantic:typeRef>
+		<semantic:itemComponent id="_1833883f-633d-4212-920d-1954b412bea6" name="Lender Name">
+			<semantic:typeRef>string</semantic:typeRef>
 		</semantic:itemComponent>
-		<semantic:itemComponent id="_8d009922-d11e-4c23-8c14-f141f3ba94a8" name="Name">
+		<semantic:itemComponent id="_8d009922-d11e-4c23-8c14-f141f3ba94a8" name="Product Name">
 			<semantic:typeRef>tProductName</semantic:typeRef>
 			<semantic:allowedValues>
 				<semantic:text>"Fixed30-NoPoints","Fixed30-Standard","Fixed15-NoPoints","Fixed15-Standard","ARM5/1-NoPoints","ARM5/1-Standard"</semantic:text>
@@ -226,15 +226,6 @@
 			<semantic:typeRef>number</semantic:typeRef>
 		</semantic:itemComponent>
 	</semantic:itemDefinition>
-	<semantic:decisionService id="_5c8b9296-96cf-4898-bba5-3a2d21d34eed_DS" name="Whole Model Decision Service">
-		<semantic:variable name="Whole Model Decision Service" id="_ac7c711a-2462-489a-be3c-4292cfcb7a8b" typeRef="Any"/>
-		<semantic:outputDecision href="#_8a182857-b5a1-4389-9a76-01a316938cea"/>
-		<semantic:encapsulatedDecision href="#_91fa4ebe-d9c9-4608-b043-c27d99e1eaa5"/>
-		<semantic:inputData href="#_29a44873-e886-42de-bc2f-6d5704b6b298"/>
-		<semantic:inputData href="#_896a0a4a-0d0e-404c-a9e3-4500b4e2fd9c"/>
-		<semantic:inputData href="#_e0cfe605-3068-42a2-946f-c7db3774de1e"/>
-		<semantic:inputData href="#_d78ee6d5-96ed-43e6-89d2-123e0f388a67"/>
-	</semantic:decisionService>
 	<semantic:inputData id="_e0cfe605-3068-42a2-946f-c7db3774de1e" name="Property">
 		<semantic:variable name="Property" id="_35fe76b3-4304-4a45-bbc5-c3ac926fd494" typeRef="tProperty"/>
 	</semantic:inputData>
@@ -369,7 +360,7 @@
 		<semantic:encapsulatedLogic typeRef="tPercent">
 			<semantic:formalParameter name="Credit Score" typeRef="tCreditScore"/>
 			<semantic:formalParameter name="LTV" typeRef="tPercent"/>
-			<semantic:decisionTable id="_cd20f4b0-fbc2-4b9d-b31f-4a83d951e989" hitPolicy="UNIQUE" outputLabel="Rate Adjustment">
+			<semantic:decisionTable id="_cd20f4b0-fbc2-4b9d-b31f-4a83d951e989" hitPolicy="UNIQUE" outputLabel="Rate Adjustment" typeRef="tPercent">
 				<semantic:input id="_b66906d2-f62e-47ba-856b-538a97bb3fa5">
 					<semantic:inputExpression typeRef="tCreditScore">
 						<semantic:text>Credit Score</semantic:text>
@@ -534,7 +525,7 @@
 			<semantic:formalParameter name="p" typeRef="number" id="_b65fd962-b719-4dca-b37b-4c4d2b7e9867"/>
 			<semantic:formalParameter name="r" typeRef="number" id="_22bb5be8-b3dd-4a05-8e0d-6458fe53aa4a"/>
 			<semantic:formalParameter name="n" typeRef="number" id="_6a169eec-28b4-4789-ac5e-141348bcc99a"/>
-			<semantic:literalExpression id="_0c92187a-2412-4f49-a635-3e8cdd6e58fe">
+			<semantic:literalExpression id="_0c92187a-2412-4f49-a635-3e8cdd6e58fe" typeRef="number">
 				<semantic:text>decimal(p*r/12/(1-(1+r/12)**-n),2)</semantic:text>
 			</semantic:literalExpression>
 		</semantic:encapsulatedLogic>
@@ -557,7 +548,7 @@
 			<semantic:contextEntry id="_305a8898-1350-49ed-b827-0a59a76f9216">
 				<semantic:variable name="Product" id="_07481b52-07d7-4257-a124-2bffd7a7e080" typeRef="tProductName"/>
 				<semantic:literalExpression id="_404ff614-bed5-44bc-a64d-abae8419e748">
-					<semantic:text>Loan Product.Name</semantic:text>
+					<semantic:text>Loan Product.Product Name</semantic:text>
 				</semantic:literalExpression>
 			</semantic:contextEntry>
 			<semantic:contextEntry id="_b3a59630-4f96-4fab-9a75-eb50b5e745c0">
@@ -640,8 +631,8 @@
 			</semantic:contextEntry>
 		</semantic:context>
 	</semantic:decision>
-	<semantic:decisionService id="_f5761a7f-090d-4177-a06a-7f21f925c6ff" name="Loan Info">
-		<semantic:variable name="Loan Info" id="_f8f5ffe8-362f-4cdf-8c5e-d5c2e7bdadde" typeRef="Any"/>
+	<semantic:decisionService id="_f5761a7f-090d-4177-a06a-7f21f925c6ff" name="Loan Info Service">
+		<semantic:variable name="Loan Info Service" id="_f8f5ffe8-362f-4cdf-8c5e-d5c2e7bdadde" typeRef="Any"/>
 		<semantic:outputDecision href="#_8a182857-b5a1-4389-9a76-01a316938cea"/>
 		<semantic:encapsulatedDecision href="#_91fa4ebe-d9c9-4608-b043-c27d99e1eaa5"/>
 		<semantic:inputData href="#_29a44873-e886-42de-bc2f-6d5704b6b298"/>
