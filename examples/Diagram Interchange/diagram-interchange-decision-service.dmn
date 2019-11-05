@@ -3,9 +3,9 @@
   id="Definitions_DecisionService"
   name="Decision Service"
   namespace="http://www.omg.org/spec/DMN/20180521/diagram-interchange-decision-service/"
-  xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/"
+  xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/"
+  xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/"
   xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/"
   xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/">
   <decisionService id="DecisionService_1" name="Decision Service 1">

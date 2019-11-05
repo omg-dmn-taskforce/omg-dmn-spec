@@ -3,9 +3,9 @@
   id="Definitions_0v8cooh"
   name="Decision with Listed Input data"
   namespace="http://www.omg.org/spec/DMN/20180521/diagram-interchange-decision-with-listed-input-data/"
-  xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/"
+  xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/"
+  xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/"
   xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/"
   xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/">
   <decision id="Decision_1" name="Decision">
