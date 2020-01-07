@@ -36,7 +36,7 @@
         <semantic:itemComponent isCollection="false" name="Age" id="_df3aab6f-1610-41fa-a407-09678a89d6da">
             <semantic:typeRef>number</semantic:typeRef>
         </semantic:itemComponent>
-        <semantic:itemComponent isCollection="false" name="MartitalStatus" id="_d39ad810-7781-4ffb-9644-de51d1ca7f7a">
+        <semantic:itemComponent isCollection="false" name="MaritalStatus" id="_d39ad810-7781-4ffb-9644-de51d1ca7f7a">
             <semantic:typeRef>string</semantic:typeRef>
             <semantic:allowedValues triso:constraintsType="enumeration">
                 <semantic:text>"S","M"</semantic:text>
@@ -1454,7 +1454,7 @@ else false</semantic:text>
             <semantic:binding>
                 <semantic:parameter id="_259966f2-bf40-4139-b587-6c9b989f1aa0" name="Marital Status"/>
                 <semantic:literalExpression id="_610941db-8c4e-483c-9d75-789b3d5c2333">
-                    <semantic:text>Applicant data.MartitalStatus</semantic:text>
+                    <semantic:text>Applicant data.MaritalStatus</semantic:text>
                 </semantic:literalExpression>
             </semantic:binding>
             <semantic:binding>
