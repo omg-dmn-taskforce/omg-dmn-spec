@@ -972,7 +972,7 @@
                              instance="_17_0_3_1_42401a5_1375643571589_440563_3430"/>
             </ownedAttribute>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_42401a5_1375643571589_681805_3414"
-                            name="input&#xA;"
+                            name="input"
                             visibility="public"
                             isOrdered="true"
                             aggregation="composite"
@@ -2173,7 +2173,7 @@
                <type href="http://www.omg.org/spec/UML/20110701/PrimitiveTypes.xmi#String"/>
                <defaultValue xmi:type="uml:LiteralString"
                              xmi:id="_17_0_2_3_ea50349_1446150762540_477393_4060"
-                             value="&#34;text/plain&#34;"/>
+                             value="text/plain"/>
             </ownedAttribute>
          </packagedElement>
          <packagedElement xmi:type="uml:Enumeration" xmi:id="_17_0_2_3_ea50349_1446149839178_181611_3787"
