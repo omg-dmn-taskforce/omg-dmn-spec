@@ -525,7 +525,7 @@
                        name="end"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_18_1_f7a0369_1441612964861_428140_5975"
-                       name="DC::Style"
+                       name="DI::Style"
                        isAbstract="true"/>
       <packagedElement xmi:type="uml:Class" xmi:id="_19_0beta_610020e_1518100496563_982994_4706"
                        name="DMNDecisionServiceDividerLine">
