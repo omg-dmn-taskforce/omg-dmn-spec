@@ -527,6 +527,44 @@
 		</xsd:sequence>
 		<xsd:attribute name="id" type="xsd:ID" use="optional"/>
 	</xsd:complexType>
+	<xsd:complexType name="tTypedChildExpression">
+		<xsd:complexContent>
+			<xsd:extension base="tChildExpression">
+				<xsd:attribute name="typeRef" type="xsd:string" use="optional"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="tIterator">
+		<xsd:complexContent>
+			<xsd:extension base="tExpression">
+				<xsd:sequence>
+					<xsd:element name="in" type="tTypedChildExpression"/>
+				</xsd:sequence>
+				<xsd:attribute name="iteratorVariable" type="xsd:string"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:element name="for" type="tFor" substitutionGroup="expression"/>
+	<xsd:complexType name="tFor">
+		<xsd:complexContent>
+			<xsd:extension base="tIterator">
+				<xsd:sequence>
+					<xsd:element name="return" type="tChildExpression"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:element name="every" type="tQuantified" substitutionGroup="expression"/>
+	<xsd:element name="some" type="tQuantified" substitutionGroup="expression"/>
+	<xsd:complexType name="tQuantified">
+		<xsd:complexContent>
+			<xsd:extension base="tIterator">
+				<xsd:sequence>
+					<xsd:element name="satisfies" type="tChildExpression"/>	
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
 	<xsd:element name="conditional" type="tConditional" substitutionGroup="expression"/>
 	<xsd:complexType name="tConditional">
 		<xsd:complexContent>
