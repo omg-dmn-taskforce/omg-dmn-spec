@@ -521,4 +521,22 @@
 			</xsd:extension>
 		</xsd:complexContent>
 	</xsd:complexType>
+	<xsd:complexType name="tChildExpression">
+		<xsd:sequence>
+			<xsd:element type="tExpression"/>
+		</xsd:sequence>
+		<xsd:attribute name="id" type="xsd:ID" use="optional"/>
+	</xsd:complexType>
+	<xsd:element name="conditional" type="tConditional" substitutionGroup="expression"/>
+	<xsd:complexType name="tConditional">
+		<xsd:complexContent>
+			<xsd:extension base="tExpression">
+				<xsd:sequence>
+					<xsd:element name="if" type="tChildExpression"/>
+					<xsd:element name="then" type="tChildExpression"/>
+					<xsd:element name="else" type="tChildExpression"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
 </xsd:schema>
