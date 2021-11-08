@@ -539,4 +539,15 @@
 			</xsd:extension>
 		</xsd:complexContent>
 	</xsd:complexType>
+	<xsd:element name="filter" type="tFilter" substitutionGroup="expression"/>
+	<xsd:complexType name="tFilter ">
+		<xsd:complexContent>
+			<xsd:extension base="tExpression">
+				<xsd:sequence>
+					<xsd:element name="in" type="tChildExpression"/>
+					<xsd:element name="match" type="tChildExpression"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
 </xsd:schema>
