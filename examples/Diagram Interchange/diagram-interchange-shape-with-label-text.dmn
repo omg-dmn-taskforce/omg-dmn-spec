@@ -3,7 +3,7 @@
   id="definitions_0v8cooh"
   name="Decision"
   namespace="http://www.omg.org/spec/DMN/20180521/diagram-interchange-shape-with-label-text/"
-  xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/"
+  xmlns="https://www.omg.org/spec/DMN/20211108/MODEL/"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/"
   xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/"
