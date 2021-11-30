@@ -523,7 +523,7 @@
 	</xsd:complexType>
 	<xsd:complexType name="tChildExpression">
 		<xsd:sequence>
-			<xsd:element type="tExpression"/>
+			<xsd:element ref="expression"/>
 		</xsd:sequence>
 		<xsd:attribute name="id" type="xsd:ID" use="optional"/>
 	</xsd:complexType>
