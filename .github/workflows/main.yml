@@ -1,0 +1,24 @@
+name: CI
+
+on:
+  # Triggers the workflow on push or pull request events but only for the master branch
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+  # Allows to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  xml-linters:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Lint XML
+        uses: korelstar/xmllint-problem-matcher@v1
+        uses: ChristophWurst/xmllint-action@v1
+        with:
+          xml-file: ./examples/Chapter 11 Example 1 Originations/Chapter 11 Example.dmn
+          xml-schema-file: ./xsd/DMN14.xsd
