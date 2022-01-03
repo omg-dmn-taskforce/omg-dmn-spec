@@ -14,11 +14,9 @@ jobs:
   xml-linters:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: Lint XML
-        uses: korelstar/xmllint-problem-matcher@v1
-        uses: ChristophWurst/xmllint-action@v1
+      - uses: actions/checkout@v2
+      - uses: korelstar/xmllint-problem-matcher@v1
+      - uses: ChristophWurst/xmllint-action@v1
         with:
           xml-file: ./examples/Chapter 11 Example 1 Originations/Chapter 11 Example.dmn
           xml-schema-file: ./xsd/DMN14.xsd
