@@ -578,7 +578,7 @@
 		</xsd:complexContent>
 	</xsd:complexType>
 	<xsd:element name="filter" type="tFilter" substitutionGroup="expression"/>
-	<xsd:complexType name="tFilter ">
+	<xsd:complexType name="tFilter">
 		<xsd:complexContent>
 			<xsd:extension base="tExpression">
 				<xsd:sequence>
