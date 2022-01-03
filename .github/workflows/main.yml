@@ -11,12 +11,12 @@ on:
   workflow_dispatch:
 
 jobs:
-  xml-linters:
+  xmllint:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - uses: korelstar/xmllint-problem-matcher@v1
       - uses: ChristophWurst/xmllint-action@v1
         with:
-          xml-file: ./examples/Chapter 11 Example 1 Originations/Chapter 11 Example.dmn
+          xml-file: "./examples/Chapter 11 Example 1 Originations/Chapter 11 Example.dmn"
           xml-schema-file: ./xsd/DMN14.xsd
