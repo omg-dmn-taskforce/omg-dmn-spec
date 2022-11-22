@@ -38,6 +38,7 @@
 					<xsd:element name="Size" type="dc:Dimension" minOccurs="0" maxOccurs="1"/>
 					<xsd:element ref="dmndi:DMNDiagramElement" minOccurs="0" maxOccurs="unbounded"/>
 				</xsd:sequence>
+				<xsd:attribute name="useAlternativeInputDataShape" type="xsd:boolean" use="optional" default="false"/>
 			</xsd:extension>
 		</xsd:complexContent>
 	</xsd:complexType>
