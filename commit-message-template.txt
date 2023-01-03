@@ -1,4 +1,4 @@
-DMN12-/DMN12-
+DMN14-/DMN14-
 
-Issue: http://solitaire.omg.org/browse/DMN12-
-Proposal: http://solitaire.omg.org/browse/DMN12-
+Issue: http://solitaire.omg.org/browse/DMN14-
+Proposal: http://solitaire.omg.org/browse/DMN14-
