@@ -236,6 +236,7 @@
 					<xsd:sequence>
 						<xsd:element name="typeRef" type="xsd:string"/>
 						<xsd:element name="allowedValues" type="tUnaryTests" minOccurs="0"/>
+						<xsd:element name="typeConstraint" type="tUnaryTests" minOccurs="0"/>
 					</xsd:sequence>
 					<xsd:element name="itemComponent" type="tItemDefinition" minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element name="functionItem" type="tFunctionItem" minOccurs="0" maxOccurs="1"/>
