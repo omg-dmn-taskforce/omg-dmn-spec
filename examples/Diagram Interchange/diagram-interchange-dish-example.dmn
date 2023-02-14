@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <definitions id="dish-decisions" name="Dish Decisions"
   namespace="http://www.omg.org/spec/DMN/20180521/dish-example/"
-  xmlns="https://www.omg.org/spec/DMN/20211108/MODEL/"
+  xmlns="https://www.omg.org/spec/DMN/20230324/MODEL/"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/"
+  xmlns:dmndi="https://www.omg.org/spec/DMN/20230324/DMNDI/"
   xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/"
   xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/">
 
