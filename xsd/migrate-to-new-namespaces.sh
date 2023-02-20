@@ -5,9 +5,9 @@ XSD_DIR="$(dirname $0)"
 
 source "$XSD_DIR/dmn-namespace-utils.sh"
 
-find_dmn13_files() {
-    grep -Hirl $DMN13 --exclude='*.biodi.dmn' --exclude='test-xsd*' --exclude='dmn-namespace-utils.sh' --exclude='migrate-to-new-namespaces.sh' --exclude='DMN13.xsd' --exclude-dir=.git --exclude-dir=target
-}
+#find_dmn13_files() {
+#    grep -Hirl $DMN13 --exclude='*.biodi.dmn' --exclude='test-xsd*' --exclude='dmn-namespace-utils.sh' --exclude='migrate-to-new-namespaces.sh' --exclude='DMN13.xsd' --exclude-dir=.git --exclude-dir=target
+#}
 
 #find_dmn13_files
 
@@ -34,10 +34,18 @@ upgrade_dmn_13_to_dmn_14() {
         "$1"
 }
 
-# recursively search all DMN files in the current directory and perform a schema validation with the DMN 1.1 and 1.2 schemas
+upgrade_dmn_14_to_dmn_15() {
+    sed \
+        -e "s#$DMN14#$DMN15#g" \
+        -e "s#$FEEL14#$FEEL15#g" \
+        -e "s#$DMNDI13#$DMNDI15#g" \
+        "$1"
+}
+
+# recursively search all DMN files in the current directory and migtrate them
 declare -i NUMBER_OF_FILES=0
 while IFS= read -r -d '' DMN_FILE; do
     NUMBER_OF_FILES+=1
-    #echo "$NUMBER_OF_FILES: $DMN_FILE"
-    upgrade_dmn_13_to_dmn_14 "$DMN_FILE" | sponge "$DMN_FILE"
-done < <(find . '(' -iname '*.dmn*.xml' -o -iname '*.dmn' ')' -type f -print0)
+    echo "$NUMBER_OF_FILES: $DMN_FILE"
+    upgrade_dmn_14_to_dmn_15 "$DMN_FILE" | sponge "$DMN_FILE"
+done < <(find . '(' -iname '*.dmn*.xml' -or -iname '*.dmn' -or -name 'DMN*15.xsd' ')' -type f -print0)

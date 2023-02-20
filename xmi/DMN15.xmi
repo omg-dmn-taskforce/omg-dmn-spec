@@ -9,7 +9,7 @@
    <uml:Model xmi:type="uml:Model" xmi:id="_17_0_2_3_ea50349_1435105765209_262546_0"
               name="Data">
       <packagedElement xmi:type="uml:Package" xmi:id="eee_1045467100313_135436_1" name="DMN"
-                       URI="https://www.omg.org/spec/DMN/20211108/DMN14.xmi">
+                       URI="https://www.omg.org/spec/DMN/20230324/DMN15.xmi">
          <ownedComment xmi:type="uml:Comment" xmi:id="_17_0_3_1_42401a5_1375643476024_606503_2866"
                        body="Author: Gary Hallmark&#xA;Created: Nov 4, 2015&#xA;Title:&#xA;Comment:&#xA;">
             <annotatedElement xmi:idref="eee_1045467100313_135436_1"/>
@@ -136,14 +136,14 @@
                <lowerValue xmi:type="uml:LiteralInteger"
                            xmi:id="_17_0_5_1_a250249_1570481273112_235040_5455"/>
             </ownedAttribute>
-            <ownedAttribute xmi:type="uml:Property" xmi:id="_19_0_4_17c4044b_1671570055615_67715_4963"
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_19_0_4_17c4044b_1676408438239_924777_4935"
                             name="typeConstraint"
                             visibility="public"
                             aggregation="composite"
                             type="_17_0_2_3_ea50349_1435355730486_426171_2296"
-                            association="_19_0_4_17c4044b_1671570055615_160196_4962">
+                            association="_19_0_4_17c4044b_1676408438239_44411_4934">
                <lowerValue xmi:type="uml:LiteralInteger"
-                           xmi:id="_19_0_4_17c4044b_1671570081578_657125_4973"/>
+                           xmi:id="_19_0_4_17c4044b_1676408466454_788786_4946"/>
             </ownedAttribute>
          </packagedElement>
          <packagedElement xmi:type="uml:Class" xmi:id="_17_0_3_1_42401a5_1375643567471_779757_3017"
@@ -982,7 +982,7 @@
                              instance="_17_0_3_1_42401a5_1375643571589_440563_3430"/>
             </ownedAttribute>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_42401a5_1375643571589_681805_3414"
-                            name="input&#xA;"
+                            name="input"
                             visibility="public"
                             isOrdered="true"
                             aggregation="composite"
@@ -1540,7 +1540,7 @@
                             xmi:id="_17_0_3_1_42401a5_1376065040047_468328_2868"
                             general="_17_0_3_1_42401a5_1375643567533_685035_3031"/>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_42401a5_1376065040047_430528_2867"
-                            name="contextEnrty"
+                            name="contextEntry"
                             visibility="public"
                             aggregation="composite"
                             type="_17_0_3_1_42401a5_1376065040043_665764_2860"
@@ -1781,12 +1781,12 @@
                             visibility="public">
                <type href="http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#String"/>
             </ownedAttribute>
-            <ownedAttribute xmi:type="uml:Property" xmi:id="_19_0_4_17c4044b_1671570055615_660091_4964"
-                            visibility="private"
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_19_0_4_17c4044b_1676408438240_404499_4936"
+                            visibility="public"
                             type="_17_0_3_1_42401a5_1375643567533_707974_3032"
-                            association="_19_0_4_17c4044b_1671570055615_160196_4962">
+                            association="_19_0_4_17c4044b_1676408438239_44411_4934">
                <lowerValue xmi:type="uml:LiteralInteger"
-                           xmi:id="_19_0_4_17c4044b_1671570093734_179025_4977"/>
+                           xmi:id="_19_0_4_17c4044b_1676408479836_769101_4950"/>
             </ownedAttribute>
          </packagedElement>
          <packagedElement xmi:type="uml:Association" xmi:id="_17_0_2_3_ea50349_1435355869562_534385_2358"
@@ -2190,7 +2190,7 @@
                <type href="http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#String"/>
                <defaultValue xmi:type="uml:LiteralString"
                              xmi:id="_17_0_2_3_ea50349_1446150762540_477393_4060"
-                             value="&#34;text/plain&#34;"/>
+                             value="text/plain"/>
             </ownedAttribute>
          </packagedElement>
          <packagedElement xmi:type="uml:Enumeration" xmi:id="_17_0_2_3_ea50349_1446149839178_181611_3787"
@@ -2579,9 +2579,9 @@
                       type="_2021x_1_17c4044b_1633547026114_611120_1867"
                       association="_2021x_1_17c4044b_1633550064423_348226_3402"/>
          </packagedElement>
-         <packagedElement xmi:type="uml:Association" xmi:id="_19_0_4_17c4044b_1671570055615_160196_4962">
-            <memberEnd xmi:idref="_19_0_4_17c4044b_1671570055615_67715_4963"/>
-            <memberEnd xmi:idref="_19_0_4_17c4044b_1671570055615_660091_4964"/>
+         <packagedElement xmi:type="uml:Association" xmi:id="_19_0_4_17c4044b_1676408438239_44411_4934">
+            <memberEnd xmi:idref="_19_0_4_17c4044b_1676408438239_924777_4935"/>
+            <memberEnd xmi:idref="_19_0_4_17c4044b_1676408438240_404499_4936"/>
          </packagedElement>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_17_0_2_3_ea50349_1435268740013_353945_2202"
@@ -2651,7 +2651,7 @@
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_17_0_5_1_a250249_1518651579981_707778_3952"
                        name="DMNDI"
-                       URI="http://www.omg.org/spec/DMN/20211108/DMN14.xmi">
+                       URI="https://www.omg.org/spec/DMN/20230324/DMNDI15.xmi">
          <packagedElement xmi:type="uml:Class" xmi:id="_17_0_5_1_a250249_1518651646564_243499_3956"
                           name="DMNDI">
             <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_5_1_a250249_1518651855436_638563_4054"

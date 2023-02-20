@@ -7,7 +7,7 @@
       <xmi:exporterVersion>19.0 v9</xmi:exporterVersion>
    </xmi:documentation>
    <uml:Model xmi:type="uml:Model" xmi:id="eee_1045467100313_135436_1" name="DMNDI"
-              URI="https://www.omg.org/spec/DMN/20191111/DMNDI13.xmi">
+              URI="https://www.omg.org/spec/DMN/20230324/DMNDI15.xmi">
       <ownedComment xmi:type="uml:Comment" xmi:id="_18_1beta_8c90288_1415101994820_370998_4336"
                     body="Author:rmueller.&#xA;Created:9/7/15 9:00 AM.&#xA;Title:.&#xA;Comment:.&#xA;">
          <annotatedElement xmi:idref="eee_1045467100313_135436_1"/>
@@ -459,7 +459,7 @@
                        name="DI::Edge"
                        isAbstract="true">
          <ownedAttribute xmi:type="uml:Property" xmi:id="_18_1_f7a0369_1441612107952_355312_5540"
-                         name="wayPoints"
+                         name="waypoint"
                          visibility="public"
                          aggregation="composite"
                          type="_18_1_f7a0369_1441611905896_227631_5363"
@@ -534,8 +534,14 @@
                        name="end"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_18_1_f7a0369_1441612964861_428140_5975"
-                       name="DC::Style"
-                       isAbstract="true"/>
+                       name="DI::Style"
+                       isAbstract="true">
+         <ownedAttribute xmi:type="uml:Property" xmi:id="_19_0_4_17c4044b_1676383307802_395866_4927"
+                         name="id"
+                         visibility="public">
+            <type href="http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#String"/>
+         </ownedAttribute>
+      </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_19_0beta_610020e_1518100496563_982994_4706"
                        name="DMNDecisionServiceDividerLine">
          <generalization xmi:type="uml:Generalization"
