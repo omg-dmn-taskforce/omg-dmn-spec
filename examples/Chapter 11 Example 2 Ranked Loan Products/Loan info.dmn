@@ -356,8 +356,8 @@
 		<semantic:variable name="Down Payment" id="_bbe3f7c0-d59c-472b-9266-73bcdcc0fbb6" typeRef="number"/>
 	</semantic:inputData>
 	<semantic:businessKnowledgeModel id="_aeaa30db-0f84-424a-b2f5-af9b2538a9ce" name="Rate Adjustment">
-		<semantic:variable name="Rate Adjustment" id="_3199df2d-5734-481f-a201-933b41d6196e" typeRef="tPercent"/>
-		<semantic:encapsulatedLogic typeRef="tPercent">
+		<semantic:variable name="Rate Adjustment" id="_3199df2d-5734-481f-a201-933b41d6196e"/>
+		<semantic:encapsulatedLogic>
 			<semantic:formalParameter name="Credit Score" typeRef="tCreditScore"/>
 			<semantic:formalParameter name="LTV" typeRef="tPercent"/>
 			<semantic:decisionTable id="_cd20f4b0-fbc2-4b9d-b31f-4a83d951e989" hitPolicy="UNIQUE" outputLabel="Rate Adjustment" typeRef="tPercent">
@@ -520,8 +520,8 @@
 		</semantic:encapsulatedLogic>
 	</semantic:businessKnowledgeModel>
 	<semantic:businessKnowledgeModel id="_0d2a6f36-0403-41ad-a191-f793743649d4" name="payment">
-		<semantic:variable name="payment" id="_8c231b6d-165f-4c36-bcd3-617498b36e0e" typeRef="number"/>
-		<semantic:encapsulatedLogic id="_97168569-14dd-4533-8d8c-497681134e3b" kind="FEEL" typeRef="number">
+		<semantic:variable name="payment" id="_8c231b6d-165f-4c36-bcd3-617498b36e0e"/>
+		<semantic:encapsulatedLogic id="_97168569-14dd-4533-8d8c-497681134e3b" kind="FEEL">
 			<semantic:formalParameter name="p" typeRef="number" id="_b65fd962-b719-4dca-b37b-4c4d2b7e9867"/>
 			<semantic:formalParameter name="r" typeRef="number" id="_22bb5be8-b3dd-4a05-8e0d-6458fe53aa4a"/>
 			<semantic:formalParameter name="n" typeRef="number" id="_6a169eec-28b4-4789-ac5e-141348bcc99a"/>
