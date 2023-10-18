@@ -18,11 +18,11 @@ jobs:
       - uses: korelstar/xmllint-problem-matcher@v1
       - uses: ChristophWurst/xmllint-action@master
         with:
-          xml-file: "./examples/Chapter_11_Example_1_Originations/Chapter_11_Example.dmn"
+          xml-file: "./examples/Chapter 11 Example 1 Originations/Chapter 11 Example.dmn"
           xml-schema-file: ./xsd/DMN15.xsd
       - uses: ChristophWurst/xmllint-action@master
         with:
-          xml-file: "./examples/Chapter_11_Example_1_Originations/Financial.dmn"
+          xml-file: "./examples/Chapter 11 Example 1 Originations/Financial.dmn"
           xml-schema-file: ./xsd/DMN15.xsd
       - uses: ChristophWurst/xmllint-action@master
         with:
