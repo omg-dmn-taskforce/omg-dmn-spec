@@ -40,4 +40,9 @@ jobs:
         with:
           xml-file: "Loan_info.dmn"
           xml-schema-file: ./xsd/DMN15.xsd
+      - uses: ChristophWurst/xmllint-action@master
+        with:
+          xml-file: "examples/Diagram Interchange/diagram-interchange-decision-service.dmn"
+          xml-schema-file: ./xsd/DMN15.xsd
+
       
