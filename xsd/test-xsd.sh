@@ -11,6 +11,7 @@ mkdir -p $TARGET_DIR
 DMN11='http://www.omg.org/spec/DMN/20151101/dmn.xsd'
 DMN12='http://www.omg.org/spec/DMN/20180521/MODEL/'
 DMN13='https://www.omg.org/spec/DMN/20191111/MODEL/'
+DMN14='https://www.omg.org/spec/DMN/20211108/MODEL/'
 DMNDI11='http://www.omg.org/spec/DMN/20151101/DMNDI'
 DMNDI12='http://www.omg.org/spec/DMN/20180521/DMNDI/'
 DMNDI13='https://www.omg.org/spec/DMN/20191111/DMNDI/'
@@ -19,6 +20,7 @@ DC='http://www.omg.org/spec/DMN/20180521/DC/'
 FEEL10='http://www.omg.org/spec/FEEL/20140401'
 FEEL12='http://www.omg.org/spec/DMN/20180521/FEEL/'
 FEEL13='https://www.omg.org/spec/DMN/20191111/FEEL/'
+FEEL14='https://www.omg.org/spec/DMN/20211108/FEEL/'
 
 validate_as_dmn_11() {
     migrate_to_dmn_11 "$1" | xmllint --schema "$TARGET_DIR/DMN11.xsd" --noout -

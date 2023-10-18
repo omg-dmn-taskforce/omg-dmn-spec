@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema elementFormDefault="qualified"
-	xmlns="https://www.omg.org/spec/DMN/20211108/MODEL/"
+	xmlns="https://www.omg.org/spec/DMN/20230324/MODEL/"
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-	xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/"
-	targetNamespace="https://www.omg.org/spec/DMN/20211108/MODEL/">
+	xmlns:dmndi="https://www.omg.org/spec/DMN/20230324/DMNDI/"
+	targetNamespace="https://www.omg.org/spec/DMN/20230324/MODEL/">
 
-	<xsd:import namespace="https://www.omg.org/spec/DMN/20191111/DMNDI/"
-	            schemaLocation="DMNDI13.xsd">
+	<xsd:import namespace="https://www.omg.org/spec/DMN/20230324/DMNDI/"
+	            schemaLocation="DMNDI15.xsd">
 		<xsd:annotation>
 			<xsd:documentation>
 				Include the DMN Diagram Interchange (DI) schema
@@ -54,8 +54,8 @@
 					<xsd:element ref="businessContextElement" minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element ref="dmndi:DMNDI" minOccurs="0" maxOccurs="1"/>
 				</xsd:sequence>
-				<xsd:attribute name="expressionLanguage" type="xsd:anyURI" use="optional" default="https://www.omg.org/spec/DMN/20211108/FEEL/"/>
-				<xsd:attribute name="typeLanguage" type="xsd:anyURI" use="optional" default="https://www.omg.org/spec/DMN/20211108/FEEL/"/>
+				<xsd:attribute name="expressionLanguage" type="xsd:anyURI" use="optional" default="https://www.omg.org/spec/DMN/20230324/FEEL/"/>
+				<xsd:attribute name="typeLanguage" type="xsd:anyURI" use="optional" default="https://www.omg.org/spec/DMN/20230324/FEEL/"/>
 				<xsd:attribute name="namespace" type="xsd:anyURI" use="required"/>
 				<xsd:attribute name="exporter" type="xsd:string" use="optional"/>
 				<xsd:attribute name="exporterVersion" type="xsd:string" use="optional"/>
@@ -236,6 +236,7 @@
 					<xsd:sequence>
 						<xsd:element name="typeRef" type="xsd:string"/>
 						<xsd:element name="allowedValues" type="tUnaryTests" minOccurs="0"/>
+						<xsd:element name="typeConstraint" type="tUnaryTests" minOccurs="0"/>
 					</xsd:sequence>
 					<xsd:element name="itemComponent" type="tItemDefinition" minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element name="functionItem" type="tFunctionItem" minOccurs="0" maxOccurs="1"/>
@@ -578,7 +579,7 @@
 		</xsd:complexContent>
 	</xsd:complexType>
 	<xsd:element name="filter" type="tFilter" substitutionGroup="expression"/>
-	<xsd:complexType name="tFilter ">
+	<xsd:complexType name="tFilter">
 		<xsd:complexContent>
 			<xsd:extension base="tExpression">
 				<xsd:sequence>

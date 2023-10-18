@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-            xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/"
+            xmlns:dmndi="https://www.omg.org/spec/DMN/20230324/DMNDI/"
             xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/"
             xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/"
-            targetNamespace="https://www.omg.org/spec/DMN/20191111/DMNDI/"
+            targetNamespace="https://www.omg.org/spec/DMN/20230324/DMNDI/"
             elementFormDefault="qualified" attributeFormDefault="unqualified">
 
 	<xsd:import namespace="http://www.omg.org/spec/DMN/20180521/DC/"
@@ -38,6 +38,7 @@
 					<xsd:element name="Size" type="dc:Dimension" minOccurs="0" maxOccurs="1"/>
 					<xsd:element ref="dmndi:DMNDiagramElement" minOccurs="0" maxOccurs="unbounded"/>
 				</xsd:sequence>
+				<xsd:attribute name="useAlternativeInputDataShape" type="xsd:boolean" use="optional" default="false"/>
 			</xsd:extension>
 		</xsd:complexContent>
 	</xsd:complexType>
