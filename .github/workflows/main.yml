@@ -15,8 +15,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: copy file with spaces
+        uses: canastro/copy-file-action@master
+        with:
+          source: "examples/Chapter 11 Example 2 Ranked Loan Products/Recommended Loan Products.dmn"
+          target: "Recommended_Loan_Products.dmn"
       - uses: korelstar/xmllint-problem-matcher@v1
       - uses: ChristophWurst/xmllint-action@v1
         with:
           xml-file: "./examples/Chapter_11_Example_1_Originations/Chapter_11_Example.dmn"
           xml-schema-file: ./xsd/DMN15.xsd
+      - uses: ChristophWurst/xmllint-action@v1
+        with:
+          xml-file: "Recommended_Loan_Products.dmn"
+          xml-schema-file: ./xsd/DMN15.xsd
+  
