@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <semantic:definitions version="1.6" id="_5c8b9296-96cf-4898-bba5-3a2d21d34eed" name="Loan info" namespace="http://www.trisotech.com/definitions/_5c8b9296-96cf-4898-bba5-3a2d21d34eed" exporter="DMN Modeler" exporterVersion="6.2.2.3" xmlns:semantic="https://www.omg.org/spec/DMN/" xmlns="http://www.trisotech.com/definitions/_5c8b9296-96cf-4898-bba5-3a2d21d34eed"
-xsi:schemaLocation="
-	https://www.omg.org/spec/DMN/
-	https://www.omg.org/spec/DMN/20240322/DMN16.xsd
-	https://www.omg.org/spec/DMN/DI/
-	https://www.omg.org/spec/DMN/20240322/DMNDI16.xsd
-	http://www.omg.org/spec/DMN/20180521/DI/
-	https://www.omg.org/spec/DMN/20180521/DI.xsd
-	http://www.omg.org/spec/DMN/20180521/DC/
-	https://www.omg.org/spec/DMN/20180521/DC.xsd
-">
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+		https://www.omg.org/spec/DMN/
+		https://www.omg.org/spec/DMN/20240322/DMN16.xsd
+		https://www.omg.org/spec/DMN/DI/
+		https://www.omg.org/spec/DMN/20240322/DMNDI16.xsd
+		http://www.omg.org/spec/DMN/20180521/DI/
+		https://www.omg.org/spec/DMN/20180521/DI.xsd
+		http://www.omg.org/spec/DMN/20180521/DC/
+		https://www.omg.org/spec/DMN/20180521/DC.xsd
+	">
 	<semantic:itemDefinition name="tBorrower" label="tBorrower">
 		<semantic:itemComponent id="_b7dcc14d-510d-4628-a510-ca774208e501" name="Full Name">
 			<semantic:typeRef>string</semantic:typeRef>
