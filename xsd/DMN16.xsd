@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema elementFormDefault="qualified"
-	xmlns="https://www.omg.org/spec/DMN/20230324/MODEL/"
-	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-	xmlns:dmndi="https://www.omg.org/spec/DMN/20230324/DMNDI/"
-	targetNamespace="https://www.omg.org/spec/DMN/20230324/MODEL/">
+<xsd:schema id="DMN" version="1.6"
+	elementFormDefault="qualified"
+	xmlns="https://www.omg.org/spec/DMN/"
+	targetNamespace="https://www.omg.org/spec/DMN/"
+	xmlns:dmndi="https://www.omg.org/spec/DMN/DI/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 
-	<xsd:import namespace="https://www.omg.org/spec/DMN/20230324/DMNDI/"
-	            schemaLocation="DMNDI15.xsd">
+	<xsd:import namespace="https://www.omg.org/spec/DMN/DI/"
+	            schemaLocation="DMNDI16.xsd">
 		<xsd:annotation>
 			<xsd:documentation>
 				Include the DMN Diagram Interchange (DI) schema
@@ -54,8 +55,9 @@
 					<xsd:element ref="businessContextElement" minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element ref="dmndi:DMNDI" minOccurs="0" maxOccurs="1"/>
 				</xsd:sequence>
-				<xsd:attribute name="expressionLanguage" type="xsd:anyURI" use="optional" default="https://www.omg.org/spec/DMN/20230324/FEEL/"/>
-				<xsd:attribute name="typeLanguage" type="xsd:anyURI" use="optional" default="https://www.omg.org/spec/DMN/20230324/FEEL/"/>
+				<xsd:attribute name="version" type="xsd:decimal" use="required"/>
+				<xsd:attribute name="expressionLanguage" type="xsd:anyURI" use="optional" default="https://www.omg.org/spec/DMN/FEEL/1.6"/>
+				<xsd:attribute name="typeLanguage" type="xsd:anyURI" use="optional" default="https://www.omg.org/spec/DMN/FEEL/1.6"/>
 				<xsd:attribute name="namespace" type="xsd:anyURI" use="required"/>
 				<xsd:attribute name="exporter" type="xsd:string" use="optional"/>
 				<xsd:attribute name="exporterVersion" type="xsd:string" use="optional"/>

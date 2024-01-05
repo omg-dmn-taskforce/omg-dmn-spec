@@ -1,13 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions
+<definitions version="1.6"
   id="Definitions_0v8cooh"
   name="Decision with Listed Input data"
   namespace="http://www.omg.org/spec/DMN/20180521/diagram-interchange-decision-with-listed-input-data/"
-  xmlns="https://www.omg.org/spec/DMN/20230324/MODEL/"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns:dmndi="https://www.omg.org/spec/DMN/20230324/DMNDI/"
+  xmlns="https://www.omg.org/spec/DMN/"
+  xmlns:dmndi="https://www.omg.org/spec/DMN/DI/"
+  xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/"
   xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/"
-  xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/">
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="
+    https://www.omg.org/spec/DMN/
+    https://www.omg.org/spec/DMN/20240322/DMN16.xsd
+    https://www.omg.org/spec/DMN/DI/
+    https://www.omg.org/spec/DMN/20240322/DMNDI16.xsd
+    http://www.omg.org/spec/DMN/20180521/DI/
+    https://www.omg.org/spec/DMN/20180521/DI.xsd
+    http://www.omg.org/spec/DMN/20180521/DC/
+    https://www.omg.org/spec/DMN/20180521/DC.xsd
+  ">
   <decision id="Decision_1" name="Decision">
     <informationRequirement>
       <requiredInput href="#InputData_1" />
