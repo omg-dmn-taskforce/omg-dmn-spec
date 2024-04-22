@@ -7,12 +7,12 @@
     </semantic:decisionService>
     <semantic:businessKnowledgeModel id="_a30c75ec-7d81-4606-802c-b31ea308392d" name="PMT">
         <semantic:description>&lt;p&gt;&lt;span lang="JA"&gt;Standard calculation of monthly installment&amp;nbsp;&lt;/span&gt;from Rate, Term and Amount.&lt;/p&gt;</semantic:description>
-        <semantic:variable name="PMT" id="_702e93e8-7d03-4400-aae4-a21543a4d631" typeRef="Any"/>
-        <semantic:encapsulatedLogic id="_7fafdbd9-083f-43f5-bc0a-57c9ea0cf943" kind="FEEL" typeRef="Any" triso:expressionId="_3e686571-acdc-46c2-8fe0-8e399ee6a570">
+        <semantic:variable name="PMT" id="_702e93e8-7d03-4400-aae4-a21543a4d631"/>
+        <semantic:encapsulatedLogic id="_7fafdbd9-083f-43f5-bc0a-57c9ea0cf943" kind="FEEL" triso:expressionId="_3e686571-acdc-46c2-8fe0-8e399ee6a570">
             <semantic:formalParameter name="Rate" typeRef="number" id="_1787cf94-5e76-4926-ac24-5b4096b28dca"/>
             <semantic:formalParameter name="Term" typeRef="number" id="_0d037df5-8942-473f-9feb-2e16d6d7d631"/>
             <semantic:formalParameter name="Amount" typeRef="number" id="_deb10bf3-97f0-4f6b-8ae4-5cbfd44debac"/>
-            <semantic:literalExpression id="_4d149dbb-89da-498e-853f-2c33f4e9b834">
+            <semantic:literalExpression id="_4d149dbb-89da-498e-853f-2c33f4e9b834" typeRef="number">
                 <semantic:text>(Amount *Rate/12) / (1 - (1 + Rate/12)**-Term)</semantic:text>
             </semantic:literalExpression>
         </semantic:encapsulatedLogic>
