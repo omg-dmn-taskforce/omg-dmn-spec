@@ -55,7 +55,6 @@
 					<xsd:element ref="businessContextElement" minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element ref="dmndi:DMNDI" minOccurs="0" maxOccurs="1"/>
 				</xsd:sequence>
-				<xsd:attribute name="version" type="xsd:decimal" use="required"/>
 				<xsd:attribute name="expressionLanguage" type="xsd:anyURI" use="optional" default="https://www.omg.org/spec/DMN/FEEL/1.6"/>
 				<xsd:attribute name="typeLanguage" type="xsd:anyURI" use="optional" default="https://www.omg.org/spec/DMN/FEEL/1.6"/>
 				<xsd:attribute name="namespace" type="xsd:anyURI" use="required"/>
