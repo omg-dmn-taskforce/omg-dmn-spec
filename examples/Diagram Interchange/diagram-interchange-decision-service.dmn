@@ -10,9 +10,9 @@
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="
     https://www.omg.org/spec/DMN/
-    https://www.omg.org/spec/DMN/20240322/DMN16.xsd
+    https://www.omg.org/spec/DMN/20240513/DMN16.xsd
     https://www.omg.org/spec/DMN/DI/
-    https://www.omg.org/spec/DMN/20240322/DMNDI16.xsd
+    https://www.omg.org/spec/DMN/20240513/DMNDI16.xsd
     http://www.omg.org/spec/DMN/20180521/DI/
     https://www.omg.org/spec/DMN/20180521/DI.xsd
     http://www.omg.org/spec/DMN/20180521/DC/
