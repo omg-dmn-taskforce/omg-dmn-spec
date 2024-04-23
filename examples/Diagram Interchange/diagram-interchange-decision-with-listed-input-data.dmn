@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions version="1.6"
+<definitions
   id="Definitions_0v8cooh"
   name="Decision with Listed Input data"
   namespace="http://www.omg.org/spec/DMN/20180521/diagram-interchange-decision-with-listed-input-data/"

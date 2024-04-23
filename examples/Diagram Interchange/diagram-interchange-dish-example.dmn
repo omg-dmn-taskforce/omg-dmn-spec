@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions version="1.6" id="dish-decisions" name="Dish Decisions"
+<definitions id="dish-decisions" name="Dish Decisions"
   namespace="http://www.omg.org/spec/DMN/20180521/dish-example/"
   xmlns="https://www.omg.org/spec/DMN/"
   xmlns:dmndi="https://www.omg.org/spec/DMN/DI/"
