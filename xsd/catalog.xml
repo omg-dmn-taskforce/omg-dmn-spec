@@ -2,11 +2,11 @@
 
     <uri
         name="https://www.omg.org/spec/DMN/"
-        uri="DMN16.xsd" />
+        uri="DMN.xsd" />
 
     <uri
         name="https://www.omg.org/spec/DMN/DI/"
-        uri="DMNDI16.xsd" />
+        uri="DMNDI.xsd" />
     
     <uri
         name="http://www.omg.org/spec/DMN/20180521/DI/"
