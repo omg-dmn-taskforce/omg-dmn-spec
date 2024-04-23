@@ -1,0 +1,25 @@
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+
+    <uri
+        name="https://www.omg.org/spec/DMN/20240513/MODEL/"
+        uri="DMN16.xsd" />
+
+    <uri
+        name="https://www.omg.org/spec/DMN/20230324/DMNDI/"
+        uri="DMNDI15.xsd" />
+    
+    <uri
+        name="http://www.omg.org/spec/DMN/20180521/DI/"
+        uri="DI.xsd" />
+    
+    <uri
+        name="http://www.omg.org/spec/DMN/20180521/DC/"
+        uri="DC.xsd" />
+
+    <uri name="http://www.omg.org/spec/XMI/20131001"
+        uri="https://www.omg.org/spec/XMI/20131001/XMI.xsd" />
+    <uri name="http://www.w3.org/2001/XMLSchema"
+        uri="https://www.w3.org/2001/XMLSchema.xsd" />
+    <uri name="http://www.w3.org/XML/1998/namespace"
+        uri="https://www.w3.org/2009/01/xml.xsd" />
+</catalog>
