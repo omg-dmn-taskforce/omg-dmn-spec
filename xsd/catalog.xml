@@ -1,0 +1,19 @@
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+
+    <uri
+        name="https://www.omg.org/spec/DMN/"
+        uri="DMN16.xsd" />
+
+    <uri
+        name="https://www.omg.org/spec/DMN/DI/"
+        uri="DMNDI16.xsd" />
+    
+    <uri
+        name="http://www.omg.org/spec/DMN/20180521/DI/"
+        uri="DI.xsd" />
+    
+    <uri
+        name="http://www.omg.org/spec/DMN/20180521/DC/"
+        uri="DC.xsd" />
+
+</catalog>

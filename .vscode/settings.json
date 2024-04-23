@@ -1,0 +1,62 @@
+{
+    "xml.catalogs": [
+        "xsd/catalog.xml"
+    ],
+    "xml.filePathSupport.mappings": [
+        // see: https://github.com/redhat-developer/vscode-xml/blob/main/docs/Features/XMLFilePathSupport.md
+        {
+            "pattern": "**/*.dmn",
+            "expressions": [
+               {
+                  "xpath": "import/@locationURI"
+               }
+            ]
+        }
+    ],
+    "xml.references": [
+        // see: https://github.com/redhat-developer/vscode-xml/blob/main/docs/Features/XMLReferencesFeatures.md
+        {
+            "pattern": "**/*.dmn",
+            "expressions": [
+                {
+                    "from": "itemComponent/typeRef/text()",
+                    "to": "itemDefinition/@name"
+                },
+                {
+                    "from": "@dmnElementRef",
+                    "to": "@id"
+                },
+                {
+                    "from": "@href",
+                    "prefix": "#",
+                    "to": "@id"
+                },
+                {
+                    "from": "DMNEdge/@sourceElement",
+                    "to": "DMNShape/@id"
+                },
+                {
+                    "from": "DMNEdge/@targetElement",
+                    "to": "DMNShape/@id"
+                }
+            ]
+        },
+        {
+            "pattern": "**/*.xmi",
+            "expressions": [
+                {
+                    "from": "@idref",
+                    "to": "@id"
+                },
+                {
+                    "from": "@type",
+                    "to": "@id"
+                },
+                {
+                    "from": "@element",
+                    "to": "@id"
+                }
+            ]
+        }
+    ]
+}
