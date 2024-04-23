@@ -3,9 +3,7 @@ name: CI
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
   push:
-    branches: [ master ]
   pull_request:
-    branches: [ master ]
 
   # Allows to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -19,40 +17,40 @@ jobs:
       - uses: ChristophWurst/xmllint-action@v1.2
         with:
           xml-file: "./examples/Chapter 11 Example 1 Originations/Chapter 11 Example.dmn"
-          xml-schema-file: ./xsd/DMN15.xsd
+          xml-schema-file: ./xsd/DMN.xsd
         if: always()
       - uses: ChristophWurst/xmllint-action@v1.2
         with:
           xml-file: "./examples/Chapter 11 Example 1 Originations/Financial.dmn"
-          xml-schema-file: ./xsd/DMN15.xsd
+          xml-schema-file: ./xsd/DMN.xsd
         if: always()
       - uses: ChristophWurst/xmllint-action@v1.2
         with:
           xml-file: "examples/Chapter 11 Example 2 Ranked Loan Products/Recommended Loan Products.dmn"
-          xml-schema-file: ./xsd/DMN15.xsd
+          xml-schema-file: ./xsd/DMN.xsd
         if: always()
       - uses: ChristophWurst/xmllint-action@v1.2
         with:
           xml-file: "examples/Chapter 11 Example 2 Ranked Loan Products/Loan info.dmn"
-          xml-schema-file: ./xsd/DMN15.xsd
+          xml-schema-file: ./xsd/DMN.xsd
         if: always()
       - uses: ChristophWurst/xmllint-action@v1.2
         with:
           xml-file: "examples/Diagram Interchange/diagram-interchange-decision-service.dmn"
-          xml-schema-file: ./xsd/DMN15.xsd
+          xml-schema-file: ./xsd/DMN.xsd
         if: always()
       - uses: ChristophWurst/xmllint-action@v1.2
         with:
           xml-file: "examples/Diagram Interchange/diagram-interchange-decision-with-listed-input-data.dmn"
-          xml-schema-file: ./xsd/DMN15.xsd
+          xml-schema-file: ./xsd/DMN.xsd
         if: always()
       - uses: ChristophWurst/xmllint-action@v1.2
         with:
           xml-file: "examples/Diagram Interchange/diagram-interchange-dish-example.dmn"
-          xml-schema-file: ./xsd/DMN15.xsd
+          xml-schema-file: ./xsd/DMN.xsd
         if: always()
       - uses: ChristophWurst/xmllint-action@v1.2
         with:
           xml-file: "examples/Diagram Interchange/diagram-interchange-shape-with-label-text.dmn"
-          xml-schema-file: ./xsd/DMN15.xsd
+          xml-schema-file: ./xsd/DMN.xsd
         if: always()
