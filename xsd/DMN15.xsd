@@ -474,6 +474,7 @@
 		<xsd:restriction base="xsd:string">
 			<xsd:enumeration value="FEEL"/>
 			<xsd:enumeration value="Java"/>
+			<xsd:enumeration value="ONNX"/>
 			<xsd:enumeration value="PMML"/>
 		</xsd:restriction>
 	</xsd:simpleType>
