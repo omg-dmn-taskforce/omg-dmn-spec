@@ -9,7 +9,7 @@
    <uml:Model xmi:type="uml:Model" xmi:id="_17_0_2_3_ea50349_1435105765209_262546_0"
               name="Data">
       <packagedElement xmi:type="uml:Package" xmi:id="eee_1045467100313_135436_1" name="DMN"
-                       URI="https://www.omg.org/spec/DMN/20230324/DMN15.xmi">
+                       URI="https://www.omg.org/spec/DMN/20240513/DMN16.xmi">
          <ownedComment xmi:type="uml:Comment" xmi:id="_17_0_3_1_42401a5_1375643476024_606503_2866"
                        body="Author: Gary Hallmark&#xA;Created: Nov 4, 2015&#xA;Title:&#xA;Comment:&#xA;">
             <annotatedElement xmi:idref="eee_1045467100313_135436_1"/>
