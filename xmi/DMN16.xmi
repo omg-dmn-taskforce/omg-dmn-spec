@@ -2661,5 +2661,7 @@
             </packagedElement>
          </packagedElement>
    </package>
-   <mofext:Tag xmi:id="DMN_mofTag0" xmi:type="mofext:Tag" name="org.omg.xmi.nsPrefix" element="_19_0_2_239e051a_1575919788035_856770_278" value="DMN"/>
+   <mofext:Tag xmi:type="mofext:Tag" xmi:id="_org.omg.xmi.nsPrefix" name="org.omg.xmi.nsPrefix" value="dmn">
+      <element xmi:idref="eee_1045467100313_135436_1"/>
+   </mofext:Tag>
 </xmi:XMI>
