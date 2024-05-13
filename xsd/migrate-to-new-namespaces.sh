@@ -1,6 +1,11 @@
 #!/bin/bash
 set -euxo pipefail
 
+# recursively search all DMN and XSD files in the current directory and migtrate them
+# from an old set of namespace to a new set of namespaces
+# requires `sponge` which can be installed via `sudo apt install moreutils`
+# usage: run `xsd/migrate-to-new-namespaces.sh` from the root of the project
+
 XSD_DIR="$(dirname $0)"
 
 source "$XSD_DIR/dmn-namespace-utils.sh"
@@ -42,10 +47,16 @@ upgrade_dmn_14_to_dmn_15() {
         "$1"
 }
 
-# recursively search all DMN files in the current directory and migtrate them
+upgrade_dmn_15_to_dmn_16() {
+    sed \
+        -e "s#$DMN15#$DMN16#g" \
+        -e "s#$FEEL15#$FEEL16#g" \
+        "$1"
+}
+
 declare -i NUMBER_OF_FILES=0
 while IFS= read -r -d '' DMN_FILE; do
     NUMBER_OF_FILES+=1
     echo "$NUMBER_OF_FILES: $DMN_FILE"
-    upgrade_dmn_14_to_dmn_15 "$DMN_FILE" | sponge "$DMN_FILE"
-done < <(find . '(' -iname '*.dmn*.xml' -or -iname '*.dmn' -or -name 'DMN*15.xsd' ')' -type f -print0)
+    upgrade_dmn_15_to_dmn_16 "$DMN_FILE" | sponge "$DMN_FILE"
+done < <(find . '(' -iname '*.dmn*.xml' -or -iname '*.dmn' -or -name 'DMN*1*.xsd' ')' -type f -print0)
