@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<semantic:definitions id="_736fa164-03d8-429f-8318-4913a548c3a6" name="Recommended Loan Products" namespace="http://www.trisotech.com/definitions/_736fa164-03d8-429f-8318-4913a548c3a6" exporter="DMN Modeler" exporterVersion="6.2.3" xmlns:semantic="https://www.omg.org/spec/DMN/20230324/MODEL/" xmlns:tc="http://www.omg.org/spec/DMN/20160719/testcase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:include1="http://www.trisotech.com/definitions/_5c8b9296-96cf-4898-bba5-3a2d21d34eed" xmlns="http://www.trisotech.com/definitions/_736fa164-03d8-429f-8318-4913a548c3a6">
-	<semantic:import namespace="http://www.trisotech.com/definitions/_5c8b9296-96cf-4898-bba5-3a2d21d34eed" name="Services" importType="https://www.omg.org/spec/DMN/20230324/MODEL/"/>
+<semantic:definitions id="_736fa164-03d8-429f-8318-4913a548c3a6" name="Recommended Loan Products" namespace="http://www.trisotech.com/definitions/_736fa164-03d8-429f-8318-4913a548c3a6" exporter="DMN Modeler" exporterVersion="6.2.3" xmlns:semantic="https://www.omg.org/spec/DMN/20240513/MODEL/" xmlns:tc="http://www.omg.org/spec/DMN/20160719/testcase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:include1="http://www.trisotech.com/definitions/_5c8b9296-96cf-4898-bba5-3a2d21d34eed" xmlns="http://www.trisotech.com/definitions/_736fa164-03d8-429f-8318-4913a548c3a6">
+	<semantic:import namespace="http://www.trisotech.com/definitions/_5c8b9296-96cf-4898-bba5-3a2d21d34eed" name="Services" importType="https://www.omg.org/spec/DMN/20240513/MODEL/"/>
 	<semantic:itemDefinition name="tBorrower" label="tBorrower">
 		<semantic:itemComponent id="_b7dcc14d-510d-4628-a510-ca774208e501" name="Full Name">
 			<semantic:typeRef>string</semantic:typeRef>
@@ -431,8 +431,8 @@
 		<semantic:variable name="Down Payment" id="_bbe3f7c0-d59c-472b-9266-73bcdcc0fbb6" typeRef="number"/>
 	</semantic:inputData>
 	<semantic:businessKnowledgeModel id="_a6e2c692-4a0c-4385-bbc3-7280e94a8760" name="Min Credit Score">
-		<semantic:variable name="Min Credit Score" id="_bafc7628-ede7-40ed-8229-b79e1760b8ee" typeRef="tCreditScore"/>
-		<semantic:encapsulatedLogic typeRef="tCreditScore">
+		<semantic:variable name="Min Credit Score" id="_bafc7628-ede7-40ed-8229-b79e1760b8ee"/>
+		<semantic:encapsulatedLogic>
 			<semantic:formalParameter name="DTI" typeRef="tPercent"/>
 			<semantic:formalParameter name="LTV" typeRef="tPercent"/>
 			<semantic:formalParameter name="Reserves" typeRef="number"/>
@@ -797,8 +797,8 @@ Property, Credit Score, Lender Ratings) </semantic:text>
 		</semantic:literalExpression>
 	</semantic:decision>
 	<semantic:businessKnowledgeModel id="_f286d938-0042-4f0d-a889-6838d2c83a17" name="Eligibility">
-		<semantic:variable name="Eligibility" id="_33c71a05-13ba-4040-9ce3-394aa5513d28" typeRef="Any"/>
-		<semantic:encapsulatedLogic id="_0c7fd6f0-3c0f-43fc-8689-de083430e010" kind="FEEL" typeRef="Any">
+		<semantic:variable name="Eligibility" id="_33c71a05-13ba-4040-9ce3-394aa5513d28"/>
+		<semantic:encapsulatedLogic id="_0c7fd6f0-3c0f-43fc-8689-de083430e010" kind="FEEL">
 			<semantic:formalParameter name="Loan Product" typeRef="tLoanProduct" id="_d91e73be-a2fa-4224-a673-07e5cafe2235"/>
 			<semantic:formalParameter name="Borrower" typeRef="tBorrower" id="_6828f434-c3cb-4c22-909c-e21c34f66416"/>
 			<semantic:formalParameter name="Loan Info" typeRef="tLoanInfoRow" id="_cf041290-0a54-4e2b-80ef-c3a3a04d6c21"/>
@@ -1024,8 +1024,8 @@ then true else false</semantic:text>
 		</semantic:context>
 	</semantic:decision>
 	<semantic:businessKnowledgeModel id="_813f0ad9-fae2-41fd-b99b-2c8e438b4e01" name="Eligibility Parameters">
-		<semantic:variable name="Eligibility Parameters" id="_de0fa861-531d-4983-9dd7-0b448af5d6a7" typeRef="tEligibilityParameters"/>
-		<semantic:encapsulatedLogic id="_0a63f9b7-5f09-47af-9bd7-0e6b10f0d457" kind="FEEL" typeRef="tEligibilityParameters">
+		<semantic:variable name="Eligibility Parameters" id="_de0fa861-531d-4983-9dd7-0b448af5d6a7"/>
+		<semantic:encapsulatedLogic id="_0a63f9b7-5f09-47af-9bd7-0e6b10f0d457" kind="FEEL">
 			<semantic:formalParameter name="Loan Product" typeRef="tLoanProduct" id="_1912abed-44d7-4728-a98b-f9edb9874014"/>
 			<semantic:formalParameter name="Borrower" typeRef="tBorrower" id="_53f8f293-a4ab-48e3-9285-1a50d9c7f384"/>
 			<semantic:formalParameter name="Loan Info" typeRef="tLoanInfoRow" id="_962c2fd9-96da-46b1-9532-234b60306665"/>
@@ -1091,8 +1091,8 @@ and To be paid off=true].Balance[item!=null])</semantic:text>
 		<semantic:variable name="Lender Ratings" id="_2c92c03e-a395-4af5-ae8c-387b37ba1d71" typeRef="tLenderRatings"/>
 	</semantic:inputData>
 	<semantic:businessKnowledgeModel id="_929201cb-cb3b-4326-b199-bb0f9149ebb0" name="Format Row">
-		<semantic:variable name="Format Row" id="_517952d5-64e8-4dc8-8815-ac6732b851a6" typeRef="tformattedrow_1"/>
-		<semantic:encapsulatedLogic id="_e6de2d7e-3623-449f-b238-63d2eadc31d6" kind="FEEL" typeRef="tformattedrow_1">
+		<semantic:variable name="Format Row" id="_517952d5-64e8-4dc8-8815-ac6732b851a6"/>
+		<semantic:encapsulatedLogic id="_e6de2d7e-3623-449f-b238-63d2eadc31d6" kind="FEEL">
 			<semantic:formalParameter name="row" typeRef="tTableRow" id="_984e3a72-a34e-4957-beb5-471b1a972ed5"/>
 			<semantic:context id="_5ccce417-75fd-4d60-b014-695bb847cb31" typeRef="tformattedrow_1">
 				<semantic:contextEntry id="_b5fcf3db-2bf1-4b11-ac61-88234e8ff31a">
