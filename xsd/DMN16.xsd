@@ -243,6 +243,7 @@
 				</xsd:choice>
 				<xsd:attribute name="typeLanguage" type="xsd:anyURI" use="optional"/>
 				<xsd:attribute name="isCollection" type="xsd:boolean" use="optional" default="false"/>
+				<xsd:attribute name="isRange" type="xsd:boolean" use="optional" default="false"/>
 			</xsd:extension>
 		</xsd:complexContent>
 	</xsd:complexType>
