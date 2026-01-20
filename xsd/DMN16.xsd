@@ -329,7 +329,7 @@
 			<xsd:extension base="tDMNElement">
 				<xsd:sequence>
 					<xsd:element name="outputValues" type="tUnaryTests" minOccurs="0"/>
-					<xsd:element name="defaultOutputEntry" type="tLiteralExpression" minOccurs="0"/>
+					<xsd:element name="defaultOutputEntry" type="tExpression" minOccurs="0"/>
 				</xsd:sequence>
 				<xsd:attribute name="name" type="xsd:string" use="optional"/>
 				<xsd:attribute name="typeRef" type="xsd:string"/>
