@@ -292,6 +292,9 @@
 	<xsd:complexType name="tInformationItem">
 		<xsd:complexContent>
 			<xsd:extension base="tNamedElement">
+				<xsd:sequence>
+					<xsd:element name="defaultValue" type="tExpression" minOccurs="0"/>
+				</xsd:sequence>
 				<xsd:attribute name="typeRef" type="xsd:string"/>
 			</xsd:extension>
 		</xsd:complexContent>
