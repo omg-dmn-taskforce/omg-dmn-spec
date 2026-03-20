@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema id="DMN" version="1.6"
+<xsd:schema id="DMN" version="20260504"
 	elementFormDefault="qualified"
 	xmlns="https://www.omg.org/spec/DMN/"
 	targetNamespace="https://www.omg.org/spec/DMN/"
