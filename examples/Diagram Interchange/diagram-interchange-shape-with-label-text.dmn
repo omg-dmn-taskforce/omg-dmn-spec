@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <definitions
+  dmnVersion="1.7"
   id="definitions_0v8cooh"
   name="Decision"
   namespace="http://www.omg.org/spec/DMN/20180521/diagram-interchange-shape-with-label-text/"

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <definitions
+  dmnVersion="1.7"
   id="Definitions_DecisionService"
   name="Decision Service"
   namespace="http://www.omg.org/spec/DMN/20180521/diagram-interchange-decision-service/"
