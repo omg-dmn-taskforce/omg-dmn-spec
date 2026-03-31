@@ -367,8 +367,8 @@
 		<semantic:variable name="Down Payment" id="_bbe3f7c0-d59c-472b-9266-73bcdcc0fbb6" typeRef="number"/>
 	</semantic:inputData>
 	<semantic:businessKnowledgeModel id="_aeaa30db-0f84-424a-b2f5-af9b2538a9ce" name="Rate Adjustment">
-		<semantic:variable name="Rate Adjustment" id="_3199df2d-5734-481f-a201-933b41d6196e" typeRef="tPercent"/>
-		<semantic:encapsulatedLogic typeRef="tPercent">
+		<semantic:variable name="Rate Adjustment" id="_3199df2d-5734-481f-a201-933b41d6196e"/>
+		<semantic:encapsulatedLogic>
 			<semantic:formalParameter name="Credit Score" typeRef="tCreditScore"/>
 			<semantic:formalParameter name="LTV" typeRef="tPercent"/>
 			<semantic:decisionTable id="_cd20f4b0-fbc2-4b9d-b31f-4a83d951e989" hitPolicy="UNIQUE" outputLabel="Rate Adjustment" typeRef="tPercent">
@@ -386,7 +386,6 @@
 					</semantic:inputExpression>
 				</semantic:input>
 				<semantic:output id="_b7f72972-4ba1-4b2f-912e-349803135418"/>
-				<semantic:annotation name="Description"/>
 				<semantic:rule id="_3e460ca6-9b4f-42f3-b88c-4917970f788c">
 					<semantic:inputEntry id="_829ad9b0-0cf3-4d00-9200-8ec1758e0552">
 						<semantic:text>&gt;=660</semantic:text>
@@ -397,9 +396,6 @@
 					<semantic:outputEntry id="_22bb07d5-518d-4a68-9133-afd49eecf707">
 						<semantic:text>0</semantic:text>
 					</semantic:outputEntry>
-					<semantic:annotationEntry>
-						<semantic:text/>
-					</semantic:annotationEntry>
 				</semantic:rule>
 				<semantic:rule id="_b4193cc2-fa9d-4225-bd43-d01def7a7b99">
 					<semantic:inputEntry id="_51b2a53b-a6c2-482a-be44-5bcb429fe000">
@@ -411,9 +407,6 @@
 					<semantic:outputEntry id="_9def10dd-fefa-415d-af70-57e604100c35">
 						<semantic:text>0.125</semantic:text>
 					</semantic:outputEntry>
-					<semantic:annotationEntry>
-						<semantic:text/>
-					</semantic:annotationEntry>
 				</semantic:rule>
 				<semantic:rule id="_aa33035d-70c3-46c7-8a03-091aa1cac209">
 					<semantic:inputEntry id="_b5d9d461-0c25-4696-a0f0-fef4db24e091">
@@ -425,9 +418,6 @@
 					<semantic:outputEntry id="_02773f21-ff28-4953-871f-79e11247a4ea">
 						<semantic:text>0.125</semantic:text>
 					</semantic:outputEntry>
-					<semantic:annotationEntry>
-						<semantic:text/>
-					</semantic:annotationEntry>
 				</semantic:rule>
 				<semantic:rule id="_ab605848-4621-46b1-b004-72e2cfb0790d">
 					<semantic:inputEntry id="_7989b770-8e8e-408d-b2f6-8645a9907948">
@@ -439,9 +429,6 @@
 					<semantic:outputEntry id="_2dc38af3-2e5e-4209-9b4c-efc01ea7bbf3">
 						<semantic:text>0.125</semantic:text>
 					</semantic:outputEntry>
-					<semantic:annotationEntry>
-						<semantic:text/>
-					</semantic:annotationEntry>
 				</semantic:rule>
 				<semantic:rule id="_af2ccda3-bdbe-4765-b77b-5e3dbb511d67">
 					<semantic:inputEntry id="_79b63a75-ab77-4ab6-887a-ae469a742628">
@@ -453,9 +440,6 @@
 					<semantic:outputEntry id="_519343cd-1c7a-4bc0-af66-d70cac2ee465">
 						<semantic:text>0.25</semantic:text>
 					</semantic:outputEntry>
-					<semantic:annotationEntry>
-						<semantic:text/>
-					</semantic:annotationEntry>
 				</semantic:rule>
 				<semantic:rule id="_496169e5-073b-4387-a929-05cbe62bc98b">
 					<semantic:inputEntry id="_45f13f95-6f0f-48bf-8f3c-ab7f9bd99fde">
@@ -467,9 +451,6 @@
 					<semantic:outputEntry id="_19aa90b1-12a9-4e53-83dd-e4555b05b27c">
 						<semantic:text>0.25</semantic:text>
 					</semantic:outputEntry>
-					<semantic:annotationEntry>
-						<semantic:text/>
-					</semantic:annotationEntry>
 				</semantic:rule>
 				<semantic:rule id="_62273267-d968-4124-8f47-17c93eb7b46e">
 					<semantic:inputEntry id="_388d54da-b672-4f0c-8b01-605cf210bd09">
@@ -481,9 +462,6 @@
 					<semantic:outputEntry id="_4ffd9f8b-91e7-4e49-89b6-a58e3dd26ed7">
 						<semantic:text>0.375</semantic:text>
 					</semantic:outputEntry>
-					<semantic:annotationEntry>
-						<semantic:text/>
-					</semantic:annotationEntry>
 				</semantic:rule>
 				<semantic:rule id="_8fc1174c-a757-4549-af9f-99700065c077">
 					<semantic:inputEntry id="_ea897caa-1470-4fab-af36-c97059f147fd">
@@ -495,9 +473,6 @@
 					<semantic:outputEntry id="_8bb7e26c-c2d7-44c8-aea0-fa9a90e1427f">
 						<semantic:text>0.375</semantic:text>
 					</semantic:outputEntry>
-					<semantic:annotationEntry>
-						<semantic:text/>
-					</semantic:annotationEntry>
 				</semantic:rule>
 				<semantic:rule id="_2e26421d-08e6-4a80-a661-5985b0a9b3ac">
 					<semantic:inputEntry id="_5af33bef-309c-4df0-a59c-646a33c54be5">
@@ -509,9 +484,6 @@
 					<semantic:outputEntry id="_a24d5aab-d03f-4fb1-988d-a7cf034975b8">
 						<semantic:text>0.5</semantic:text>
 					</semantic:outputEntry>
-					<semantic:annotationEntry>
-						<semantic:text/>
-					</semantic:annotationEntry>
 				</semantic:rule>
 				<semantic:rule id="_e215d517-2d2a-4117-acfc-a982c8fb0353">
 					<semantic:inputEntry id="_9c12fc0d-2fa9-4a74-8b16-2ff02aebcaf6">
@@ -523,16 +495,13 @@
 					<semantic:outputEntry id="_b47625d7-01f3-4284-98bf-ff9d3b86c81e">
 						<semantic:text>0.5</semantic:text>
 					</semantic:outputEntry>
-					<semantic:annotationEntry>
-						<semantic:text/>
-					</semantic:annotationEntry>
 				</semantic:rule>
 			</semantic:decisionTable>
 		</semantic:encapsulatedLogic>
 	</semantic:businessKnowledgeModel>
 	<semantic:businessKnowledgeModel id="_0d2a6f36-0403-41ad-a191-f793743649d4" name="payment">
-		<semantic:variable name="payment" id="_8c231b6d-165f-4c36-bcd3-617498b36e0e" typeRef="number"/>
-		<semantic:encapsulatedLogic id="_97168569-14dd-4533-8d8c-497681134e3b" kind="FEEL" typeRef="number">
+		<semantic:variable name="payment" id="_8c231b6d-165f-4c36-bcd3-617498b36e0e"/>
+		<semantic:encapsulatedLogic id="_97168569-14dd-4533-8d8c-497681134e3b" kind="FEEL">
 			<semantic:formalParameter name="p" typeRef="number" id="_b65fd962-b719-4dca-b37b-4c4d2b7e9867"/>
 			<semantic:formalParameter name="r" typeRef="number" id="_22bb5be8-b3dd-4a05-8e0d-6458fe53aa4a"/>
 			<semantic:formalParameter name="n" typeRef="number" id="_6a169eec-28b4-4789-ac5e-141348bcc99a"/>

@@ -244,6 +244,7 @@
 				</xsd:choice>
 				<xsd:attribute name="typeLanguage" type="xsd:anyURI" use="optional"/>
 				<xsd:attribute name="isCollection" type="xsd:boolean" use="optional" default="false"/>
+				<xsd:attribute name="isRange" type="xsd:boolean" use="optional" default="false"/>
 			</xsd:extension>
 		</xsd:complexContent>
 	</xsd:complexType>
@@ -293,6 +294,9 @@
 	<xsd:complexType name="tInformationItem">
 		<xsd:complexContent>
 			<xsd:extension base="tNamedElement">
+				<xsd:sequence>
+					<xsd:element name="defaultValue" type="tExpression" minOccurs="0"/>
+				</xsd:sequence>
 				<xsd:attribute name="typeRef" type="xsd:string"/>
 			</xsd:extension>
 		</xsd:complexContent>
@@ -330,7 +334,7 @@
 			<xsd:extension base="tDMNElement">
 				<xsd:sequence>
 					<xsd:element name="outputValues" type="tUnaryTests" minOccurs="0"/>
-					<xsd:element name="defaultOutputEntry" type="tLiteralExpression" minOccurs="0"/>
+					<xsd:element name="defaultOutputEntry" type="tExpression" minOccurs="0"/>
 				</xsd:sequence>
 				<xsd:attribute name="name" type="xsd:string" use="optional"/>
 				<xsd:attribute name="typeRef" type="xsd:string"/>
@@ -475,6 +479,7 @@
 		<xsd:restriction base="xsd:string">
 			<xsd:enumeration value="FEEL"/>
 			<xsd:enumeration value="Java"/>
+			<xsd:enumeration value="ONNX"/>
 			<xsd:enumeration value="PMML"/>
 		</xsd:restriction>
 	</xsd:simpleType>

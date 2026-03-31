@@ -1,4 +1,4 @@
-DMN15-/DMN15-
+DMN16-<ISSUE>/DMN16-<PROPOSAL> <SUMMARY>
 
-Issue: https://issues.omg.org/browse/DMN15-
-Proposal: https://issues.omg.org/browse/DMN15-
+Issue: https://issues.omg.org/browse/DMN16-
+Proposal: https://issues.omg.org/browse/DMN16-

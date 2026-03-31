@@ -1,6 +1,11 @@
 #!/bin/bash
 set -euxo pipefail
 
+# recursively search all DMN and XSD files in the current directory and migtrate them
+# from an old set of namespace to a new set of namespaces
+# requires `sponge` which can be installed via `sudo apt install moreutils`
+# usage: run `xsd/migrate-to-new-namespaces.sh` from the root of the project
+
 XSD_DIR="$(dirname $0)"
 
 source "$XSD_DIR/dmn-namespace-utils.sh"

@@ -441,8 +441,8 @@
 		<semantic:variable name="Down Payment" id="_bbe3f7c0-d59c-472b-9266-73bcdcc0fbb6" typeRef="number"/>
 	</semantic:inputData>
 	<semantic:businessKnowledgeModel id="_a6e2c692-4a0c-4385-bbc3-7280e94a8760" name="Min Credit Score">
-		<semantic:variable name="Min Credit Score" id="_bafc7628-ede7-40ed-8229-b79e1760b8ee" typeRef="tCreditScore"/>
-		<semantic:encapsulatedLogic typeRef="tCreditScore">
+		<semantic:variable name="Min Credit Score" id="_bafc7628-ede7-40ed-8229-b79e1760b8ee"/>
+		<semantic:encapsulatedLogic>
 			<semantic:formalParameter name="DTI" typeRef="tPercent"/>
 			<semantic:formalParameter name="LTV" typeRef="tPercent"/>
 			<semantic:formalParameter name="Reserves" typeRef="number"/>
@@ -467,7 +467,6 @@
 						<semantic:text>[300..850]</semantic:text>
 					</semantic:outputValues>
 				</semantic:output>
-				<semantic:annotation name="Description"/>
 				<semantic:rule id="_60fb255d-3cca-406e-96aa-145e5c3134e2">
 					<semantic:inputEntry id="_2dfcbc28-2f05-4c34-9360-ce1274be0344">
 						<semantic:text>&lt;=36</semantic:text>
@@ -481,9 +480,6 @@
 					<semantic:outputEntry id="_aba459a7-a9bd-48ea-86d0-c964ebb54b4d">
 						<semantic:text>620</semantic:text>
 					</semantic:outputEntry>
-					<semantic:annotationEntry>
-						<semantic:text/>
-					</semantic:annotationEntry>
 				</semantic:rule>
 				<semantic:rule id="_8fdabf93-b884-49a4-9768-ed496c1eca15">
 					<semantic:inputEntry id="_2e12a1da-8528-4941-a36f-05eae403e2ba">
@@ -498,9 +494,6 @@
 					<semantic:outputEntry id="_7e96c5da-327c-4055-9e1f-743e794fe3ed">
 						<semantic:text>640</semantic:text>
 					</semantic:outputEntry>
-					<semantic:annotationEntry>
-						<semantic:text/>
-					</semantic:annotationEntry>
 				</semantic:rule>
 				<semantic:rule id="_ce04eb2e-2f8f-4bcb-bf21-b90bfc039de5">
 					<semantic:inputEntry id="_28251421-0039-4e33-81ca-5a69720605b1">
@@ -515,9 +508,6 @@
 					<semantic:outputEntry id="_f64cf229-d24f-4128-bd62-fc7560cb2017">
 						<semantic:text>660</semantic:text>
 					</semantic:outputEntry>
-					<semantic:annotationEntry>
-						<semantic:text/>
-					</semantic:annotationEntry>
 				</semantic:rule>
 				<semantic:rule id="_ab97313e-cdac-4984-8888-28abbfd52e67">
 					<semantic:inputEntry id="_62505674-40e1-4691-956a-7050a140861a">
@@ -532,9 +522,6 @@
 					<semantic:outputEntry id="_fd8a25ff-8896-400b-b15d-bff667d11d5c">
 						<semantic:text>680</semantic:text>
 					</semantic:outputEntry>
-					<semantic:annotationEntry>
-						<semantic:text/>
-					</semantic:annotationEntry>
 				</semantic:rule>
 				<semantic:rule id="_c6aef964-bebc-4372-a9e8-518bca51140d">
 					<semantic:inputEntry id="_38a12a6c-9644-4904-8f28-0939dc344636">
@@ -549,9 +536,6 @@
 					<semantic:outputEntry id="_c3991353-5446-4083-be12-e10cd21dbfd1">
 						<semantic:text>660</semantic:text>
 					</semantic:outputEntry>
-					<semantic:annotationEntry>
-						<semantic:text/>
-					</semantic:annotationEntry>
 				</semantic:rule>
 				<semantic:rule id="_4364e403-a2cf-411b-a91e-649ded6ebb53">
 					<semantic:inputEntry id="_2de00a53-a95a-4226-9bd3-bbd1fa466f32">
@@ -566,9 +550,6 @@
 					<semantic:outputEntry id="_5aca97fc-636c-48bf-8787-59ce61d8ee65">
 						<semantic:text>680</semantic:text>
 					</semantic:outputEntry>
-					<semantic:annotationEntry>
-						<semantic:text/>
-					</semantic:annotationEntry>
 				</semantic:rule>
 				<semantic:rule id="_05db9a53-f530-4c35-bffd-4f8e07e35e12">
 					<semantic:inputEntry id="_38e6e020-7be4-4f0a-b93e-c46ab65bcd0f">
@@ -583,9 +564,6 @@
 					<semantic:outputEntry id="_2db22546-005a-4f3a-a76e-b8f11a777225">
 						<semantic:text>700</semantic:text>
 					</semantic:outputEntry>
-					<semantic:annotationEntry>
-						<semantic:text/>
-					</semantic:annotationEntry>
 				</semantic:rule>
 				<semantic:rule id="_5c867367-a339-48df-8423-262f36bc2e48">
 					<semantic:inputEntry id="_ef6f0eeb-5f35-48b1-a662-52db20addb51">
@@ -600,9 +578,6 @@
 					<semantic:outputEntry id="_1b3be1eb-1387-439f-adb5-96837c31cdbd">
 						<semantic:text>720</semantic:text>
 					</semantic:outputEntry>
-					<semantic:annotationEntry>
-						<semantic:text/>
-					</semantic:annotationEntry>
 				</semantic:rule>
 			</semantic:decisionTable>
 		</semantic:encapsulatedLogic>
@@ -807,8 +782,8 @@ Property, Credit Score, Lender Ratings) </semantic:text>
 		</semantic:literalExpression>
 	</semantic:decision>
 	<semantic:businessKnowledgeModel id="_f286d938-0042-4f0d-a889-6838d2c83a17" name="Eligibility">
-		<semantic:variable name="Eligibility" id="_33c71a05-13ba-4040-9ce3-394aa5513d28" typeRef="Any"/>
-		<semantic:encapsulatedLogic id="_0c7fd6f0-3c0f-43fc-8689-de083430e010" kind="FEEL" typeRef="Any">
+		<semantic:variable name="Eligibility" id="_33c71a05-13ba-4040-9ce3-394aa5513d28"/>
+		<semantic:encapsulatedLogic id="_0c7fd6f0-3c0f-43fc-8689-de083430e010" kind="FEEL">
 			<semantic:formalParameter name="Loan Product" typeRef="tLoanProduct" id="_d91e73be-a2fa-4224-a673-07e5cafe2235"/>
 			<semantic:formalParameter name="Borrower" typeRef="tBorrower" id="_6828f434-c3cb-4c22-909c-e21c34f66416"/>
 			<semantic:formalParameter name="Loan Info" typeRef="tLoanInfoRow" id="_cf041290-0a54-4e2b-80ef-c3a3a04d6c21"/>
@@ -854,8 +829,7 @@ Credit Score &gt;= Required Credit Score else false</semantic:text>
 								<semantic:text>"Best","Good","Not Recommended","Ineligible"</semantic:text>
 							</semantic:outputValues>
 						</semantic:output>
-						<semantic:annotation name="Description"/>
-						<semantic:rule id="_7b3d290c-0fde-4f3e-b220-35c49f0bd39b">
+								<semantic:rule id="_7b3d290c-0fde-4f3e-b220-35c49f0bd39b">
 							<semantic:inputEntry id="_e4c91cbe-7210-4249-8889-0e8624af7a0b">
 								<semantic:text>count(Ratings[Lender Name=?.Lender Name and Customer Rating &gt; 4] )&gt;0</semantic:text>
 							</semantic:inputEntry>
@@ -865,9 +839,6 @@ Credit Score &gt;= Required Credit Score else false</semantic:text>
 							<semantic:outputEntry id="_a20c0261-66f8-458c-af98-9130e71b0764">
 								<semantic:text>"Best"</semantic:text>
 							</semantic:outputEntry>
-							<semantic:annotationEntry>
-								<semantic:text/>
-							</semantic:annotationEntry>
 						</semantic:rule>
 						<semantic:rule id="_04ac4893-c441-4cc6-a437-d034b358c817">
 							<semantic:inputEntry id="_fee48560-c88d-4c30-b312-c4259bfdbd89">
@@ -879,9 +850,6 @@ Credit Score &gt;= Required Credit Score else false</semantic:text>
 							<semantic:outputEntry id="_f9bf975e-7e3a-4d9a-a8fc-7038f74359f8">
 								<semantic:text>"Good"</semantic:text>
 							</semantic:outputEntry>
-							<semantic:annotationEntry>
-								<semantic:text/>
-							</semantic:annotationEntry>
 						</semantic:rule>
 						<semantic:rule id="_c4d79130-3848-4080-afaa-647146736125">
 							<semantic:inputEntry id="_cecfdc03-6cd4-407b-a8e6-c788f89521c2">
@@ -893,9 +861,6 @@ Credit Score &gt;= Required Credit Score else false</semantic:text>
 							<semantic:outputEntry id="_74927ae6-514d-4c13-be6d-378665e8aed0">
 								<semantic:text>"Not Recommended"</semantic:text>
 							</semantic:outputEntry>
-							<semantic:annotationEntry>
-								<semantic:text/>
-							</semantic:annotationEntry>
 						</semantic:rule>
 						<semantic:rule id="_15ef0d48-8d2c-4527-ba01-c85edb527fb2">
 							<semantic:inputEntry id="_39a73402-4a5f-42e5-be97-2ae3fbbc8e4a">
@@ -907,9 +872,6 @@ Credit Score &gt;= Required Credit Score else false</semantic:text>
 							<semantic:outputEntry id="_a6f39264-79d3-49da-80ef-200c730981c4">
 								<semantic:text>"Ineligible"</semantic:text>
 							</semantic:outputEntry>
-							<semantic:annotationEntry>
-								<semantic:text/>
-							</semantic:annotationEntry>
 						</semantic:rule>
 					</semantic:decisionTable>
 				</semantic:contextEntry>
@@ -1034,8 +996,8 @@ then true else false</semantic:text>
 		</semantic:context>
 	</semantic:decision>
 	<semantic:businessKnowledgeModel id="_813f0ad9-fae2-41fd-b99b-2c8e438b4e01" name="Eligibility Parameters">
-		<semantic:variable name="Eligibility Parameters" id="_de0fa861-531d-4983-9dd7-0b448af5d6a7" typeRef="tEligibilityParameters"/>
-		<semantic:encapsulatedLogic id="_0a63f9b7-5f09-47af-9bd7-0e6b10f0d457" kind="FEEL" typeRef="tEligibilityParameters">
+		<semantic:variable name="Eligibility Parameters" id="_de0fa861-531d-4983-9dd7-0b448af5d6a7"/>
+		<semantic:encapsulatedLogic id="_0a63f9b7-5f09-47af-9bd7-0e6b10f0d457" kind="FEEL">
 			<semantic:formalParameter name="Loan Product" typeRef="tLoanProduct" id="_1912abed-44d7-4728-a98b-f9edb9874014"/>
 			<semantic:formalParameter name="Borrower" typeRef="tBorrower" id="_53f8f293-a4ab-48e3-9285-1a50d9c7f384"/>
 			<semantic:formalParameter name="Loan Info" typeRef="tLoanInfoRow" id="_962c2fd9-96da-46b1-9532-234b60306665"/>
@@ -1101,8 +1063,8 @@ and To be paid off=true].Balance[item!=null])</semantic:text>
 		<semantic:variable name="Lender Ratings" id="_2c92c03e-a395-4af5-ae8c-387b37ba1d71" typeRef="tLenderRatings"/>
 	</semantic:inputData>
 	<semantic:businessKnowledgeModel id="_929201cb-cb3b-4326-b199-bb0f9149ebb0" name="Format Row">
-		<semantic:variable name="Format Row" id="_517952d5-64e8-4dc8-8815-ac6732b851a6" typeRef="tformattedrow_1"/>
-		<semantic:encapsulatedLogic id="_e6de2d7e-3623-449f-b238-63d2eadc31d6" kind="FEEL" typeRef="tformattedrow_1">
+		<semantic:variable name="Format Row" id="_517952d5-64e8-4dc8-8815-ac6732b851a6"/>
+		<semantic:encapsulatedLogic id="_e6de2d7e-3623-449f-b238-63d2eadc31d6" kind="FEEL">
 			<semantic:formalParameter name="row" typeRef="tTableRow" id="_984e3a72-a34e-4957-beb5-471b1a972ed5"/>
 			<semantic:context id="_5ccce417-75fd-4d60-b014-695bb847cb31" typeRef="tformattedrow_1">
 				<semantic:contextEntry id="_b5fcf3db-2bf1-4b11-ac61-88234e8ff31a">
