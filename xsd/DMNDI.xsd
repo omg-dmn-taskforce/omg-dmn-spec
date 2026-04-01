@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-            xmlns:dmndi="https://www.omg.org/spec/DMN/20230324/DMNDI/"
-            xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/"
-            xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/"
-            targetNamespace="https://www.omg.org/spec/DMN/20230324/DMNDI/"
-            elementFormDefault="qualified" attributeFormDefault="unqualified">
+<xsd:schema id="DMNDI" version="1.6"
+			elementFormDefault="qualified"
+			targetNamespace="https://www.omg.org/spec/DMN/DI/"
+			xmlns:dmndi="https://www.omg.org/spec/DMN/DI/"
+			xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/"
+			xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/"
+			xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 
 	<xsd:import namespace="http://www.omg.org/spec/DMN/20180521/DC/"
-	            schemaLocation="DC.xsd"/>
+				schemaLocation="DC.xsd"/>
 	<xsd:import namespace="http://www.omg.org/spec/DMN/20180521/DI/"
-	            schemaLocation="DI.xsd"/>
+				schemaLocation="DI.xsd"/>
 
 	<xsd:element name="DMNDI" type="dmndi:DMNDI"/>
 	<xsd:element name="DMNDiagram" type="dmndi:DMNDiagram"/>
