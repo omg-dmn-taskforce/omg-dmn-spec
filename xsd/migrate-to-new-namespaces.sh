@@ -67,7 +67,9 @@ upgrade_dmn_16_to_dmn_17() {
         xsi_attr=' xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"'
     fi
 
-    # Add xsi:schemaLocation if not already present
+    # Add xsi:schemaLocation if not already present.
+    # Note: literal \n sequences below are intentional — GNU sed interprets \n in
+    # replacement strings as actual newlines, producing the multi-line format.
     local schema_loc_attr=""
     if ! grep -q 'xsi:schemaLocation=' "$1"; then
         schema_loc_attr=" xsi:schemaLocation=\"\n    $DMN\n    $DMN_XSD\n    $DMNDI\n    $DMNDI_XSD\n    $DI\n    $DI_XSD\n    $DC\n    $DC_XSD\n  \""
