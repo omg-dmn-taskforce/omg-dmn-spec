@@ -70,7 +70,7 @@ upgrade_dmn_16_to_dmn_17() {
     # Add xsi:schemaLocation if not already present
     local schema_loc_attr=""
     if ! grep -q 'xsi:schemaLocation=' "$1"; then
-        schema_loc_attr=" xsi:schemaLocation=\"$DMN $DMN_XSD $DMNDI $DMNDI_XSD\""
+        schema_loc_attr=" xsi:schemaLocation=\"\n    $DMN\n    $DMN_XSD\n    $DMNDI\n    $DMNDI_XSD\n    $DI\n    $DI_XSD\n    $DC\n    $DC_XSD\n  \""
     fi
 
     sed -E \
