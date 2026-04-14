@@ -1,6 +1,8 @@
 #!/bin/bash
 
 DMN='https://www.omg.org/spec/DMN/'
+DMN_XSD='https://www.omg.org/spec/DMN/20260504/DMN.xsd'
+DMNDI_XSD='https://www.omg.org/spec/DMN/20260504/DMNDI.xsd'
 DMN11='http://www.omg.org/spec/DMN/20151101/dmn.xsd'
 DMN12='http://www.omg.org/spec/DMN/20180521/MODEL/'
 DMN13='https://www.omg.org/spec/DMN/20191111/MODEL/'

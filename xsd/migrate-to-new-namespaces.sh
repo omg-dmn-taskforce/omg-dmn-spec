@@ -55,10 +55,29 @@ upgrade_dmn_15_to_dmn_16() {
 }
 
 upgrade_dmn_16_to_dmn_17() {
+    # Add dmnVersion attribute if not already present
+    local dmn_version_attr=""
+    if ! grep -q 'dmnVersion=' "$1"; then
+        dmn_version_attr=' dmnVersion="1.7"'
+    fi
+
+    # Add xmlns:xsi declaration if not already present
+    local xsi_attr=""
+    if ! grep -q 'xmlns:xsi=' "$1"; then
+        xsi_attr=' xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"'
+    fi
+
+    # Add xsi:schemaLocation if not already present
+    local schema_loc_attr=""
+    if ! grep -q 'xsi:schemaLocation=' "$1"; then
+        schema_loc_attr=" xsi:schemaLocation=\"$DMN $DMN_XSD $DMNDI $DMNDI_XSD\""
+    fi
+
     sed \
         -e "s#$DMN16#$DMN#g" \
         -e "s#$FEEL16#$FEEL#g" \
         -e "s#$DMNDI15#$DMNDI#g" \
+        -e "s#\\(<[a-zA-Z_:]*definitions\\b\\)#\\1${dmn_version_attr}${xsi_attr}${schema_loc_attr}#" \
         "$1"
 }
 
