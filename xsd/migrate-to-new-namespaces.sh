@@ -55,7 +55,7 @@ upgrade_dmn_15_to_dmn_16() {
 }
 
 upgrade_dmn_16_to_dmn_17() {
-    # Add dmnVersion attribute if not already present
+    # Add dmnVersion attribute if not already present (becomes first attribute)
     local dmn_version_attr=""
     if ! grep -q 'dmnVersion=' "$1"; then
         dmn_version_attr=' dmnVersion="1.7"'
@@ -67,20 +67,25 @@ upgrade_dmn_16_to_dmn_17() {
         xsi_attr=' xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"'
     fi
 
-    # Add xsi:schemaLocation if not already present.
-    # Note: literal \n sequences below are intentional — GNU sed interprets \n in
-    # replacement strings as actual newlines, producing the multi-line format.
-    local schema_loc_attr=""
+    # Add xsi:schemaLocation as the last attribute (before closing >) if not present.
+    # Uses GNU sed -z in a second pass to handle multi-line definitions opening tags.
+    # Note: literal \n sequences in schema_loc_suffix are interpreted by sed as actual newlines.
+    local schema_loc_suffix=""
     if ! grep -q 'xsi:schemaLocation=' "$1"; then
-        schema_loc_attr=" xsi:schemaLocation=\"\n    $DMN\n    $DMN_XSD\n    $DMNDI\n    $DMNDI_XSD\n    $DI\n    $DI_XSD\n    $DC\n    $DC_XSD\n  \""
+        schema_loc_suffix="\n  xsi:schemaLocation=\"\n    $DMN\n    $DMN_XSD\n    $DMNDI\n    $DMNDI_XSD\n    $DI\n    $DI_XSD\n    $DC\n    $DC_XSD\n  \""
     fi
 
     sed -E \
         -e "s#$DMN16#$DMN#g" \
         -e "s#$FEEL16#$FEEL#g" \
         -e "s#$DMNDI15#$DMNDI#g" \
-        -e "s#(<([a-zA-Z][a-zA-Z0-9_-]*:)?definitions)\\b#\\1${dmn_version_attr}${xsi_attr}${schema_loc_attr}#" \
-        "$1"
+        -e "s#(<([a-zA-Z][a-zA-Z0-9_-]*:)?definitions)\\b#\\1${dmn_version_attr}${xsi_attr}#" \
+        "$1" | \
+    if [ -n "$schema_loc_suffix" ]; then
+        sed -Ez "s#(<([a-zA-Z][a-zA-Z0-9_-]*:)?definitions\b[^>]*)>#\1${schema_loc_suffix}>#"
+    else
+        cat
+    fi
 }
 
 # recursively search all DMN files in the current directory and migrate them
