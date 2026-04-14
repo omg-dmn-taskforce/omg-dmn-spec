@@ -73,11 +73,11 @@ upgrade_dmn_16_to_dmn_17() {
         schema_loc_attr=" xsi:schemaLocation=\"$DMN $DMN_XSD $DMNDI $DMNDI_XSD\""
     fi
 
-    sed \
+    sed -E \
         -e "s#$DMN16#$DMN#g" \
         -e "s#$FEEL16#$FEEL#g" \
         -e "s#$DMNDI15#$DMNDI#g" \
-        -e "s#\\(<[a-zA-Z_:]*definitions\\b\\)#\\1${dmn_version_attr}${xsi_attr}${schema_loc_attr}#" \
+        -e "s#(<([a-zA-Z][a-zA-Z0-9_-]*:)?definitions)\\b#\\1${dmn_version_attr}${xsi_attr}${schema_loc_attr}#" \
         "$1"
 }
 
