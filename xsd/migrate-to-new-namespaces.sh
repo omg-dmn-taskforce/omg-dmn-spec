@@ -58,6 +58,7 @@ upgrade_dmn_16_to_dmn_17() {
     sed \
         -e "s#$DMN16#$DMN#g" \
         -e "s#$FEEL16#$FEEL#g" \
+        -e "s#$DMNDI15#$DMNDI#g" \
         "$1"
 }
 

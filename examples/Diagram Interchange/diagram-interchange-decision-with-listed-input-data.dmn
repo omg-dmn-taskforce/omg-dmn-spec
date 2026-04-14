@@ -5,14 +5,14 @@
   name="Decision with Listed Input data"
   namespace="http://www.omg.org/spec/DMN/20180521/diagram-interchange-decision-with-listed-input-data/"
   xmlns="https://www.omg.org/spec/DMN/"
-  xmlns:dmndi="https://www.omg.org/spec/DMN/DI/"
+  xmlns:dmndi="https://www.omg.org/spec/DMN/DMNDI/"
   xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/"
   xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="
     https://www.omg.org/spec/DMN/
     https://www.omg.org/spec/DMN/20260504/DMN.xsd
-    https://www.omg.org/spec/DMN/DI/
+    https://www.omg.org/spec/DMN/DMNDI/
     https://www.omg.org/spec/DMN/20260504/DMNDI.xsd
     http://www.omg.org/spec/DMN/20180521/DI/
     https://www.omg.org/spec/DMN/20180521/DI.xsd

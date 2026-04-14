@@ -3,10 +3,10 @@
 	elementFormDefault="qualified"
 	xmlns="https://www.omg.org/spec/DMN/"
 	targetNamespace="https://www.omg.org/spec/DMN/"
-	xmlns:dmndi="https://www.omg.org/spec/DMN/DI/"
+	xmlns:dmndi="https://www.omg.org/spec/DMN/DMNDI/"
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 
-	<xsd:import namespace="https://www.omg.org/spec/DMN/DI/"
+	<xsd:import namespace="https://www.omg.org/spec/DMN/DMNDI/"
 	            schemaLocation="DMNDI.xsd">
 		<xsd:annotation>
 			<xsd:documentation>

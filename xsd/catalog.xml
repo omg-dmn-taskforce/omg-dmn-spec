@@ -5,7 +5,7 @@
         uri="DMN.xsd" />
 
     <uri
-        name="https://www.omg.org/spec/DMN/DI/"
+        name="https://www.omg.org/spec/DMN/DMNDI/"
         uri="DMNDI.xsd" />
     
     <uri
