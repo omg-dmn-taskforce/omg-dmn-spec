@@ -9,11 +9,11 @@
         uri="DMNDI.xsd" />
     
     <uri
-        name="http://www.omg.org/spec/DMN/20180521/DI/"
+        name="https://www.omg.org/spec/SCE/DI/"
         uri="DI.xsd" />
     
     <uri
-        name="http://www.omg.org/spec/DMN/20180521/DC/"
+        name="https://www.omg.org/spec/SCE/DC/"
         uri="DC.xsd" />
 
     <uri name="http://www.omg.org/spec/XMI/20131001"

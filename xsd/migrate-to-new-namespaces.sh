@@ -79,6 +79,8 @@ upgrade_dmn_16_to_dmn_17() {
         -e "s#$DMN16#$DMN#g" \
         -e "s#$FEEL16#$FEEL#g" \
         -e "s#$DMNDI15#$DMNDI#g" \
+        -e "s#$DI12#$DI#g" \
+        -e "s#$DC12#$DC#g" \
         -e "s#(<([a-zA-Z][a-zA-Z0-9_-]*:)?definitions)\\b#\\1${dmn_version_attr}${xsi_attr}#" \
         "$1" | \
     if [ -n "$schema_loc_suffix" ]; then

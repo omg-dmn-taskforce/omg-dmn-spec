@@ -2,13 +2,13 @@
 <semantic:definitions dmnVersion="1.7" id="_736fa164-03d8-429f-8318-4913a548c3a6" name="Recommended Loan Products" namespace="http://www.trisotech.com/definitions/_736fa164-03d8-429f-8318-4913a548c3a6" exporter="DMN Modeler" exporterVersion="6.2.3" xmlns:semantic="https://www.omg.org/spec/DMN/" xmlns:tc="http://www.omg.org/spec/DMN/20160719/testcase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:include1="http://www.trisotech.com/definitions/_5c8b9296-96cf-4898-bba5-3a2d21d34eed" xmlns="http://www.trisotech.com/definitions/_736fa164-03d8-429f-8318-4913a548c3a6"
 	xsi:schemaLocation="
 		https://www.omg.org/spec/DMN/
-		https://www.omg.org/spec/DMN/20260504/DMN.xsd
+		https://www.omg.org/spec/DMN/DMN.xsd
 		https://www.omg.org/spec/DMN/DMNDI/
-		https://www.omg.org/spec/DMN/20260504/DMNDI.xsd
-		http://www.omg.org/spec/DMN/20180521/DI/
-		https://www.omg.org/spec/DMN/20180521/DI.xsd
-		http://www.omg.org/spec/DMN/20180521/DC/
-		https://www.omg.org/spec/DMN/20180521/DC.xsd
+		https://www.omg.org/spec/DMN/DMNDI.xsd
+		https://www.omg.org/spec/SCE/DI/
+		https://www.omg.org/spec/SCE/DI.xsd
+		https://www.omg.org/spec/SCE/DC/
+		https://www.omg.org/spec/SCE/DC.xsd
 	">
 	<semantic:import namespace="http://www.trisotech.com/definitions/_5c8b9296-96cf-4898-bba5-3a2d21d34eed" name="Services" importType="https://www.omg.org/spec/DMN/"/>
 	<semantic:itemDefinition name="tBorrower" label="tBorrower">
@@ -1145,237 +1145,237 @@ and To be paid off=true].Balance[item!=null])</semantic:text>
 	</semantic:businessKnowledgeModel>
 	<dmndi:DMNDI xmlns:dmndi="https://www.omg.org/spec/DMN/DMNDI/">
 		<dmndi:DMNDiagram id="_0b101bf8-a9c5-4e7c-8763-c8fcb4263a32" name="Page 1">
-			<di:extension xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/"/>
+			<di:extension xmlns:di="https://www.omg.org/spec/SCE/DI/"/>
 			<dmndi:Size height="1050" width="1550.4755458831787"/>
 			<dmndi:DMNShape id="_c1bba5d5-fa68-482c-9856-62553328432f" dmnElementRef="_a177b73e-7064-4140-8757-23bdf7a5d696">
-				<dc:Bounds xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" x="221.7520332336426" y="508.99999618530273" width="135.4823417663574" height="60.00000762939453"/>
+				<dc:Bounds xmlns:dc="https://www.omg.org/spec/SCE/DC/" x="221.7520332336426" y="508.99999618530273" width="135.4823417663574" height="60.00000762939453"/>
 				<dmndi:DMNLabel sharedStyle="LS_736fa164-03d8-429f-8318-4913a548c3a6_0"/>
 			</dmndi:DMNShape>
 			<dmndi:DMNShape id="_a3898cf2-06c3-4ff6-aee8-ff1980e1df26" dmnElementRef="_e0cfe605-3068-42a2-946f-c7db3774de1e">
-				<dc:Bounds xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" x="365.234375" y="630.9999961853027" width="135.48234176635742" height="60.00000762939453"/>
+				<dc:Bounds xmlns:dc="https://www.omg.org/spec/SCE/DC/" x="365.234375" y="630.9999961853027" width="135.48234176635742" height="60.00000762939453"/>
 				<dmndi:DMNLabel sharedStyle="LS_736fa164-03d8-429f-8318-4913a548c3a6_0"/>
 			</dmndi:DMNShape>
 			<dmndi:DMNShape id="_4b1fc771-634e-4074-b5fa-9fddc959704d" dmnElementRef="_d78ee6d5-96ed-43e6-89d2-123e0f388a67">
-				<dc:Bounds xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" x="221.7520332336426" y="630.9999961853027" width="135.4823417663574" height="60.00000762939453"/>
+				<dc:Bounds xmlns:dc="https://www.omg.org/spec/SCE/DC/" x="221.7520332336426" y="630.9999961853027" width="135.4823417663574" height="60.00000762939453"/>
 				<dmndi:DMNLabel sharedStyle="LS_736fa164-03d8-429f-8318-4913a548c3a6_0"/>
 			</dmndi:DMNShape>
 			<dmndi:DMNShape id="_9fdb64c0-601f-47bf-8592-01d5144ef096" dmnElementRef="_896a0a4a-0d0e-404c-a9e3-4500b4e2fd9c">
-				<dc:Bounds xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" x="690.9864082336426" y="630.9999961853027" width="135.48234176635742" height="60.00000762939453"/>
+				<dc:Bounds xmlns:dc="https://www.omg.org/spec/SCE/DC/" x="690.9864082336426" y="630.9999961853027" width="135.48234176635742" height="60.00000762939453"/>
 				<dmndi:DMNLabel sharedStyle="LS_736fa164-03d8-429f-8318-4913a548c3a6_0"/>
 			</dmndi:DMNShape>
 			<dmndi:DMNShape id="_be0cf71f-9d15-48dc-b705-06f25e958624" dmnElementRef="_a6e2c692-4a0c-4385-bbc3-7280e94a8760">
-				<dc:Bounds xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" x="912.4932041168213" y="349" width="153" height="60"/>
+				<dc:Bounds xmlns:dc="https://www.omg.org/spec/SCE/DC/" x="912.4932041168213" y="349" width="153" height="60"/>
 				<dmndi:DMNLabel sharedStyle="LS_736fa164-03d8-429f-8318-4913a548c3a6_0"/>
 			</dmndi:DMNShape>
 			<dmndi:DMNShape id="_dc10415e-38d4-42af-a5bd-5d7458fc841c" dmnElementRef="_93f33bde-df66-4731-82ad-0cf0d86a3294">
-				<dc:Bounds xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" x="521.734375" y="631" width="153" height="60"/>
+				<dc:Bounds xmlns:dc="https://www.omg.org/spec/SCE/DC/" x="521.734375" y="631" width="153" height="60"/>
 				<dmndi:DMNLabel sharedStyle="LS_736fa164-03d8-429f-8318-4913a548c3a6_0"/>
 			</dmndi:DMNShape>
 			<dmndi:DMNShape id="_b5fd3a66-fd67-48a9-8b4c-c18df2632c01" dmnElementRef="_0459fb1e-3d09-427d-9201-ea74a1b57864">
-				<dc:Bounds xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" x="610.2275791168213" y="445" width="153" height="60"/>
+				<dc:Bounds xmlns:dc="https://www.omg.org/spec/SCE/DC/" x="610.2275791168213" y="445" width="153" height="60"/>
 				<dmndi:DMNLabel sharedStyle="LS_736fa164-03d8-429f-8318-4913a548c3a6_0"/>
 			</dmndi:DMNShape>
 			<dmndi:DMNShape id="_f128a162-c0d5-4e7d-a96f-fc953d9fcae1" dmnElementRef="_49ced667-1cff-4fce-a4b8-b5b480b28cd3">
-				<dc:Bounds xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" x="521.734375" y="349" width="153" height="60"/>
+				<dc:Bounds xmlns:dc="https://www.omg.org/spec/SCE/DC/" x="521.734375" y="349" width="153" height="60"/>
 				<dmndi:DMNLabel sharedStyle="LS_736fa164-03d8-429f-8318-4913a548c3a6_0"/>
 			</dmndi:DMNShape>
 			<dmndi:DMNShape id="_a7fc8244-5fcc-4caa-80fc-f9c00a540a44" dmnElementRef="_f286d938-0042-4f0d-a889-6838d2c83a17">
-				<dc:Bounds xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" x="719" y="349.5" width="152" height="59"/>
+				<dc:Bounds xmlns:dc="https://www.omg.org/spec/SCE/DC/" x="719" y="349.5" width="152" height="59"/>
 				<dmndi:DMNLabel sharedStyle="LS_736fa164-03d8-429f-8318-4913a548c3a6_0"/>
 			</dmndi:DMNShape>
 			<dmndi:DMNShape id="_cabd0351-2058-4d41-9d9a-4e0c2f2f30dd" dmnElementRef="_aefdf469-fc01-4081-b1e0-85d543b347df">
-				<dc:Bounds xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" x="521.734375" y="250.00000000000003" width="153" height="59.99999999999997"/>
+				<dc:Bounds xmlns:dc="https://www.omg.org/spec/SCE/DC/" x="521.734375" y="250.00000000000003" width="153" height="59.99999999999997"/>
 				<dmndi:DMNLabel sharedStyle="LS_736fa164-03d8-429f-8318-4913a548c3a6_0"/>
 			</dmndi:DMNShape>
 			<dmndi:DMNShape id="_d4d663f4-e804-4601-a50a-da743ce86419" dmnElementRef="_813f0ad9-fae2-41fd-b99b-2c8e438b4e01">
-				<dc:Bounds xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" x="912.9932041168213" y="267.5" width="152" height="59"/>
+				<dc:Bounds xmlns:dc="https://www.omg.org/spec/SCE/DC/" x="912.9932041168213" y="267.5" width="152" height="59"/>
 				<dmndi:DMNLabel sharedStyle="LS_736fa164-03d8-429f-8318-4913a548c3a6_0"/>
 			</dmndi:DMNShape>
 			<dmndi:DMNShape id="_dc1bb3d6-b254-4464-94c3-46b5f0ec09f9" dmnElementRef="include1:_f5761a7f-090d-4177-a06a-7f21f925c6ff" isCollapsed="true">
-				<dc:Bounds xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" x="860.7361043356821" y="445" width="153" height="60"/>
+				<dc:Bounds xmlns:dc="https://www.omg.org/spec/SCE/DC/" x="860.7361043356821" y="445" width="153" height="60"/>
 				<dmndi:DMNLabel sharedStyle="LS_736fa164-03d8-429f-8318-4913a548c3a6_0"/>
 			</dmndi:DMNShape>
 			<dmndi:DMNShape id="_14e3646c-50fc-4b3a-8e40-40c99c6a54c7" dmnElementRef="_7ed0a891-7b25-4c0e-838e-0a3cd5ec46be">
-				<dc:Bounds xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" x="221.7520332336426" y="387.00346411608245" width="135.4823417663574" height="60.00000762939453"/>
+				<dc:Bounds xmlns:dc="https://www.omg.org/spec/SCE/DC/" x="221.7520332336426" y="387.00346411608245" width="135.4823417663574" height="60.00000762939453"/>
 				<dmndi:DMNLabel sharedStyle="LS_736fa164-03d8-429f-8318-4913a548c3a6_0"/>
 			</dmndi:DMNShape>
 			<dmndi:DMNShape id="_ec10fdad-2a7c-4238-b6f8-e581f0b772d8" dmnElementRef="_929201cb-cb3b-4326-b199-bb0f9149ebb0">
-				<dc:Bounds xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" x="281.2361043356818" y="250.5" width="152" height="59"/>
+				<dc:Bounds xmlns:dc="https://www.omg.org/spec/SCE/DC/" x="281.2361043356818" y="250.5" width="152" height="59"/>
 				<dmndi:DMNLabel sharedStyle="LS_736fa164-03d8-429f-8318-4913a548c3a6_0"/>
 			</dmndi:DMNShape>
 			<dmndi:DMNEdge id="_0670a8b5-bc66-453c-8a48-b691469e5dd0" dmnElementRef="_4af51bdd-1651-42ec-8350-bc551facdffc">
-				<di:waypoint xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" x="588.234375" y="631"/>
-				<di:waypoint xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" x="676.7275791168213" y="505"/>
+				<di:waypoint xmlns:di="https://www.omg.org/spec/SCE/DI/" x="588.234375" y="631"/>
+				<di:waypoint xmlns:di="https://www.omg.org/spec/SCE/DI/" x="676.7275791168213" y="505"/>
 				<dmndi:DMNLabel sharedStyle="LS_736fa164-03d8-429f-8318-4913a548c3a6_0"/>
 			</dmndi:DMNEdge>
 			<dmndi:DMNEdge id="_a3f9e2b4-99d2-4186-a50c-b6622948628e" dmnElementRef="_b3b8e3b8-ae4d-4192-8e96-f6abda717c16">
-				<di:waypoint xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" x="329.49000549316406" y="630.9999961853027"/>
-				<di:waypoint xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" x="646.7275791168213" y="505"/>
+				<di:waypoint xmlns:di="https://www.omg.org/spec/SCE/DI/" x="329.49000549316406" y="630.9999961853027"/>
+				<di:waypoint xmlns:di="https://www.omg.org/spec/SCE/DI/" x="646.7275791168213" y="505"/>
 				<dmndi:DMNLabel sharedStyle="LS_736fa164-03d8-429f-8318-4913a548c3a6_0"/>
 			</dmndi:DMNEdge>
 			<dmndi:DMNEdge id="_1f922953-3c60-4457-8183-c5365813d936" dmnElementRef="_fc2723b2-1ebd-45cc-a640-93f2cb2a6b4e">
-				<di:waypoint xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" x="432.9723472595215" y="690.9999961853027"/>
-				<di:waypoint xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" x="656.7275791168213" y="505"/>
+				<di:waypoint xmlns:di="https://www.omg.org/spec/SCE/DI/" x="432.9723472595215" y="690.9999961853027"/>
+				<di:waypoint xmlns:di="https://www.omg.org/spec/SCE/DI/" x="656.7275791168213" y="505"/>
 				<dmndi:DMNLabel sharedStyle="LS_736fa164-03d8-429f-8318-4913a548c3a6_0"/>
 			</dmndi:DMNEdge>
 			<dmndi:DMNEdge id="_f3f1d471-e9d2-4e9a-8594-140d7e341b72" dmnElementRef="_7cba5baa-07f0-4e12-b6a2-bb25a86d203a">
-				<di:waypoint xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" x="748.7243804931641" y="630.9999961853027"/>
-				<di:waypoint xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" x="716.7275791168213" y="505"/>
+				<di:waypoint xmlns:di="https://www.omg.org/spec/SCE/DI/" x="748.7243804931641" y="630.9999961853027"/>
+				<di:waypoint xmlns:di="https://www.omg.org/spec/SCE/DI/" x="716.7275791168213" y="505"/>
 				<dmndi:DMNLabel sharedStyle="LS_736fa164-03d8-429f-8318-4913a548c3a6_0"/>
 			</dmndi:DMNEdge>
 			<dmndi:DMNEdge id="_fcf3aa6e-ce2a-408e-aa0c-4a10795fbe6d" dmnElementRef="_0e52bb98-f219-45a8-8c29-3ed891143377">
-				<di:waypoint xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" x="912.4932041168213" y="378.49152542372883"/>
-				<di:waypoint xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" x="871" y="378.5"/>
+				<di:waypoint xmlns:di="https://www.omg.org/spec/SCE/DI/" x="912.4932041168213" y="378.49152542372883"/>
+				<di:waypoint xmlns:di="https://www.omg.org/spec/SCE/DI/" x="871" y="378.5"/>
 				<dmndi:DMNLabel sharedStyle="LS_736fa164-03d8-429f-8318-4913a548c3a6_0"/>
 			</dmndi:DMNEdge>
 			<dmndi:DMNEdge id="_5bb524fc-5aec-4ec6-8d2a-dd91e7ffef84" dmnElementRef="_08f900ff-aea1-419b-8e80-138343254a26">
-				<di:waypoint xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" x="686.7275791168213" y="445"/>
-				<di:waypoint xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" x="598.234375" y="409"/>
+				<di:waypoint xmlns:di="https://www.omg.org/spec/SCE/DI/" x="686.7275791168213" y="445"/>
+				<di:waypoint xmlns:di="https://www.omg.org/spec/SCE/DI/" x="598.234375" y="409"/>
 				<dmndi:DMNLabel sharedStyle="LS_736fa164-03d8-429f-8318-4913a548c3a6_0"/>
 			</dmndi:DMNEdge>
 			<dmndi:DMNEdge id="_9f91df8c-ebb4-4e2b-b579-b153c1df09b9" dmnElementRef="_84630610-2554-4a74-a7e7-d185d10fd933">
-				<di:waypoint xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" x="319.49000549316406" y="508.99999618530273"/>
-				<di:waypoint xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" x="521.734375" y="379"/>
+				<di:waypoint xmlns:di="https://www.omg.org/spec/SCE/DI/" x="319.49000549316406" y="508.99999618530273"/>
+				<di:waypoint xmlns:di="https://www.omg.org/spec/SCE/DI/" x="521.734375" y="379"/>
 				<dmndi:DMNLabel sharedStyle="LS_736fa164-03d8-429f-8318-4913a548c3a6_0"/>
 			</dmndi:DMNEdge>
 			<dmndi:DMNEdge id="_e9dc41c9-1998-47e6-ac1a-992a9a98fe4b" dmnElementRef="_4d86d4b2-4dee-426b-a1ff-6e91c6846585">
-				<di:waypoint xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" x="719" y="378.5"/>
-				<di:waypoint xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" x="674.734375" y="379"/>
+				<di:waypoint xmlns:di="https://www.omg.org/spec/SCE/DI/" x="719" y="378.5"/>
+				<di:waypoint xmlns:di="https://www.omg.org/spec/SCE/DI/" x="674.734375" y="379"/>
 				<dmndi:DMNLabel sharedStyle="LS_736fa164-03d8-429f-8318-4913a548c3a6_0"/>
 			</dmndi:DMNEdge>
 			<dmndi:DMNEdge id="_dddf7b22-df2a-418e-904f-c13f4e01b63d" dmnElementRef="_aa3ff8c4-2379-4609-8296-8474d14607e7">
-				<di:waypoint xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" x="289.49000549316406" y="630.9999961853027"/>
-				<di:waypoint xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" x="521.734375" y="399"/>
+				<di:waypoint xmlns:di="https://www.omg.org/spec/SCE/DI/" x="289.49000549316406" y="630.9999961853027"/>
+				<di:waypoint xmlns:di="https://www.omg.org/spec/SCE/DI/" x="521.734375" y="399"/>
 				<dmndi:DMNLabel sharedStyle="LS_736fa164-03d8-429f-8318-4913a548c3a6_0"/>
 			</dmndi:DMNEdge>
 			<dmndi:DMNEdge id="_bc4016d5-51eb-453a-aa1e-edfb1448cbd6" dmnElementRef="_56fb1a8d-9a03-4e87-b234-b3b9c941e3ff">
-				<di:waypoint xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" x="432.9723472595215" y="630.9999961853027"/>
-				<di:waypoint xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" x="476.60336112976074" y="496.99999809265137"/>
-				<di:waypoint xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" x="538.234375" y="409"/>
+				<di:waypoint xmlns:di="https://www.omg.org/spec/SCE/DI/" x="432.9723472595215" y="630.9999961853027"/>
+				<di:waypoint xmlns:di="https://www.omg.org/spec/SCE/DI/" x="476.60336112976074" y="496.99999809265137"/>
+				<di:waypoint xmlns:di="https://www.omg.org/spec/SCE/DI/" x="538.234375" y="409"/>
 				<dmndi:DMNLabel sharedStyle="LS_736fa164-03d8-429f-8318-4913a548c3a6_0"/>
 			</dmndi:DMNEdge>
 			<dmndi:DMNEdge id="_72c23e8d-0fd3-45f9-8cad-1cf8858bce11" dmnElementRef="_c83ae553-f658-4823-a18f-f404f447f859">
-				<di:waypoint xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" x="568.234375" y="631"/>
-				<di:waypoint xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" x="578.234375" y="409"/>
+				<di:waypoint xmlns:di="https://www.omg.org/spec/SCE/DI/" x="568.234375" y="631"/>
+				<di:waypoint xmlns:di="https://www.omg.org/spec/SCE/DI/" x="578.234375" y="409"/>
 				<dmndi:DMNLabel sharedStyle="LS_736fa164-03d8-429f-8318-4913a548c3a6_0"/>
 			</dmndi:DMNEdge>
 			<dmndi:DMNEdge id="_c562e786-cdc6-47e6-98e2-ede2203b8799" dmnElementRef="_a68f3c2d-409a-466c-9be8-aa4ee85640c2">
-				<di:waypoint xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" x="598.234375" y="349"/>
-				<di:waypoint xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" x="598.234375" y="310"/>
+				<di:waypoint xmlns:di="https://www.omg.org/spec/SCE/DI/" x="598.234375" y="349"/>
+				<di:waypoint xmlns:di="https://www.omg.org/spec/SCE/DI/" x="598.234375" y="310"/>
 				<dmndi:DMNLabel sharedStyle="LS_736fa164-03d8-429f-8318-4913a548c3a6_0"/>
 			</dmndi:DMNEdge>
 			<dmndi:DMNEdge id="_ca21c22e-c882-4a27-ae3b-36d491872e26" dmnElementRef="_821c87b5-940c-4c25-91a5-dcac1481a647">
-				<di:waypoint xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" x="912.9932041168213" y="296.5"/>
-				<di:waypoint xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" x="871" y="358.5"/>
+				<di:waypoint xmlns:di="https://www.omg.org/spec/SCE/DI/" x="912.9932041168213" y="296.5"/>
+				<di:waypoint xmlns:di="https://www.omg.org/spec/SCE/DI/" x="871" y="358.5"/>
 				<dmndi:DMNLabel sharedStyle="LS_736fa164-03d8-429f-8318-4913a548c3a6_0"/>
 			</dmndi:DMNEdge>
 			<dmndi:DMNEdge id="_72fc05b4-d034-4c54-a55c-f8c756a4f4d7" dmnElementRef="_88a16649-4696-4d01-84f3-130be7caba3b">
-				<di:waypoint xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" x="860.7361043356821" y="475"/>
-				<di:waypoint xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" x="763.2275791168213" y="475"/>
+				<di:waypoint xmlns:di="https://www.omg.org/spec/SCE/DI/" x="860.7361043356821" y="475"/>
+				<di:waypoint xmlns:di="https://www.omg.org/spec/SCE/DI/" x="763.2275791168213" y="475"/>
 				<dmndi:DMNLabel sharedStyle="LS_736fa164-03d8-429f-8318-4913a548c3a6_0"/>
 			</dmndi:DMNEdge>
 			<dmndi:DMNEdge id="_d6f96ec8-84ff-431b-be9b-488df35abc45" dmnElementRef="_4e13d93f-5461-4582-b6f7-afda9b6e6584">
-				<di:waypoint xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" x="357.234375" y="417.00346411608245"/>
-				<di:waypoint xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" x="521.734375" y="369"/>
+				<di:waypoint xmlns:di="https://www.omg.org/spec/SCE/DI/" x="357.234375" y="417.00346411608245"/>
+				<di:waypoint xmlns:di="https://www.omg.org/spec/SCE/DI/" x="521.734375" y="369"/>
 				<dmndi:DMNLabel sharedStyle="LS_736fa164-03d8-429f-8318-4913a548c3a6_0"/>
 			</dmndi:DMNEdge>
 			<dmndi:DMNEdge id="_dce5de3c-bbbc-4333-985c-a4618049a4a4" dmnElementRef="_b52032a0-6a00-4643-98aa-3fb4367f69ca">
-				<di:waypoint xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" x="433.2361043356818" y="279.5"/>
-				<di:waypoint xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" x="521.734375" y="280"/>
+				<di:waypoint xmlns:di="https://www.omg.org/spec/SCE/DI/" x="433.2361043356818" y="279.5"/>
+				<di:waypoint xmlns:di="https://www.omg.org/spec/SCE/DI/" x="521.734375" y="280"/>
 				<dmndi:DMNLabel sharedStyle="LS_736fa164-03d8-429f-8318-4913a548c3a6_0"/>
 			</dmndi:DMNEdge>
 		</dmndi:DMNDiagram>
 		<dmndi:DMNDiagram id="_63ffcf37-6958-4078-8118-bff7842f8c39" name="Services.Loan Info Service">
-			<di:extension xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/"/>
+			<di:extension xmlns:di="https://www.omg.org/spec/SCE/DI/"/>
 			<dmndi:Size height="1050" width="1485"/>
 			<dmndi:DMNShape id="_27064364-5b02-4f0e-a10d-dcbe208edad1" dmnElementRef="include1:_d78ee6d5-96ed-43e6-89d2-123e0f388a67">
-				<dc:Bounds xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" x="358" y="661" width="153" height="60"/>
+				<dc:Bounds xmlns:dc="https://www.omg.org/spec/SCE/DC/" x="358" y="661" width="153" height="60"/>
 				<dmndi:DMNLabel sharedStyle="LS_736fa164-03d8-429f-8318-4913a548c3a6_0"/>
 			</dmndi:DMNShape>
 			<dmndi:DMNShape id="_2822112c-279b-4ac8-9085-ffa29e5e3772" dmnElementRef="include1:_29a44873-e886-42de-bc2f-6d5704b6b298">
-				<dc:Bounds xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" x="733" y="356.75" width="153" height="60"/>
+				<dc:Bounds xmlns:dc="https://www.omg.org/spec/SCE/DC/" x="733" y="356.75" width="153" height="60"/>
 				<dmndi:DMNLabel sharedStyle="LS_736fa164-03d8-429f-8318-4913a548c3a6_0"/>
 			</dmndi:DMNShape>
 			<dmndi:DMNShape id="_7913007e-de82-490b-ba57-64076c5f7dbb" dmnElementRef="include1:_896a0a4a-0d0e-404c-a9e3-4500b4e2fd9c">
-				<dc:Bounds xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" x="821" y="469.75" width="153" height="60"/>
+				<dc:Bounds xmlns:dc="https://www.omg.org/spec/SCE/DC/" x="821" y="469.75" width="153" height="60"/>
 				<dmndi:DMNLabel sharedStyle="LS_736fa164-03d8-429f-8318-4913a548c3a6_0"/>
 			</dmndi:DMNShape>
 			<dmndi:DMNShape id="_73693581-59c2-47cf-b99d-edb869148e62" dmnElementRef="include1:_e0cfe605-3068-42a2-946f-c7db3774de1e">
-				<dc:Bounds xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" x="941" y="551.0000000000001" width="153" height="60"/>
+				<dc:Bounds xmlns:dc="https://www.omg.org/spec/SCE/DC/" x="941" y="551.0000000000001" width="153" height="60"/>
 				<dmndi:DMNLabel sharedStyle="LS_736fa164-03d8-429f-8318-4913a548c3a6_0"/>
 			</dmndi:DMNShape>
 			<dmndi:DMNShape id="_d873815e-50da-4839-955e-c4a66d8a72f6" dmnElementRef="include1:_f5761a7f-090d-4177-a06a-7f21f925c6ff" isCollapsed="false">
-				<dc:Bounds xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" x="338" y="329" width="260" height="282"/>
+				<dc:Bounds xmlns:dc="https://www.omg.org/spec/SCE/DC/" x="338" y="329" width="260" height="282"/>
 				<dmndi:DMNLabel sharedStyle="LS_736fa164-03d8-429f-8318-4913a548c3a6_0"/>
 				<dmndi:DMNDecisionServiceDividerLine>
-					<di:waypoint xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" x="338" y="470"/>
-					<di:waypoint xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" x="598" y="470"/>
+					<di:waypoint xmlns:di="https://www.omg.org/spec/SCE/DI/" x="338" y="470"/>
+					<di:waypoint xmlns:di="https://www.omg.org/spec/SCE/DI/" x="598" y="470"/>
 				</dmndi:DMNDecisionServiceDividerLine>
 			</dmndi:DMNShape>
 			<dmndi:DMNShape id="_cb197420-797b-49d7-882d-b0a982941241" dmnElementRef="include1:_91fa4ebe-d9c9-4608-b043-c27d99e1eaa5">
-				<dc:Bounds xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" x="358" y="510" width="154" height="61"/>
+				<dc:Bounds xmlns:dc="https://www.omg.org/spec/SCE/DC/" x="358" y="510" width="154" height="61"/>
 				<dmndi:DMNLabel sharedStyle="LS_736fa164-03d8-429f-8318-4913a548c3a6_0"/>
 			</dmndi:DMNShape>
 			<dmndi:DMNShape id="_276339e5-a4a0-41d3-b035-80df3320a1f4" dmnElementRef="include1:_8a182857-b5a1-4389-9a76-01a316938cea">
-				<dc:Bounds xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" x="358" y="369" width="154" height="61"/>
+				<dc:Bounds xmlns:dc="https://www.omg.org/spec/SCE/DC/" x="358" y="369" width="154" height="61"/>
 				<dmndi:DMNLabel sharedStyle="LS_736fa164-03d8-429f-8318-4913a548c3a6_0"/>
 			</dmndi:DMNShape>
 			<dmndi:DMNShape id="_3705344c-2a10-4927-96d1-f86916bb02e2" dmnElementRef="include1:_0d2a6f36-0403-41ad-a191-f793743649d4">
-				<dc:Bounds xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" x="623" y="610.5034679307797" width="152" height="59"/>
+				<dc:Bounds xmlns:dc="https://www.omg.org/spec/SCE/DC/" x="623" y="610.5034679307797" width="152" height="59"/>
 				<dmndi:DMNLabel sharedStyle="LS_736fa164-03d8-429f-8318-4913a548c3a6_0"/>
 			</dmndi:DMNShape>
 			<dmndi:DMNShape id="_94efa65c-e784-4e88-9807-627d768b1aae" dmnElementRef="include1:_aeaa30db-0f84-424a-b2f5-af9b2538a9ce">
-				<dc:Bounds xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" x="130.4687421975863" y="600.5034679307797" width="151.99999999999997" height="59"/>
+				<dc:Bounds xmlns:dc="https://www.omg.org/spec/SCE/DC/" x="130.4687421975863" y="600.5034679307797" width="151.99999999999997" height="59"/>
 				<dmndi:DMNLabel sharedStyle="LS_736fa164-03d8-429f-8318-4913a548c3a6_0"/>
 			</dmndi:DMNShape>
 			<dmndi:DMNEdge id="_35eff1f0-be88-46e7-91f2-2f550c8bc64c" dmnElementRef="include1:_8304cbac-5619-459b-92a8-b389aaaf2aff">
-				<di:waypoint xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" x="434.5" y="661"/>
-				<di:waypoint xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" x="435" y="571"/>
+				<di:waypoint xmlns:di="https://www.omg.org/spec/SCE/DI/" x="434.5" y="661"/>
+				<di:waypoint xmlns:di="https://www.omg.org/spec/SCE/DI/" x="435" y="571"/>
 				<dmndi:DMNLabel sharedStyle="LS_736fa164-03d8-429f-8318-4913a548c3a6_0"/>
 			</dmndi:DMNEdge>
 			<dmndi:DMNEdge id="_1987d0a2-82d0-409c-90b4-03c83213da8d" dmnElementRef="include1:_70f3db04-5830-45d2-ba12-7c355e571fcd">
-				<di:waypoint xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" x="733" y="386.75"/>
-				<di:waypoint xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" x="512" y="399.5"/>
+				<di:waypoint xmlns:di="https://www.omg.org/spec/SCE/DI/" x="733" y="386.75"/>
+				<di:waypoint xmlns:di="https://www.omg.org/spec/SCE/DI/" x="512" y="399.5"/>
 				<dmndi:DMNLabel sharedStyle="LS_736fa164-03d8-429f-8318-4913a548c3a6_0"/>
 			</dmndi:DMNEdge>
 			<dmndi:DMNEdge id="_fa64a0fe-f9c8-44e8-befb-ea8bea160d0b" dmnElementRef="include1:_ffe87244-b1ab-4075-a243-5f2a87f170d0">
-				<di:waypoint xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" x="733" y="386.75"/>
-				<di:waypoint xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" x="512" y="540.5"/>
+				<di:waypoint xmlns:di="https://www.omg.org/spec/SCE/DI/" x="733" y="386.75"/>
+				<di:waypoint xmlns:di="https://www.omg.org/spec/SCE/DI/" x="512" y="540.5"/>
 				<dmndi:DMNLabel sharedStyle="LS_736fa164-03d8-429f-8318-4913a548c3a6_0"/>
 			</dmndi:DMNEdge>
 			<dmndi:DMNEdge id="_c089b2a8-ff15-4e9b-9c8e-b0d93b6c7a87" dmnElementRef="include1:_da7d6551-1fd0-49ea-9723-ec51d15005a8">
-				<di:waypoint xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" x="821" y="499.75"/>
-				<di:waypoint xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" x="512" y="399.5"/>
+				<di:waypoint xmlns:di="https://www.omg.org/spec/SCE/DI/" x="821" y="499.75"/>
+				<di:waypoint xmlns:di="https://www.omg.org/spec/SCE/DI/" x="512" y="399.5"/>
 				<dmndi:DMNLabel sharedStyle="LS_736fa164-03d8-429f-8318-4913a548c3a6_0"/>
 			</dmndi:DMNEdge>
 			<dmndi:DMNEdge id="_1d657839-84f5-4d7b-a9a9-0836a535cff0" dmnElementRef="include1:_d9d4a780-7427-4000-b2c7-575717ebcae5">
-				<di:waypoint xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" x="821" y="499.75"/>
-				<di:waypoint xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" x="512" y="540.5"/>
+				<di:waypoint xmlns:di="https://www.omg.org/spec/SCE/DI/" x="821" y="499.75"/>
+				<di:waypoint xmlns:di="https://www.omg.org/spec/SCE/DI/" x="512" y="540.5"/>
 				<dmndi:DMNLabel sharedStyle="LS_736fa164-03d8-429f-8318-4913a548c3a6_0"/>
 			</dmndi:DMNEdge>
 			<dmndi:DMNEdge id="_c02edce6-9373-4cca-9ad2-475e6233ac29" dmnElementRef="include1:_8d9ec740-a917-4215-88ec-e531ee90a348">
-				<di:waypoint xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" x="941" y="581.0000000000001"/>
-				<di:waypoint xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" x="512" y="399.5"/>
+				<di:waypoint xmlns:di="https://www.omg.org/spec/SCE/DI/" x="941" y="581.0000000000001"/>
+				<di:waypoint xmlns:di="https://www.omg.org/spec/SCE/DI/" x="512" y="399.5"/>
 				<dmndi:DMNLabel sharedStyle="LS_736fa164-03d8-429f-8318-4913a548c3a6_0"/>
 			</dmndi:DMNEdge>
 			<dmndi:DMNEdge id="_96c3213d-d7f4-40f6-8087-16a6af11474b" dmnElementRef="include1:_e47777c4-b10c-4aa8-8087-371824560192">
-				<di:waypoint xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" x="941" y="581.0000000000001"/>
-				<di:waypoint xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" x="512" y="540.5"/>
+				<di:waypoint xmlns:di="https://www.omg.org/spec/SCE/DI/" x="941" y="581.0000000000001"/>
+				<di:waypoint xmlns:di="https://www.omg.org/spec/SCE/DI/" x="512" y="540.5"/>
 				<dmndi:DMNLabel sharedStyle="LS_736fa164-03d8-429f-8318-4913a548c3a6_0"/>
 			</dmndi:DMNEdge>
 			<dmndi:DMNEdge id="_b40c4be4-a3d0-4180-9d75-455f9da96ddd" dmnElementRef="include1:_1f641b45-5ad1-4dfa-bdc5-19d0f52b87b4">
-				<di:waypoint xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" x="435" y="510"/>
-				<di:waypoint xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" x="435" y="430"/>
+				<di:waypoint xmlns:di="https://www.omg.org/spec/SCE/DI/" x="435" y="510"/>
+				<di:waypoint xmlns:di="https://www.omg.org/spec/SCE/DI/" x="435" y="430"/>
 				<dmndi:DMNLabel sharedStyle="LS_736fa164-03d8-429f-8318-4913a548c3a6_0"/>
 			</dmndi:DMNEdge>
 			<dmndi:DMNEdge id="_516ea932-dbcb-4e57-9686-f2401224ec7e" dmnElementRef="include1:_ff803e3f-9159-401f-b22c-edbb48cbf164">
-				<di:waypoint xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" x="699" y="611.5034679307797"/>
-				<di:waypoint xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" x="435" y="571"/>
+				<di:waypoint xmlns:di="https://www.omg.org/spec/SCE/DI/" x="699" y="611.5034679307797"/>
+				<di:waypoint xmlns:di="https://www.omg.org/spec/SCE/DI/" x="435" y="571"/>
 				<dmndi:DMNLabel sharedStyle="LS_736fa164-03d8-429f-8318-4913a548c3a6_0"/>
 			</dmndi:DMNEdge>
 			<dmndi:DMNEdge id="_d094e1a0-eb98-4f74-b775-df535297ee20" dmnElementRef="include1:_28360d50-9eee-4fa1-9f4d-a19c5bc9bbcb">
-				<di:waypoint xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" x="206.4687421975863" y="601.5034679307797"/>
-				<di:waypoint xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" x="435" y="571"/>
+				<di:waypoint xmlns:di="https://www.omg.org/spec/SCE/DI/" x="206.4687421975863" y="601.5034679307797"/>
+				<di:waypoint xmlns:di="https://www.omg.org/spec/SCE/DI/" x="435" y="571"/>
 				<dmndi:DMNLabel sharedStyle="LS_736fa164-03d8-429f-8318-4913a548c3a6_0"/>
 			</dmndi:DMNEdge>
 		</dmndi:DMNDiagram>

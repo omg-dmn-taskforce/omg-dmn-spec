@@ -3,18 +3,18 @@
   namespace="http://www.omg.org/spec/DMN/20180521/dish-example/"
   xmlns="https://www.omg.org/spec/DMN/"
   xmlns:dmndi="https://www.omg.org/spec/DMN/DMNDI/"
-  xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/"
-  xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/"
+  xmlns:di="https://www.omg.org/spec/SCE/DI/"
+  xmlns:dc="https://www.omg.org/spec/SCE/DC/"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="
     https://www.omg.org/spec/DMN/
-    https://www.omg.org/spec/DMN/20260504/DMN.xsd
+    https://www.omg.org/spec/DMN/DMN.xsd
     https://www.omg.org/spec/DMN/DMNDI/
-    https://www.omg.org/spec/DMN/20260504/DMNDI.xsd
-    http://www.omg.org/spec/DMN/20180521/DI/
-    https://www.omg.org/spec/DMN/20180521/DI.xsd
-    http://www.omg.org/spec/DMN/20180521/DC/
-    https://www.omg.org/spec/DMN/20180521/DC.xsd
+    https://www.omg.org/spec/DMN/DMNDI.xsd
+    https://www.omg.org/spec/SCE/DI/
+    https://www.omg.org/spec/SCE/DI.xsd
+    https://www.omg.org/spec/SCE/DC/
+    https://www.omg.org/spec/SCE/DC.xsd
   ">
 
   <inputData name="Type of day" id="dayType_id">
@@ -209,24 +209,24 @@
         <dc:Bounds x="495" y="10" width="120" height="75" />
       </dmndi:DMNShape>
       <dmndi:DMNEdge id="_di8" dmnElementRef="season_ir">
-        <di:waypoint xsi:type="dc:Point" x="80" y="140" />
-        <di:waypoint xsi:type="dc:Point" x="205" y="65" />
+        <di:waypoint x="80" y="140" />
+        <di:waypoint x="205" y="65" />
       </dmndi:DMNEdge>
       <dmndi:DMNEdge id="_di9" dmnElementRef="guestCount_ir">
-        <di:waypoint xsi:type="dc:Point" x="345" y="140" />
-        <di:waypoint xsi:type="dc:Point" x="205" y="65" />
+        <di:waypoint x="345" y="140" />
+        <di:waypoint x="205" y="65" />
       </dmndi:DMNEdge>
       <dmndi:DMNEdge id="_di10" dmnElementRef="temperature_ir">
-        <di:waypoint xsi:type="dc:Point" x="80" y="270" />
-        <di:waypoint xsi:type="dc:Point" x="80" y="195" />
+        <di:waypoint x="80" y="270" />
+        <di:waypoint x="80" y="195" />
       </dmndi:DMNEdge>
       <dmndi:DMNEdge id="_di11" dmnElementRef="dayType_ir">
-        <di:waypoint xsi:type="dc:Point" x="340" y="270" />
-        <di:waypoint xsi:type="dc:Point" x="340" y="195" />
+        <di:waypoint x="340" y="270" />
+        <di:waypoint x="340" y="195" />
       </dmndi:DMNEdge>
       <dmndi:DMNEdge id="_di12" dmnElementRef="host_ar">
-        <di:waypoint xsi:type="dc:Point" x="495" y="30" />
-        <di:waypoint xsi:type="dc:Point" x="250" y="30" />
+        <di:waypoint x="495" y="30" />
+        <di:waypoint x="250" y="30" />
       </dmndi:DMNEdge>
     </dmndi:DMNDiagram>
   </dmndi:DMNDI>

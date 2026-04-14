@@ -6,18 +6,18 @@
   namespace="http://www.omg.org/spec/DMN/20180521/diagram-interchange-decision-with-listed-input-data/"
   xmlns="https://www.omg.org/spec/DMN/"
   xmlns:dmndi="https://www.omg.org/spec/DMN/DMNDI/"
-  xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/"
-  xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/"
+  xmlns:di="https://www.omg.org/spec/SCE/DI/"
+  xmlns:dc="https://www.omg.org/spec/SCE/DC/"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="
     https://www.omg.org/spec/DMN/
-    https://www.omg.org/spec/DMN/20260504/DMN.xsd
+    https://www.omg.org/spec/DMN/DMN.xsd
     https://www.omg.org/spec/DMN/DMNDI/
-    https://www.omg.org/spec/DMN/20260504/DMNDI.xsd
-    http://www.omg.org/spec/DMN/20180521/DI/
-    https://www.omg.org/spec/DMN/20180521/DI.xsd
-    http://www.omg.org/spec/DMN/20180521/DC/
-    https://www.omg.org/spec/DMN/20180521/DC.xsd
+    https://www.omg.org/spec/DMN/DMNDI.xsd
+    https://www.omg.org/spec/SCE/DI/
+    https://www.omg.org/spec/SCE/DI.xsd
+    https://www.omg.org/spec/SCE/DC/
+    https://www.omg.org/spec/SCE/DC.xsd
   ">
   <decision id="Decision_1" name="Decision">
     <informationRequirement>
