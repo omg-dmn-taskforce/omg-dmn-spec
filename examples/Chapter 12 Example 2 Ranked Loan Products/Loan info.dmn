@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<semantic:definitions dmnVersion="1.7" id="_5c8b9296-96cf-4898-bba5-3a2d21d34eed" name="Loan info" namespace="http://www.trisotech.com/definitions/_5c8b9296-96cf-4898-bba5-3a2d21d34eed" exporter="DMN Modeler" exporterVersion="6.2.2.3" xmlns:semantic="https://www.omg.org/spec/DMN/" xmlns="http://www.trisotech.com/definitions/_5c8b9296-96cf-4898-bba5-3a2d21d34eed"
+<semantic:definitions dmnVersion="1.7" id="_5c8b9296-96cf-4898-bba5-3a2d21d34eed" name="Loan info" namespace="http://www.trisotech.com/definitions/_5c8b9296-96cf-4898-bba5-3a2d21d34eed" exporter="DMN Modeler" exporterVersion="6.2.2.3" xmlns:semantic="https://www.omg.org/spec/DMN/" xmlns:dmndi="https://www.omg.org/spec/DMN/DMNDI/" xmlns:di="https://www.omg.org/spec/SCE/DI/" xmlns:dc="https://www.omg.org/spec/SCE/DC/" xmlns="http://www.trisotech.com/definitions/_5c8b9296-96cf-4898-bba5-3a2d21d34eed"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="
 		https://www.omg.org/spec/DMN/
@@ -620,116 +620,116 @@
 		<semantic:inputData href="#_e0cfe605-3068-42a2-946f-c7db3774de1e"/>
 		<semantic:inputData href="#_d78ee6d5-96ed-43e6-89d2-123e0f388a67"/>
 	</semantic:decisionService>
-	<dmndi:DMNDI xmlns:dmndi="https://www.omg.org/spec/DMN/DMNDI/">
+	<dmndi:DMNDI>
 		<dmndi:DMNDiagram id="_0b101bf8-a9c5-4e7c-8763-c8fcb4263a32" name="Page 1">
-			<di:extension xmlns:di="https://www.omg.org/spec/SCE/DI/"/>
+			<di:extension/>
 			<dmndi:Size height="1054.996529420125" width="1803.949344176753"/>
 			<dmndi:DMNShape id="_a3898cf2-06c3-4ff6-aee8-ff1980e1df26" dmnElementRef="_e0cfe605-3068-42a2-946f-c7db3774de1e">
-				<dc:Bounds xmlns:dc="https://www.omg.org/spec/SCE/DC/" x="1131.4602065272172" y="422.99652560542773" width="135.48234176635742" height="60.00000762939453"/>
+				<dc:Bounds x="1131.4602065272172" y="422.99652560542773" width="135.48234176635742" height="60.00000762939453"/>
 				<dmndi:DMNLabel sharedStyle="LS_5c8b9296-96cf-4898-bba5-3a2d21d34eed_0">
-					<dc:Bounds xmlns:dc="https://www.omg.org/spec/SCE/DC/" height="12" width="94" x="1150.6981787867387" y="445.99652560542773"/>
+					<dc:Bounds height="12" width="94" x="1150.6981787867387" y="445.99652560542773"/>
 				</dmndi:DMNLabel>
 			</dmndi:DMNShape>
 			<dmndi:DMNShape id="_4b1fc771-634e-4074-b5fa-9fddc959704d" dmnElementRef="_d78ee6d5-96ed-43e6-89d2-123e0f388a67">
-				<dc:Bounds xmlns:dc="https://www.omg.org/spec/SCE/DC/" x="923.7588291168213" y="403.9965256054276" width="135.48234176635742" height="60.00000762939453"/>
+				<dc:Bounds x="923.7588291168213" y="403.9965256054276" width="135.48234176635742" height="60.00000762939453"/>
 				<dmndi:DMNLabel sharedStyle="LS_5c8b9296-96cf-4898-bba5-3a2d21d34eed_0">
-					<dc:Bounds xmlns:dc="https://www.omg.org/spec/SCE/DC/" height="12" width="94" x="942.9968013763428" y="426.9965256054276"/>
+					<dc:Bounds height="12" width="94" x="942.9968013763428" y="426.9965256054276"/>
 				</dmndi:DMNLabel>
 			</dmndi:DMNShape>
 			<dmndi:DMNShape id="_514ee41e-624f-49ab-bbd4-bc72290d220f" dmnElementRef="_29a44873-e886-42de-bc2f-6d5704b6b298">
-				<dc:Bounds xmlns:dc="https://www.omg.org/spec/SCE/DC/" x="1215.460206527217" y="328.9965256054276" width="135.48234176635742" height="60.00000762939453"/>
+				<dc:Bounds x="1215.460206527217" y="328.9965256054276" width="135.48234176635742" height="60.00000762939453"/>
 				<dmndi:DMNLabel sharedStyle="LS_5c8b9296-96cf-4898-bba5-3a2d21d34eed_0">
-					<dc:Bounds xmlns:dc="https://www.omg.org/spec/SCE/DC/" height="12" width="93.99999999999999" x="1234.8731191577845" y="351.9965292929683"/>
+					<dc:Bounds height="12" width="93.99999999999999" x="1234.8731191577845" y="351.9965292929683"/>
 				</dmndi:DMNLabel>
 			</dmndi:DMNShape>
 			<dmndi:DMNShape id="_9fdb64c0-601f-47bf-8592-01d5144ef096" dmnElementRef="_896a0a4a-0d0e-404c-a9e3-4500b4e2fd9c">
-				<dc:Bounds xmlns:dc="https://www.omg.org/spec/SCE/DC/" x="1215.4602065272172" y="228.0034667651778" width="135.48234176635742" height="60.00000762939453"/>
+				<dc:Bounds x="1215.4602065272172" y="228.0034667651778" width="135.48234176635742" height="60.00000762939453"/>
 				<dmndi:DMNLabel sharedStyle="LS_5c8b9296-96cf-4898-bba5-3a2d21d34eed_0">
-					<dc:Bounds xmlns:dc="https://www.omg.org/spec/SCE/DC/" height="12" width="93.99999999999999" x="1234.8731191577847" y="251.0034704527185"/>
+					<dc:Bounds height="12" width="93.99999999999999" x="1234.8731191577847" y="251.0034704527185"/>
 				</dmndi:DMNLabel>
 			</dmndi:DMNShape>
 			<dmndi:DMNShape id="_6946a3af-1379-4948-831f-8b40c6fa8b52" dmnElementRef="_aeaa30db-0f84-424a-b2f5-af9b2538a9ce">
-				<dc:Bounds xmlns:dc="https://www.omg.org/spec/SCE/DC/" x="671.734375" y="364.49652942012494" width="152" height="59"/>
+				<dc:Bounds x="671.734375" y="364.49652942012494" width="152" height="59"/>
 				<dmndi:DMNLabel sharedStyle="LS_5c8b9296-96cf-4898-bba5-3a2d21d34eed_0">
-					<dc:Bounds xmlns:dc="https://www.omg.org/spec/SCE/DC/" height="12" width="94.00000000000001" x="699.747362012987" y="387.51292286274787"/>
+					<dc:Bounds height="12" width="94.00000000000001" x="699.747362012987" y="387.51292286274787"/>
 				</dmndi:DMNLabel>
 			</dmndi:DMNShape>
 			<dmndi:DMNShape id="_aa434c2c-6b3b-4799-b1e3-628a27162558" dmnElementRef="_0d2a6f36-0403-41ad-a191-f793743649d4">
-				<dc:Bounds xmlns:dc="https://www.omg.org/spec/SCE/DC/" x="671.7343750000001" y="278.5" width="152" height="59"/>
+				<dc:Bounds x="671.7343750000001" y="278.5" width="152" height="59"/>
 				<dmndi:DMNLabel sharedStyle="LS_5c8b9296-96cf-4898-bba5-3a2d21d34eed_0">
-					<dc:Bounds xmlns:dc="https://www.omg.org/spec/SCE/DC/" height="12" width="94" x="699.7343750000001" y="301.5"/>
+					<dc:Bounds height="12" width="94" x="699.7343750000001" y="301.5"/>
 				</dmndi:DMNLabel>
 			</dmndi:DMNShape>
 			<dmndi:DMNShape id="_9244509d-f461-4336-8b36-04a1a6954423" dmnElementRef="_f5761a7f-090d-4177-a06a-7f21f925c6ff" isCollapsed="false">
-				<dc:Bounds xmlns:dc="https://www.omg.org/spec/SCE/DC/" x="878.7013774103955" y="156.00347057987508" width="260" height="219.99652942012492"/>
+				<dc:Bounds x="878.7013774103955" y="156.00347057987508" width="260" height="219.99652942012492"/>
 				<dmndi:DMNLabel sharedStyle="LS_5c8b9296-96cf-4898-bba5-3a2d21d34eed_0">
-					<dc:Bounds xmlns:dc="https://www.omg.org/spec/SCE/DC/" height="12.21875" width="254" x="894.7013774103955" y="172.00347057987508"/>
+					<dc:Bounds height="12.21875" width="254" x="894.7013774103955" y="172.00347057987508"/>
 				</dmndi:DMNLabel>
 				<dmndi:DMNDecisionServiceDividerLine>
-					<di:waypoint xmlns:di="https://www.omg.org/spec/SCE/DI/" x="878.7013774103955" y="271.00347057987506"/>
-					<di:waypoint xmlns:di="https://www.omg.org/spec/SCE/DI/" x="1138.7013774103955" y="271.00347057987506"/>
+					<di:waypoint x="878.7013774103955" y="271.00347057987506"/>
+					<di:waypoint x="1138.7013774103955" y="271.00347057987506"/>
 				</dmndi:DMNDecisionServiceDividerLine>
 			</dmndi:DMNShape>
 			<dmndi:DMNShape id="_e23c0c63-fda2-411e-9a7f-12226a908c91" dmnElementRef="_8a182857-b5a1-4389-9a76-01a316938cea">
-				<dc:Bounds xmlns:dc="https://www.omg.org/spec/SCE/DC/" x="932.2013774103956" y="196.00347057987508" width="153.0000000000001" height="59.99999999999997"/>
+				<dc:Bounds x="932.2013774103956" y="196.00347057987508" width="153.0000000000001" height="59.99999999999997"/>
 				<dmndi:DMNLabel sharedStyle="LS_5c8b9296-96cf-4898-bba5-3a2d21d34eed_0">
-					<dc:Bounds xmlns:dc="https://www.omg.org/spec/SCE/DC/" height="12" width="146" x="935.2013774103956" y="220.00347057987508"/>
+					<dc:Bounds height="12" width="146" x="935.2013774103956" y="220.00347057987508"/>
 				</dmndi:DMNLabel>
 			</dmndi:DMNShape>
 			<dmndi:DMNShape id="_ec44949f-5a92-40a5-8165-5192c916e4ac" dmnElementRef="_91fa4ebe-d9c9-4608-b043-c27d99e1eaa5">
-				<dc:Bounds xmlns:dc="https://www.omg.org/spec/SCE/DC/" x="932.2013774103958" y="291" width="152.9999999999999" height="60"/>
+				<dc:Bounds x="932.2013774103958" y="291" width="152.9999999999999" height="60"/>
 				<dmndi:DMNLabel sharedStyle="LS_5c8b9296-96cf-4898-bba5-3a2d21d34eed_0">
-					<dc:Bounds xmlns:dc="https://www.omg.org/spec/SCE/DC/" height="12.000000000000004" width="146" x="934.7078709168893" y="314.5081967213115"/>
+					<dc:Bounds height="12.000000000000004" width="146" x="934.7078709168893" y="314.5081967213115"/>
 				</dmndi:DMNLabel>
 			</dmndi:DMNShape>
 			<dmndi:DMNEdge id="_76f6f123-fc4f-460b-8ea7-1aaab6959d9b" dmnElementRef="_e47777c4-b10c-4aa8-8087-371824560192">
-				<di:waypoint xmlns:di="https://www.omg.org/spec/SCE/DI/" x="1189.1981787867387" y="422.99652560542773"/>
-				<di:waypoint xmlns:di="https://www.omg.org/spec/SCE/DI/" x="1048.7013774103957" y="351"/>
+				<di:waypoint x="1189.1981787867387" y="422.99652560542773"/>
+				<di:waypoint x="1048.7013774103957" y="351"/>
 				<dmndi:DMNLabel sharedStyle="LS_5c8b9296-96cf-4898-bba5-3a2d21d34eed_0"/>
 			</dmndi:DMNEdge>
 			<dmndi:DMNEdge id="_98386957-cfad-49d1-bce7-6259d54d5ba3" dmnElementRef="_ffe87244-b1ab-4075-a243-5f2a87f170d0">
-				<di:waypoint xmlns:di="https://www.omg.org/spec/SCE/DI/" x="1217.6981787867385" y="348.9965256054276"/>
-				<di:waypoint xmlns:di="https://www.omg.org/spec/SCE/DI/" x="1085.2013774103957" y="341"/>
+				<di:waypoint x="1217.6981787867385" y="348.9965256054276"/>
+				<di:waypoint x="1085.2013774103957" y="341"/>
 				<dmndi:DMNLabel sharedStyle="LS_5c8b9296-96cf-4898-bba5-3a2d21d34eed_0"/>
 			</dmndi:DMNEdge>
 			<dmndi:DMNEdge id="_8d4993ba-08a6-4e98-96bd-dc339f359d2d" dmnElementRef="_d9d4a780-7427-4000-b2c7-575717ebcae5">
-				<di:waypoint xmlns:di="https://www.omg.org/spec/SCE/DI/" x="1263.1981787867387" y="228.0034667651778"/>
-				<di:waypoint xmlns:di="https://www.omg.org/spec/SCE/DI/" x="1085.2013774103957" y="301"/>
+				<di:waypoint x="1263.1981787867387" y="228.0034667651778"/>
+				<di:waypoint x="1085.2013774103957" y="301"/>
 				<dmndi:DMNLabel sharedStyle="LS_5c8b9296-96cf-4898-bba5-3a2d21d34eed_0"/>
 			</dmndi:DMNEdge>
 			<dmndi:DMNEdge id="_2f96d770-5269-42e9-baed-ea78445b3e46" dmnElementRef="_8304cbac-5619-459b-92a8-b389aaaf2aff">
-				<di:waypoint xmlns:di="https://www.omg.org/spec/SCE/DI/" x="971.4968013763428" y="403.9965256054276"/>
-				<di:waypoint xmlns:di="https://www.omg.org/spec/SCE/DI/" x="968.7013774103958" y="351"/>
+				<di:waypoint x="971.4968013763428" y="403.9965256054276"/>
+				<di:waypoint x="968.7013774103958" y="351"/>
 				<dmndi:DMNLabel sharedStyle="LS_5c8b9296-96cf-4898-bba5-3a2d21d34eed_0"/>
 			</dmndi:DMNEdge>
 			<dmndi:DMNEdge id="_382e7238-103d-4aa7-9438-7832b2ea88d2" dmnElementRef="_28360d50-9eee-4fa1-9f4d-a19c5bc9bbcb">
-				<di:waypoint xmlns:di="https://www.omg.org/spec/SCE/DI/" x="823.734375" y="393.49652942012494"/>
-				<di:waypoint xmlns:di="https://www.omg.org/spec/SCE/DI/" x="932.2013774103958" y="331"/>
+				<di:waypoint x="823.734375" y="393.49652942012494"/>
+				<di:waypoint x="932.2013774103958" y="331"/>
 				<dmndi:DMNLabel sharedStyle="LS_5c8b9296-96cf-4898-bba5-3a2d21d34eed_0"/>
 			</dmndi:DMNEdge>
 			<dmndi:DMNEdge id="_bf0dd31b-d9f6-4b3e-9546-f59a29795a16" dmnElementRef="_ff803e3f-9159-401f-b22c-edbb48cbf164">
-				<di:waypoint xmlns:di="https://www.omg.org/spec/SCE/DI/" x="671.7343750000001" y="307.5"/>
-				<di:waypoint xmlns:di="https://www.omg.org/spec/SCE/DI/" x="1085.2013774103957" y="321"/>
+				<di:waypoint x="671.7343750000001" y="307.5"/>
+				<di:waypoint x="1085.2013774103957" y="321"/>
 				<dmndi:DMNLabel sharedStyle="LS_5c8b9296-96cf-4898-bba5-3a2d21d34eed_0"/>
 			</dmndi:DMNEdge>
 			<dmndi:DMNEdge id="_e20fb50a-b082-434d-892a-869950f1d79d" dmnElementRef="_1f641b45-5ad1-4dfa-bdc5-19d0f52b87b4">
-				<di:waypoint xmlns:di="https://www.omg.org/spec/SCE/DI/" x="968.7013774103958" y="291"/>
-				<di:waypoint xmlns:di="https://www.omg.org/spec/SCE/DI/" x="968.7013774103956" y="256.00347057987506"/>
+				<di:waypoint x="968.7013774103958" y="291"/>
+				<di:waypoint x="968.7013774103956" y="256.00347057987506"/>
 				<dmndi:DMNLabel sharedStyle="LS_5c8b9296-96cf-4898-bba5-3a2d21d34eed_0"/>
 			</dmndi:DMNEdge>
 			<dmndi:DMNEdge id="_4515e28c-f7ea-40ff-859f-65fd5d310072" dmnElementRef="_70f3db04-5830-45d2-ba12-7c355e571fcd">
-				<di:waypoint xmlns:di="https://www.omg.org/spec/SCE/DI/" x="1273.1981787867385" y="328.9965256054276"/>
-				<di:waypoint xmlns:di="https://www.omg.org/spec/SCE/DI/" x="1085.2013774103957" y="236.00347057987508"/>
+				<di:waypoint x="1273.1981787867385" y="328.9965256054276"/>
+				<di:waypoint x="1085.2013774103957" y="236.00347057987508"/>
 				<dmndi:DMNLabel sharedStyle="LS_5c8b9296-96cf-4898-bba5-3a2d21d34eed_0"/>
 			</dmndi:DMNEdge>
 			<dmndi:DMNEdge id="_3affdb18-a0c8-4e50-9e36-73c650b2467b" dmnElementRef="_da7d6551-1fd0-49ea-9723-ec51d15005a8">
-				<di:waypoint xmlns:di="https://www.omg.org/spec/SCE/DI/" x="1217.6981787867387" y="248.0034667651778"/>
-				<di:waypoint xmlns:di="https://www.omg.org/spec/SCE/DI/" x="1085.2013774103957" y="226.00347057987508"/>
+				<di:waypoint x="1217.6981787867387" y="248.0034667651778"/>
+				<di:waypoint x="1085.2013774103957" y="226.00347057987508"/>
 				<dmndi:DMNLabel sharedStyle="LS_5c8b9296-96cf-4898-bba5-3a2d21d34eed_0"/>
 			</dmndi:DMNEdge>
 			<dmndi:DMNEdge id="_9b2c749a-da49-43cc-8688-e72f394f0b32" dmnElementRef="_8d9ec740-a917-4215-88ec-e531ee90a348">
-				<di:waypoint xmlns:di="https://www.omg.org/spec/SCE/DI/" x="1209.1981787867387" y="422.99652560542773"/>
-				<di:waypoint xmlns:di="https://www.omg.org/spec/SCE/DI/" x="1078.7013774103957" y="256.00347057987506"/>
+				<di:waypoint x="1209.1981787867387" y="422.99652560542773"/>
+				<di:waypoint x="1078.7013774103957" y="256.00347057987506"/>
 				<dmndi:DMNLabel sharedStyle="LS_5c8b9296-96cf-4898-bba5-3a2d21d34eed_0"/>
 			</dmndi:DMNEdge>
 		</dmndi:DMNDiagram>
