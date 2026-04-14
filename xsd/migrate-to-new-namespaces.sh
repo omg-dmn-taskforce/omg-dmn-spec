@@ -62,7 +62,7 @@ upgrade_dmn_16_to_dmn_17() {
         "$1"
 }
 
-# recursively search all DMN files in the current directory and migtrate them
+# recursively search all DMN files in the current directory and migrate them
 declare -i NUMBER_OF_FILES=0
 while IFS= read -r -d '' DMN_FILE; do
     NUMBER_OF_FILES+=1
