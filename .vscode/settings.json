@@ -1,6 +1,12 @@
 {
     "xml.catalogs": [
-        "xsd/catalog.xml"
+        "catalog.xml"
+    ],
+    "xml.fileAssociations": [
+        {
+            "pattern": "**/*.dmn",
+            "systemId": "xsd/DMN.xsd"
+        }
     ],
     "xml.filePathSupport.mappings": [
         // see: https://github.com/redhat-developer/vscode-xml/blob/main/docs/Features/XMLFilePathSupport.md

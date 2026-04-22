@@ -8,9 +8,23 @@
 			xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 
 	<xsd:import namespace="https://www.omg.org/spec/SCE/DC/"
-				schemaLocation="DC.xsd"/>
+				schemaLocation="../SCE/DC.xsd">
+		<xsd:annotation>
+			<xsd:documentation>
+				Diagram Common, adopted from SCE.
+				Canonical location: https://www.omg.org/spec/SCE/DC.xsd
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:import>
 	<xsd:import namespace="https://www.omg.org/spec/SCE/DI/"
-				schemaLocation="DI.xsd"/>
+				schemaLocation="../SCE/DI.xsd">
+		<xsd:annotation>
+			<xsd:documentation>
+				Diagram Interchange, adopted from SCE.
+				Canonical location: https://www.omg.org/spec/SCE/DI.xsd
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:import>
 
 	<xsd:element name="DMNDI" type="dmndi:DMNDI"/>
 	<xsd:element name="DMNDiagram" type="dmndi:DMNDiagram"/>
