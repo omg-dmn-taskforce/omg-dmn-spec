@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema elementFormDefault="qualified"
-	xmlns="https://www.omg.org/spec/DMN/20240513/MODEL/"
-	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-	xmlns:dmndi="https://www.omg.org/spec/DMN/20230324/DMNDI/"
-	targetNamespace="https://www.omg.org/spec/DMN/20240513/MODEL/">
+<xsd:schema id="DMN" version="20260504"
+	elementFormDefault="qualified"
+	xmlns="https://www.omg.org/spec/DMN/"
+	targetNamespace="https://www.omg.org/spec/DMN/"
+	xmlns:dmndi="https://www.omg.org/spec/DMN/DMNDI/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 
-	<xsd:import namespace="https://www.omg.org/spec/DMN/20230324/DMNDI/"
-	            schemaLocation="DMNDI15.xsd">
+	<xsd:import namespace="https://www.omg.org/spec/DMN/DMNDI/"
+	            schemaLocation="DMNDI.xsd">
 		<xsd:annotation>
 			<xsd:documentation>
 				Include the DMN Diagram Interchange (DI) schema
@@ -54,8 +55,9 @@
 					<xsd:element ref="businessContextElement" minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element ref="dmndi:DMNDI" minOccurs="0" maxOccurs="1"/>
 				</xsd:sequence>
-				<xsd:attribute name="expressionLanguage" type="xsd:anyURI" use="optional" default="https://www.omg.org/spec/DMN/20240513/FEEL/"/>
-				<xsd:attribute name="typeLanguage" type="xsd:anyURI" use="optional" default="https://www.omg.org/spec/DMN/20240513/FEEL/"/>
+				<xsd:attribute name="dmnVersion" type="xsd:string" use="required"/>
+				<xsd:attribute name="expressionLanguage" type="xsd:anyURI" use="optional" default="https://www.omg.org/spec/DMN/FEEL/"/>
+				<xsd:attribute name="typeLanguage" type="xsd:anyURI" use="optional" default="https://www.omg.org/spec/DMN/FEEL/"/>
 				<xsd:attribute name="namespace" type="xsd:anyURI" use="required"/>
 				<xsd:attribute name="exporter" type="xsd:string" use="optional"/>
 				<xsd:attribute name="exporterVersion" type="xsd:string" use="optional"/>
@@ -243,6 +245,7 @@
 				</xsd:choice>
 				<xsd:attribute name="typeLanguage" type="xsd:anyURI" use="optional"/>
 				<xsd:attribute name="isCollection" type="xsd:boolean" use="optional" default="false"/>
+				<xsd:attribute name="isRange" type="xsd:boolean" use="optional" default="false"/>
 			</xsd:extension>
 		</xsd:complexContent>
 	</xsd:complexType>
@@ -292,6 +295,9 @@
 	<xsd:complexType name="tInformationItem">
 		<xsd:complexContent>
 			<xsd:extension base="tNamedElement">
+				<xsd:sequence>
+					<xsd:element name="defaultValue" type="tExpression" minOccurs="0"/>
+				</xsd:sequence>
 				<xsd:attribute name="typeRef" type="xsd:string"/>
 			</xsd:extension>
 		</xsd:complexContent>

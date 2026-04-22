@@ -1,0 +1,29 @@
+# Local validation of DMN XSDs and examples.
+# Mirrors CI in .github/workflows/main.yml, but uses the XML catalog so that
+# https://www.omg.org/spec/{DMN,SCE}/... schemaLocations resolve to local files.
+
+XSDS := xsd/DMN.xsd xsd/DMNDI.xsd SCE/DI.xsd SCE/DC.xsd
+
+export XML_CATALOG_FILES := $(CURDIR)/catalog.xml
+
+.PHONY: all validate lint-xsd lint-examples ci-local
+
+all: lint-xsd lint-examples validate
+
+lint-xsd:
+	xmllint --noout $(XSDS)
+
+lint-examples:
+	find examples -type f -name '*.dmn' -print0 | xargs -0 -n1 -t xmllint --noout
+
+validate:
+	find examples -type f -name '*.dmn' -print0 | xargs -0 -n1 -t xmllint --noout --schema xsd/DMN.xsd
+
+# Run the GitHub Actions workflow locally in Docker via `act`
+# (https://github.com/nektos/act). Requires Docker and `act` on PATH.
+# Uses whatever runner image is pinned in ~/.config/act/actrc (act prompts
+# on first run). xmllint-action is itself a Docker action, so the micro
+# image (node:16-buster-slim) is sufficient.
+ci-local:
+	@command -v act >/dev/null || { echo "act not found — install from https://github.com/nektos/act"; exit 1; }
+	act push --workflows .github/workflows/main.yml
