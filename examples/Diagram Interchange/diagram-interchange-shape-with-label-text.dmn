@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions
+<dmn:definitions
   dmnVersion="1.7"
   id="definitions_0v8cooh"
   name="Decision"
   namespace="http://www.omg.org/spec/DMN/20180521/diagram-interchange-shape-with-label-text/"
-  xmlns="https://www.omg.org/spec/DMN/"
+  xmlns:dmn="https://www.omg.org/spec/DMN/"
   xmlns:dmndi="https://www.omg.org/spec/DMN/DMNDI/"
   xmlns:di="https://www.omg.org/spec/SCE/DI/"
   xmlns:dc="https://www.omg.org/spec/SCE/DC/"
@@ -19,7 +19,7 @@
     https://www.omg.org/spec/SCE/DC/
     https://www.omg.org/spec/SCE/DC.xsd
   ">
-  <decision id="Decision_1" name="Decision 1" />
+  <dmn:decision id="Decision_1" name="Decision 1" />
   <dmndi:DMNDI>
     <dmndi:DMNDiagram id="DRD1">
       <dmndi:DMNShape id="_DMNShape_Decision_1" dmnElementRef="Decision_1">
@@ -32,4 +32,4 @@ sion
       </dmndi:DMNShape>
     </dmndi:DMNDiagram>
   </dmndi:DMNDI>
-</definitions>
+</dmn:definitions>

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions
+<dmn:definitions
   dmnVersion="1.7"
   id="Definitions_DecisionService"
   name="Decision Service"
   namespace="http://www.omg.org/spec/DMN/20180521/diagram-interchange-decision-service/"
-  xmlns="https://www.omg.org/spec/DMN/"
+  xmlns:dmn="https://www.omg.org/spec/DMN/"
   xmlns:dmndi="https://www.omg.org/spec/DMN/DMNDI/"
   xmlns:di="https://www.omg.org/spec/SCE/DI/"
   xmlns:dc="https://www.omg.org/spec/SCE/DC/"
@@ -19,7 +19,7 @@
     https://www.omg.org/spec/SCE/DC/
     https://www.omg.org/spec/SCE/DC.xsd
   ">
-  <decisionService id="DecisionService_1" name="Decision Service 1" />
+  <dmn:decisionService id="DecisionService_1" name="Decision Service 1" />
   <dmndi:DMNDI>
     <dmndi:DMNDiagram id="DRD1">
       <dmndi:DMNShape id="_DMNShape_DecisionService_1" dmnElementRef="DecisionService_1">
@@ -34,4 +34,4 @@
       </dmndi:DMNShape>
     </dmndi:DMNDiagram>
   </dmndi:DMNDI>
-</definitions>
+</dmn:definitions>
