@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema id="DI" version="20240210"
+    targetNamespace="https://www.omg.org/spec/SCE/DI/"
+    xmlns:di="https://www.omg.org/spec/SCE/DI/"
+    xmlns:dc="https://www.omg.org/spec/SCE/DC/"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    elementFormDefault="qualified" attributeFormDefault="unqualified">
+
+  <!-- The documentation annotations in this file are non-normative.
+      They are provided for convenience, but the specification text takes precedence. -->
+
+  <xs:import namespace="https://www.omg.org/spec/SCE/DC/"
+      schemaLocation="DC.xsd"/>
+
+  <xs:annotation>
+    <xs:documentation>
+      The Diagram Interchange (DI) package enables interchange of graphical information that language users have control over,
+      such as position of nodes and line routing points. Language specifications specialize elements of DI to define diagram interchange
+      elements for a language.
+    </xs:documentation>
+  </xs:annotation>
+
+  <xs:complexType name="tDiagramElement" abstract="true">
+    <xs:annotation>
+      <xs:documentation>
+        DiagramElement is the abstract super type of all elements in diagrams, including diagrams themselves.
+        When contained in a diagram, diagram elements are laid out relative to the diagram's origin.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element ref="di:extension" minOccurs="0" maxOccurs="1"/>
+      <xs:element ref="di:Style" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>an optional locally-owned style for this diagram element.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="sharedStyle" type="xs:IDREF">
+      <xs:annotation>
+        <xs:documentation>a reference to an optional shared style element for this diagram element.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="id" type="xs:ID" use="optional"/>
+    <xs:anyAttribute namespace="##other" processContents="lax"/>
+  </xs:complexType>
+
+  <xs:element name="extension" type="di:tExtension"/>
+  <xs:complexType name="tExtension">
+    <xs:sequence>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="tDiagram" abstract="true">
+    <xs:complexContent>
+      <xs:extension base="di:tDiagramElement">
+        <xs:attribute name="name" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>the name of the diagram.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="documentation" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>the documentation of the diagram.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="resolution" type="xs:double">
+          <xs:annotation>
+            <xs:documentation>the resolution of the diagram expressed in user units per inch.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="tShape" abstract="true">
+    <xs:complexContent>
+      <xs:extension base="di:tDiagramElement">
+        <xs:sequence>
+          <xs:element ref="dc:Bounds" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+              <xs:documentation>the optional bounds of the shape relative to the origin of its nesting plane.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="tEdge" abstract="true">
+    <xs:complexContent>
+      <xs:extension base="di:tDiagramElement">
+        <xs:sequence>
+          <xs:element name="waypoint" type="dc:tPoint" minOccurs="0" maxOccurs="unbounded">
+            <xs:annotation>
+              <xs:documentation>an optional list of points relative to the origin of the nesting diagram that specifies the connected line segments of the edge</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:element name="Style" type="di:tStyle">
+    <xs:annotation>
+      <xs:documentation>
+        This element should never be instantiated directly, but rather a concrete implementation should.
+        It is placed there only to be referred in the sequence of DiagramElement.
+        This element is not marked as abstract for backwards compatibility with DMN and CMMN.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="tStyle" abstract="true">
+    <xs:annotation>
+      <xs:documentation>Style contains formatting properties that affect the appearance or style of diagram elements, including diagram themselves.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element ref="di:extension" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:ID"/>
+    <xs:anyAttribute namespace="##other" processContents="lax"/>
+  </xs:complexType>
+
+</xs:schema>
