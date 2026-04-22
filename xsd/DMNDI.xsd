@@ -11,7 +11,7 @@
 				schemaLocation="../SCE/DC.xsd">
 		<xsd:annotation>
 			<xsd:documentation>
-				Diagram Common, adopted from SCE.
+				Diagram Common, adopted from Specification Common Elements (SCE).
 				Canonical location: https://www.omg.org/spec/SCE/DC.xsd
 			</xsd:documentation>
 		</xsd:annotation>
@@ -20,7 +20,7 @@
 				schemaLocation="../SCE/DI.xsd">
 		<xsd:annotation>
 			<xsd:documentation>
-				Diagram Interchange, adopted from SCE.
+				Diagram Interchange, adopted from Specification Common Elements (SCE).
 				Canonical location: https://www.omg.org/spec/SCE/DI.xsd
 			</xsd:documentation>
 		</xsd:annotation>
