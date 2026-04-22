@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema id="DMNDI" version="1.6"
+<xsd:schema id="DMNDI" version="20260504"
 			elementFormDefault="qualified"
 			targetNamespace="https://www.omg.org/spec/DMN/DMNDI/"
 			xmlns:dmndi="https://www.omg.org/spec/DMN/DMNDI/"
