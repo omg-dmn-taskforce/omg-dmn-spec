@@ -1,6 +1,4 @@
 {
-    "files.insertFinalNewline": true,
-    "files.trimFinalNewlines": true,
     "xml.catalogs": [
         "catalog.xml"
     ],
@@ -8,14 +6,6 @@
     "xml.validation.schema.enabled": "always",
     "xml.validation.namespaces.enabled": "always",
     "xml.validation.disallowDocTypeDecl": true,
-    "xml.format.splitAttributes": "preserve",
-    "xml.format.xsiSchemaLocationSplit": "none",
-    "xml.format.preserveAttributeLineBreaks": true,
-    "xml.format.preservedNewlines": 2,
-    "xml.format.spaceBeforeEmptyCloseTag": true,
-    "xml.format.enforceQuoteStyle": "preferred",
-    "xml.format.emptyElements": "collapse",
-    "xml.preferences.quoteStyle": "double",
     "xml.codeLens.enabled": true,
     "xml.symbols.showReferencedGrammars": true,
     "xml.fileAssociations": [
@@ -80,5 +70,15 @@
                 }
             ]
         }
-    ]
+    ],
+    "xml.format.splitAttributes": "preserve",
+    "xml.format.xsiSchemaLocationSplit": "none",
+    "xml.format.preserveAttributeLineBreaks": true,
+    "xml.format.preservedNewlines": 2,
+    "xml.format.spaceBeforeEmptyCloseTag": true,
+    "xml.format.enforceQuoteStyle": "preferred",
+    "xml.format.emptyElements": "collapse",
+    "xml.preferences.quoteStyle": "double",
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true
 }
