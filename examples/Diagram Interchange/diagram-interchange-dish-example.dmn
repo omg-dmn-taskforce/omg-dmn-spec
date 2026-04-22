@@ -18,12 +18,12 @@
   ">
 
   <inputData name="Type of day" id="dayType_id">
-    <variable typeRef="string" name="Type of day" id="dayType_ii"/>
+    <variable typeRef="string" name="Type of day" id="dayType_ii" />
   </inputData>
   <inputData name="Weather in Celsius" id="temperature_id">
-    <variable typeRef="integer" name="Weather in Celsius" id="temperature_ii"/>
+    <variable typeRef="integer" name="Weather in Celsius" id="temperature_ii" />
   </inputData>
-  <knowledgeSource name="Host" id="host_ks"/>
+  <knowledgeSource name="Host" id="host_ks" />
   <decision id="dish" name="Dish">
     <informationRequirement id="season_ir">
       <requiredDecision href="#season" />
@@ -32,7 +32,7 @@
       <requiredDecision href="#guestCount" />
     </informationRequirement>
     <authorityRequirement id="host_ar">
-      <requiredAuthority href="#host_ks"/>
+      <requiredAuthority href="#host_ks" />
     </authorityRequirement>
     <decisionTable id="dishDecisionTable">
       <input id="seasonInput" label="Season">
@@ -116,7 +116,7 @@
   </decision>
   <decision id="season" name="Season">
     <informationRequirement id="temperature_ir">
-      <requiredInput href="#temperature_id"/>
+      <requiredInput href="#temperature_id" />
     </informationRequirement>
     <decisionTable id="seasonDecisionTable">
       <input id="temperatureInput" label="Weather in Celsius">
@@ -153,7 +153,7 @@
   </decision>
   <decision id="guestCount" name="Guest Count">
     <informationRequirement id="dayType_ir">
-      <requiredInput href="#dayType_id"/>
+      <requiredInput href="#dayType_id" />
     </informationRequirement>
     <decisionTable id="guestCountDecisionTable">
       <input id="typeOfDayInput" label="Type of day">
