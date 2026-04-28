@@ -8,7 +8,7 @@
       <xmi:exporterVersion>2026x v2</xmi:exporterVersion>
    </xmi:documentation>
    <package xmi:type="uml:Package" xmi:id="eee_1045467100313_135436_1" name="DMN"
-            URI="https://www.omg.org/spec/DMN/20260504/DMN.xmi">
+                        URI="https://www.omg.org/spec/DMN/20260504/DMN.xmi">
               <ownedComment xmi:type="uml:Comment" xmi:id="_17_0_3_1_42401a5_1375643476024_606503_2866"
                         body="Author: Gary Hallmark, Falko Menge, Simon Ringuette&#xA;Created: Apr 23, 2026&#xA;Title:&#xA;Comment:&#xA;">
             <annotatedElement xmi:idref="eee_1045467100313_135436_1"/>
@@ -879,6 +879,24 @@
                              visibility="public"
                              type="_17_0_3_1_42401a5_1375643567518_778757_3029"
                              association="_17_0_3_1_42401a5_1375643567533_411293_3070"/>
+            <ownedAttribute xmi:type="uml:Property"
+                             xmi:id="_2026x_17c4044b_1777394659175_654575_1471"
+                             name="requiredDecision"
+                             visibility="public"
+                             type="_17_0_3_1_42401a5_1375643567518_778757_3029"
+                             association="_2026x_17c4044b_1777394659174_256505_1470">
+               <lowerValue xmi:type="uml:LiteralInteger"
+                            xmi:id="_2026x_17c4044b_1777394680087_973638_1477"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property"
+                             xmi:id="_2026x_17c4044b_1777394830768_66060_1515"
+                             name="requiredInput"
+                             visibility="public"
+                             type="_17_0_3_1_42401a5_1375643567471_970532_3014"
+                             association="_2026x_17c4044b_1777394830768_633772_1514">
+               <lowerValue xmi:type="uml:LiteralInteger"
+                            xmi:id="_2026x_17c4044b_1777394870103_361914_1527"/>
+            </ownedAttribute>
          </packagedElement>
          <packagedElement xmi:type="uml:Enumeration"
                            xmi:id="_17_0_3_1_42401a5_1375643567549_474071_3086"
@@ -2537,6 +2555,9 @@
             <ownedLiteral xmi:type="uml:EnumerationLiteral"
                            xmi:id="_17_0_5_1_a250249_1502923200055_392053_4020"
                            name="PMML"/>
+            <ownedLiteral xmi:type="uml:EnumerationLiteral"
+                           xmi:id="_2026x_17c4044b_1777394368178_112778_1432"
+                           name="ONNX"/>
          </packagedElement>
          <packagedElement xmi:type="uml:Association"
                            xmi:id="_17_0_5_1_a250249_1518651855436_503672_4052">
@@ -2862,7 +2883,42 @@
             <memberEnd xmi:idref="_19_0_4_17c4044b_1676408438239_924777_4935"/>
             <memberEnd xmi:idref="_19_0_4_17c4044b_1676408438240_404499_4936"/>
          </packagedElement>
-         <packagedElement xmi:type="uml:Package"
+         <packagedElement xmi:type="uml:Association"
+                           xmi:id="_2026x_17c4044b_1777394659174_256505_1470"
+                           name="InformationRequirement2requiredDecision">
+            <memberEnd xmi:idref="_2026x_17c4044b_1777394659175_654575_1471"/>
+            <memberEnd xmi:idref="_2026x_17c4044b_1777394659175_728034_1472"/>
+            <ownedEnd xmi:type="uml:Property"
+                       xmi:id="_2026x_17c4044b_1777394659175_728034_1472"
+                       visibility="public"
+                       type="_17_0_3_1_42401a5_1375643567533_147800_3033"
+                       association="_2026x_17c4044b_1777394659174_256505_1470">
+               <lowerValue xmi:type="uml:LiteralInteger"
+                            xmi:id="_2026x_17c4044b_1777395055064_948015_1563"/>
+               <upperValue xmi:type="uml:LiteralUnlimitedNatural"
+                            xmi:id="_2026x_17c4044b_1777395055064_262707_1564"
+                            value="*"/>
+            </ownedEnd>
+         </packagedElement>
+         <packagedElement xmi:type="uml:Association"
+                           xmi:id="_2026x_17c4044b_1777394830768_633772_1514"
+                           name="InformationRequirement2requiredInput">
+            <memberEnd xmi:idref="_2026x_17c4044b_1777394830768_66060_1515"/>
+            <memberEnd xmi:idref="_2026x_17c4044b_1777394830769_901586_1516"/>
+            <ownedEnd xmi:type="uml:Property"
+                       xmi:id="_2026x_17c4044b_1777394830769_901586_1516"
+                       visibility="public"
+                       type="_17_0_3_1_42401a5_1375643567533_147800_3033"
+                       association="_2026x_17c4044b_1777394830768_633772_1514">
+               <lowerValue xmi:type="uml:LiteralInteger"
+                            xmi:id="_2026x_17c4044b_1777394839905_187481_1519"/>
+               <upperValue xmi:type="uml:LiteralUnlimitedNatural"
+                            xmi:id="_2026x_17c4044b_1777394839905_395629_1520"
+                            value="*"/>
+            </ownedEnd>
+         </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package"
                         xmi:id="_17_0_2_3_ea50349_1435268740013_353945_2202"
                         name="BMM"
                         URI="https://www.omg.org/spec/BMM/20130801/BMM.xmi">
