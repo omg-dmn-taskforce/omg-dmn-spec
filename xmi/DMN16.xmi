@@ -7,7 +7,7 @@
       <xmi:exporter>MagicDraw Clean XMI Exporter</xmi:exporter>
       <xmi:exporterVersion>2026x v2</xmi:exporterVersion>
    </xmi:documentation>
-   <package xmi:type="uml:Package" xmi:id="eee_1045467100313_135436_1" name="DMN"
+   <uml:Package xmi:type="uml:Package" xmi:id="eee_1045467100313_135436_1" name="DMN"
                         URI="https://www.omg.org/spec/DMN/20260504/DMN.xmi">
               <ownedComment xmi:type="uml:Comment" xmi:id="_17_0_3_1_42401a5_1375643476024_606503_2866"
                         body="Author: Gary Hallmark, Falko Menge, Simon Ringuette&#xA;Created: Apr 23, 2026&#xA;Title:&#xA;Comment:&#xA;">
@@ -2916,7 +2916,7 @@
                             xmi:id="_2026x_17c4044b_1777394839905_395629_1520"
                             value="*"/>
             </ownedEnd>
-      </packagedElement>
+         </packagedElement>
       <packagedElement xmi:type="uml:Package"
                         xmi:id="_17_0_2_3_ea50349_1435268740013_353945_2202"
                         name="BMM"
@@ -3007,7 +3007,7 @@
                              association="_17_0_5_1_a250249_1518651855436_503672_4052"/>
          </packagedElement>
       </packagedElement>
-   </package>
+   </uml:Package>
    <mofext:Tag xmi:type="mofext:Tag" xmi:id="_org.omg.xmi.nsPrefix" name="org.omg.xmi.nsPrefix" value="dmn">
       <element xmi:idref="eee_1045467100313_135436_1"/>
    </mofext:Tag>

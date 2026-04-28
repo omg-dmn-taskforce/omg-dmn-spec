@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmlns:StandardProfile="http://www.omg.org/spec/UML/20131001/StandardProfile"
-          xmlns:uml="http://www.omg.org/spec/UML/20161101"
-          xmlns:xmi="http://www.omg.org/spec/XMI/20131001">
+<xmi:XMI xmlns:uml="http://www.omg.org/spec/UML/20161101"
+         xmlns:xmi="http://www.omg.org/spec/XMI/20131001">
    <xmi:documentation xmi:type="xmi:Documentation">
       <xmi:shortDescription>DMNDI.xmi: XMI representation of the metamodel for DMN Diagram Interchange version 20260504.</xmi:shortDescription>
       <xmi:exporter>MagicDraw Clean XMI Exporter</xmi:exporter>
       <xmi:exporterVersion>2026x v2</xmi:exporterVersion>
    </xmi:documentation>
-   <uml:Model xmi:type="uml:Model"
+   <uml:Package xmi:type="uml:Package"
                xmi:id="eee_1045467100313_135436_1"
                name="DMNDI"
                URI="https://www.omg.org/spec/DMN/20260504/DMNDI.xmi">
@@ -753,5 +752,5 @@
                     type="_18_1_f7a0369_1441609962778_700532_4351"
                     association="_2026x_17c4044b_1772053914958_642974_1382"/>
       </packagedElement>
-   </uml:Model>
+   </uml:Package>
 </xmi:XMI>
