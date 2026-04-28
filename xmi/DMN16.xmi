@@ -1,20 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmlns:StandardProfile="http://www.omg.org/spec/UML/20131001/StandardProfile"
-          xmlns:uml="http://www.omg.org/spec/UML/20161101"
-          xmlns:xmi="http://www.omg.org/spec/XMI/20131001">
+<xmi:XMI xmlns:uml="http://www.omg.org/spec/UML/20161101"
+         xmlns:xmi="http://www.omg.org/spec/XMI/20131001"
+         xmlns:mofext="http://www.omg.org/spec/MOF/20131001">
    <xmi:documentation xmi:type="xmi:Documentation">
+      <xmi:shortDescription>DMN.xmi: XMI representation of the metamodel for DMN version 20260504.</xmi:shortDescription>
       <xmi:exporter>MagicDraw Clean XMI Exporter</xmi:exporter>
       <xmi:exporterVersion>2026x v2</xmi:exporterVersion>
    </xmi:documentation>
-   <uml:Model xmi:type="uml:Model"
-               xmi:id="_17_0_2_3_ea50349_1435105765209_262546_0"
-               name="Data">
-      <packagedElement xmi:type="uml:Package"
-                        xmi:id="eee_1045467100313_135436_1"
-                        name="DMN"
-                        URI="https://www.omg.org/spec/DMN/20260504/DMN.xmi">
-         <ownedComment xmi:type="uml:Comment"
-                        xmi:id="_17_0_3_1_42401a5_1375643476024_606503_2866"
+   <package xmi:type="uml:Package" xmi:id="eee_1045467100313_135436_1" name="DMN"
+            URI="https://www.omg.org/spec/DMN/20260504/DMN.xmi">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_17_0_3_1_42401a5_1375643476024_606503_2866"
                         body="Author: Gary Hallmark&#xA;Created: Nov 4, 2015&#xA;Title:&#xA;Comment:&#xA;">
             <annotatedElement xmi:idref="eee_1045467100313_135436_1"/>
          </ownedComment>
@@ -2867,11 +2862,10 @@
             <memberEnd xmi:idref="_19_0_4_17c4044b_1676408438239_924777_4935"/>
             <memberEnd xmi:idref="_19_0_4_17c4044b_1676408438240_404499_4936"/>
          </packagedElement>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Package"
+         <packagedElement xmi:type="uml:Package"
                         xmi:id="_17_0_2_3_ea50349_1435268740013_353945_2202"
                         name="BMM"
-                        URI="http://www.omg.org/spec/BMM/20130801/BMM.xmi">
+                        URI="https://www.omg.org/spec/BMM/20130801/BMM.xmi">
          <packagedElement xmi:type="uml:Class"
                            xmi:id="_17_0_2_3_ea50349_1435268843602_88699_2217"
                            name="Objective">
@@ -2958,7 +2952,8 @@
                              association="_17_0_5_1_a250249_1518651855436_503672_4052"/>
          </packagedElement>
       </packagedElement>
-   </uml:Model>
-   <StandardProfile:Metaclass xmi:id="_17_0_2_3_ea50349_1446066806407_401082_5765"
-                               base_Class="_17_0_2_3_ea50349_1446066767165_84469_5739"/>
+   </package>
+   <mofext:Tag xmi:type="mofext:Tag" xmi:id="_org.omg.xmi.nsPrefix" name="org.omg.xmi.nsPrefix" value="dmn">
+      <element xmi:idref="eee_1045467100313_135436_1"/>
+   </mofext:Tag>
 </xmi:XMI>
