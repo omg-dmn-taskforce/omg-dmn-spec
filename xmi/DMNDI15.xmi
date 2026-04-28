@@ -3,6 +3,7 @@
           xmlns:uml="http://www.omg.org/spec/UML/20161101"
           xmlns:xmi="http://www.omg.org/spec/XMI/20131001">
    <xmi:documentation xmi:type="xmi:Documentation">
+      <xmi:shortDescription>DMNDI.xmi: XMI representation of the metamodel for DMN Diagram Interchange version 20260504.</xmi:shortDescription>
       <xmi:exporter>MagicDraw Clean XMI Exporter</xmi:exporter>
       <xmi:exporterVersion>2026x v2</xmi:exporterVersion>
    </xmi:documentation>
@@ -12,7 +13,7 @@
                URI="https://www.omg.org/spec/DMN/20260504/DMNDI.xmi">
       <ownedComment xmi:type="uml:Comment"
                      xmi:id="_18_1beta_8c90288_1415101994820_370998_4336"
-                     body="Author:rmueller.&#xA;Created:9/7/15 9:00 AM.&#xA;Title:.&#xA;Comment:.&#xA;">
+                     body="Author: Falko Menge, Simon Ringuette&#xA;Created: Apr 23 2026&#xA;Title:&#xA;Comment:&#xA;">
          <annotatedElement xmi:idref="eee_1045467100313_135436_1"/>
       </ownedComment>
       <packagedElement xmi:type="uml:Class"
