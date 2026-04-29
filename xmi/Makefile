@@ -1,5 +1,5 @@
 # Local validation of XMI files against the (locally patched) XMI.xsd.
-# See xsd/XMI.xsd for the list of patches vs. the upstream OMG schema.
+# See XMI.xsd for the list of patches vs. the upstream OMG schema.
 
 XMIS := $(wildcard *.xmi)
 VALIDATOR_DIR := validator
