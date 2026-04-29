@@ -19,8 +19,10 @@
           - parent (this): runs eclipse-run with two p2 sources, the SimRel
                            composite and the local repository/
 
-        Driver invocation: `mvn verify -Dxmi.dir=&lt;abs-path&gt;` from this directory.
-        First-time `mvn verify` downloads ~150MB of Eclipse runtime artifacts
+        Driver invocation from this directory:
+          1. `mvn install`
+          2. `mvn org.eclipse.tycho:tycho-eclipserun-plugin:${tycho-version}:eclipse-run -Dxmi.dir=&lt;abs-path&gt;`
+        First-time execution downloads ~150MB of Eclipse runtime artifacts
         into ~/.m2/repository/.cache/tycho. Subsequent runs use the cache.
     </description>
 
