@@ -19,8 +19,8 @@ validate:
 # UML semantic validation via Eclipse UML2 5.5+ resolved through Tycho from the
 # Eclipse SimRel 2026-03 p2 repository. Requires Java 21 + Maven 3.9+. First
 # run downloads ~150MB of Eclipse runtime; subsequent runs use the local cache.
-# The Tycho reactor builds the bundle, then assembles it into a p2 site, then
-# the parent's verify phase runs eclipse-run with both repos visible.
+# The Tycho reactor is built and its p2 site assembled via `mvn install`, then
+# `tycho-eclipse-plugin:eclipse-run` is invoked explicitly with both repos visible.
 validate-uml:
 	@cd $(VALIDATOR_DIR) && mvn -q install
 	@cd $(VALIDATOR_DIR) && mvn -q -pl . -N \
