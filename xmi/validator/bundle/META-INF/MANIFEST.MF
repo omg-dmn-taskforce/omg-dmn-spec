@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: OMG DMN XMI Validator
+Bundle-SymbolicName: org.omg.dmn.xmi.validator;singleton:=true
+Bundle-Version: 0.1.0.qualifier
+Bundle-Vendor: OMG
+Bundle-RequiredExecutionEnvironment: JavaSE-21
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.equinox.app,
+ org.eclipse.uml2.uml,
+ org.eclipse.uml2.uml.resources,
+ org.eclipse.emf.common,
+ org.eclipse.emf.ecore,
+ org.eclipse.emf.ecore.xmi
+Automatic-Module-Name: org.omg.dmn.xmi.validator
