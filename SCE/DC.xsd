@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema id="DC" version="20240210"
+    targetNamespace="https://www.omg.org/spec/SCE/DC/"
+    xmlns:dc="https://www.omg.org/spec/SCE/DC/"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    elementFormDefault="qualified" attributeFormDefault="unqualified">
+
+  <!-- The documentation annotations in this file are non-normative.
+      They are provided for convenience, but the specification text takes precedence. -->
+
+  <xs:element name="Color" type="dc:tColor"/>
+  <xs:complexType name="tColor">
+    <xs:annotation>
+      <xs:documentation>Color is a data type that represents a color value in the RGB format.</xs:documentation>
+    </xs:annotation>
+    <xs:attribute name="red" type="dc:tRGB" use="required"/>
+    <xs:attribute name="green" type="dc:tRGB" use="required"/>
+    <xs:attribute name="blue" type="dc:tRGB" use="required"/>
+  </xs:complexType>
+
+  <xs:simpleType name="tRGB">
+    <xs:restriction base="xs:int">
+      <xs:minInclusive value="0"/>
+      <xs:maxInclusive value="255"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:element name="Point" type="dc:tPoint"/>
+  <xs:complexType name="tPoint">
+    <xs:annotation>
+      <xs:documentation>A Point specifies an location in some x-y coordinate system.</xs:documentation>
+    </xs:annotation>
+    <xs:attribute name="x" type="xs:double" use="required"/>
+    <xs:attribute name="y" type="xs:double" use="required"/>
+  </xs:complexType>
+
+  <xs:element name="Dimension" type="dc:tDimension"/>
+  <xs:complexType name="tDimension">
+    <xs:annotation>
+      <xs:documentation>Dimension specifies two lengths (width and height) along the x and y axes in some x-y coordinate system.</xs:documentation>
+    </xs:annotation>
+    <xs:attribute name="width" type="xs:double" use="required"/>
+    <xs:attribute name="height" type="xs:double" use="required"/>
+  </xs:complexType>
+
+  <xs:element name="Bounds" type="dc:tBounds"/>
+  <xs:complexType name="tBounds">
+     <xs:annotation>
+      <xs:documentation>Bounds specifies a rectangular area in some x-y coordinate system that is defined by a location (x and y) and a size (width and height).</xs:documentation>
+    </xs:annotation>
+    <xs:attribute name="x" type="xs:double" use="required"/>
+    <xs:attribute name="y" type="xs:double" use="required"/>
+    <xs:attribute name="width" type="xs:double" use="required"/>
+    <xs:attribute name="height" type="xs:double" use="required"/>
+  </xs:complexType>
+
+  <xs:simpleType name="tAlignmentKind">
+    <xs:annotation>
+      <xs:documentation>AlignmentKind enumerates the possible options for alignment for layout purposes.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="start"/>
+      <xs:enumeration value="end"/>
+      <xs:enumeration value="center"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="tKnownColor">
+    <xs:annotation>
+      <xs:documentation>KnownColor is an enumeration of 17 known colors.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="maroon">
+        <xs:annotation>
+          <xs:documentation>a color with a value of #800000</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="red">
+        <xs:annotation>
+          <xs:documentation>a color with a value of #FF0000</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="orange">
+        <xs:annotation>
+          <xs:documentation>a color with a value of #FFA500</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="yellow">
+        <xs:annotation>
+          <xs:documentation>a color with a value of #FFFF00</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="olive">
+        <xs:annotation>
+          <xs:documentation>a color with a value of #808000</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="purple">
+        <xs:annotation>
+          <xs:documentation>a color with a value of #800080</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="fuchsia">
+        <xs:annotation>
+          <xs:documentation>a color with a value of #FF00FF</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="white">
+        <xs:annotation>
+          <xs:documentation>a color with a value of #FFFFFF</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="lime">
+        <xs:annotation>
+          <xs:documentation>a color with a value of #00FF00</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="green">
+        <xs:annotation>
+          <xs:documentation>a color with a value of #008000</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="navy">
+        <xs:annotation>
+          <xs:documentation>a color with a value of #000080</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="blue">
+        <xs:annotation>
+          <xs:documentation>a color with a value of #0000FF</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="aqua">
+        <xs:annotation>
+          <xs:documentation>a color with a value of #00FFFF</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="teal">
+        <xs:annotation>
+          <xs:documentation>a color with a value of #008080</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="black">
+        <xs:annotation>
+          <xs:documentation>a color with a value of #000000</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="silver">
+        <xs:annotation>
+          <xs:documentation>a color with a value of #C0C0C0</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="gray">
+        <xs:annotation>
+          <xs:documentation>a color with a value of #808080</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+
+</xs:schema>
