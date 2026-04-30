@@ -120,8 +120,8 @@
                         <args>-application</args>
                         <args>org.omg.dmn.xmi.validator.app</args>
                         <args>-consoleLog</args>
-                        <args>${xmi.dir}/DMN16.xmi</args>
-                        <args>${xmi.dir}/DMNDI15.xmi</args>
+                        <args>${xmi.dir}/DMN.xmi</args>
+                        <args>${xmi.dir}/DMNDI.xmi</args>
                     </applicationsArgs>
                 </configuration>
             </plugin>
