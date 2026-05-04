@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.omg.dmn</groupId>
+    <artifactId>xmi-validator-parent</artifactId>
+    <version>0.1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <name>OMG DMN XMI Validator (parent)</name>
+    <description>
+        Three-module Tycho project. Reactor order: bundle → repository → parent.
+          - bundle/      : the eclipse-plugin (validator code, MANIFEST, plugin.xml)
+          - repository/  : eclipse-repository — assembles the bundle into a p2
+                           site at repository/target/repository
+          - parent (this): runs eclipse-run with two p2 sources, the SimRel
+                           composite and the local repository/
+
+        Driver invocation from this directory:
+          1. `mvn install`
+          2. `mvn org.eclipse.tycho:tycho-eclipserun-plugin:${tycho-version}:eclipse-run -Dxmi.dir=&lt;abs-path&gt;`
+        First-time execution downloads ~150MB of Eclipse runtime artifacts
+        into ~/.m2/repository/.cache/tycho. Subsequent runs use the cache.
+    </description>
+
+    <modules>
+        <module>bundle</module>
+        <module>repository</module>
+    </modules>
+
+    <properties>
+        <tycho-version>4.0.7</tycho-version>
+        <maven.compiler.release>21</maven.compiler.release>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <xmi.dir>${maven.multiModuleProjectDirectory}/..</xmi.dir>
+    </properties>
+
+    <repositories>
+        <repository>
+            <id>eclipse-2026-03</id>
+            <url>https://download.eclipse.org/releases/2026-03/</url>
+            <layout>p2</layout>
+        </repository>
+        <!-- The local p2 site assembled by repository/ is added inside the
+             eclipse-run plugin config (below), not here. Putting it at the
+             project level would force every reactor module to load it during
+             pom parsing, but it doesn't exist until the repository module
+             finishes its `package` phase. -->
+    </repositories>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.eclipse.tycho</groupId>
+                <artifactId>tycho-maven-plugin</artifactId>
+                <version>${tycho-version}</version>
+                <extensions>true</extensions>
+            </plugin>
+            <plugin>
+                <groupId>org.eclipse.tycho</groupId>
+                <artifactId>target-platform-configuration</artifactId>
+                <version>${tycho-version}</version>
+                <configuration>
+                    <executionEnvironment>JavaSE-21</executionEnvironment>
+                </configuration>
+            </plugin>
+            <!--
+                tycho-eclipse-plugin's eclipse-run goal is NOT bound to a phase.
+                It must be invoked AFTER `mvn install` has run on the bundle and
+                repository modules (which produces the local p2 site at
+                repository/target/repository). The Makefile orchestrates this in
+                two passes:
+                    1. mvn install  -> build bundle, assemble p2 site
+                    2. mvn org.eclipse.tycho:tycho-eclipse-plugin:eclipse-run -pl . -N
+                       -> run the validator app against the now-populated p2 site
+                Binding to a phase doesn't work because the parent module's
+                lifecycle runs before children in reactor order, so verify on
+                parent fires before children build.
+            -->
+            <plugin>
+                <groupId>org.eclipse.tycho</groupId>
+                <artifactId>tycho-eclipse-plugin</artifactId>
+                <version>${tycho-version}</version>
+                <configuration>
+                    <executionEnvironment>JavaSE-21</executionEnvironment>
+                    <repositories>
+                        <repository>
+                            <id>eclipse-2026-03</id>
+                            <url>https://download.eclipse.org/releases/2026-03/</url>
+                            <layout>p2</layout>
+                        </repository>
+                        <repository>
+                            <id>local-validator-repo</id>
+                            <url>file:${maven.multiModuleProjectDirectory}/repository/target/repository</url>
+                            <layout>p2</layout>
+                        </repository>
+                    </repositories>
+                    <dependencies>
+                        <dependency>
+                            <artifactId>org.omg.dmn.xmi.validator</artifactId>
+                            <type>eclipse-plugin</type>
+                        </dependency>
+                        <dependency>
+                            <artifactId>org.eclipse.uml2.uml</artifactId>
+                            <type>eclipse-plugin</type>
+                        </dependency>
+                        <dependency>
+                            <artifactId>org.eclipse.uml2.uml.resources</artifactId>
+                            <type>eclipse-plugin</type>
+                        </dependency>
+                        <dependency>
+                            <artifactId>org.eclipse.equinox.app</artifactId>
+                            <type>eclipse-plugin</type>
+                        </dependency>
+                    </dependencies>
+                    <applicationsArgs>
+                        <args>-application</args>
+                        <args>org.omg.dmn.xmi.validator.app</args>
+                        <args>-consoleLog</args>
+                        <args>${xmi.dir}/DMN.xmi</args>
+                        <args>${xmi.dir}/DMNDI.xmi</args>
+                    </applicationsArgs>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

@@ -80,5 +80,6 @@
     "xml.format.emptyElements": "collapse",
     "xml.preferences.quoteStyle": "double",
     "files.insertFinalNewline": true,
-    "files.trimFinalNewlines": true
+    "files.trimFinalNewlines": true,
+    "java.configuration.updateBuildConfiguration": "automatic"
 }
