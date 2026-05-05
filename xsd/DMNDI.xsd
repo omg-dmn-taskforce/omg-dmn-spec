@@ -8,7 +8,7 @@
 			xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 
 	<xsd:import namespace="https://www.omg.org/spec/SCE/DC/"
-				schemaLocation="../SCE/DC.xsd">
+				schemaLocation="DC.xsd">
 		<xsd:annotation>
 			<xsd:documentation>
 				Diagram Common, adopted from Specification Common Elements (SCE).
@@ -17,7 +17,7 @@
 		</xsd:annotation>
 	</xsd:import>
 	<xsd:import namespace="https://www.omg.org/spec/SCE/DI/"
-				schemaLocation="../SCE/DI.xsd">
+				schemaLocation="DI.xsd">
 		<xsd:annotation>
 			<xsd:documentation>
 				Diagram Interchange, adopted from Specification Common Elements (SCE).

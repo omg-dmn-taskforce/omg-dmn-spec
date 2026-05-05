@@ -10,11 +10,11 @@
 
     <uri
         name="https://www.omg.org/spec/SCE/DI/"
-        uri="SCE/DI.xsd" />
+        uri="xsd/DI.xsd" />
 
     <uri
         name="https://www.omg.org/spec/SCE/DC/"
-        uri="SCE/DC.xsd" />
+        uri="xsd/DC.xsd" />
 
     <rewriteSystem
         systemIdStartString="https://www.omg.org/spec/DMN/"
@@ -22,7 +22,7 @@
 
     <rewriteSystem
         systemIdStartString="https://www.omg.org/spec/SCE/"
-        rewritePrefix="SCE/" />
+        rewritePrefix="xsd/" />
 
     <uri name="http://www.omg.org/spec/XMI/20131001"
         uri="xmi/XMI.xsd" />

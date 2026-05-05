@@ -2,16 +2,14 @@
 # Mirrors CI in .github/workflows/main.yml, but uses the XML catalog so that
 # https://www.omg.org/spec/{DMN,SCE}/... schemaLocations resolve to local files.
 
-XSDS := xsd/DMN.xsd xsd/DMNDI.xsd SCE/DI.xsd SCE/DC.xsd
-
 export XML_CATALOG_FILES := $(CURDIR)/catalog.xml
 
-.PHONY: all validate lint-xsd lint-examples ci-local package clean
+.PHONY: all lint-xsd lint-examples validate ci-local package clean
 
 all: lint-xsd lint-examples validate
 
 lint-xsd:
-	xmllint --noout $(XSDS)
+	xmllint --noout xsd/*.xsd
 
 lint-examples:
 	find examples -type f -name '*.dmn' -print0 | xargs -0 -n1 -t xmllint --noout

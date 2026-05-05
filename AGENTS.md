@@ -23,8 +23,8 @@ Proceed carefully.
 |------|---------|-------|
 | `xsd/DMN.xsd` | Main DMN model schema | **Normative** |
 | `xsd/DMNDI.xsd` | DMN Diagram Interchange schema | **Normative** |
-| `SCE/DI.xsd` | Base Diagram Interchange schema (adopted from SCE) | **Normative** |
-| `SCE/DC.xsd` | Diagram Common schema (adopted from SCE) | **Normative** |
+| `xsd/DI.xsd` | Base Diagram Interchange schema (adopted from SCE) | **Normative** |
+| `xsd/DC.xsd` | Diagram Common schema (adopted from SCE) | **Normative** |
 | `catalog.xml` | XML catalog mapping namespace and schemaLocation URIs → local XSDs | |
 | `xsd/dmn-namespace-utils.sh` | Bash variables for all versioned namespace URIs | |
 | `xsd/migrate-to-new-namespaces.sh` | sed-based namespace migration tool | |
@@ -42,7 +42,7 @@ Proceed carefully.
 # is primarily used by IDE validation to resolve the https://www.omg.org/...
 # xsi:schemaLocation URIs in example .dmn files.
 make              # lint-xsd + lint-examples + validate
-make lint-xsd     # XSD well-formedness (xsd/DMN.xsd, xsd/DMNDI.xsd, SCE/DI.xsd, SCE/DC.xsd)
+make lint-xsd     # XSD well-formedness (xsd/*.xsd)
 make lint-examples # .dmn well-formedness
 make validate     # .dmn schema validation against xsd/DMN.xsd
 make ci-local     # run the GitHub Actions workflow locally via `act` (Docker required)
@@ -50,7 +50,7 @@ make -k           # keep going on errors — see every failure in one run
 
 # Direct xmllint (what the Makefile invokes under the hood)
 xmllint --schema xsd/DMN.xsd --noout "examples/path/to/file.dmn"
-xmllint --noout xsd/DMN.xsd xsd/DMNDI.xsd SCE/DI.xsd SCE/DC.xsd
+xmllint --noout xsd/DMN.xsd xsd/DMNDI.xsd xsd/DI.xsd xsd/DC.xsd
 
 # Migrate examples from DMN 1.6 to 1.7 namespaces (requires `sponge` from moreutils)
 xsd/migrate-to-new-namespaces.sh
@@ -82,13 +82,13 @@ xsd/test-xsd.sh
   element order; do not reorder elements.
 - **Folder layout mirrors the canonical URL structure**: `xsd/` holds the
   DMN-namespace schemas (published under `https://www.omg.org/spec/DMN/`),
-  `SCE/` (peer folder at repo root) holds SCE-namespace schemas (published
+  and SCE-namespace schemas (published
   under `https://www.omg.org/spec/SCE/`). This lets relative
   `schemaLocation` values work identically offline and online — e.g.
-  `../SCE/DC.xsd` in `xsd/DMNDI.xsd` resolves to `SCE/DC.xsd` locally and
-  to `https://www.omg.org/spec/SCE/DC.xsd` online.
+  `DC.xsd` in `xsd/DMNDI.xsd` resolves to `xsd/DC.xsd` locally and
+  to `https://www.omg.org/spec/DMN/DC.xsd` online.
 - **`schemaLocation` convention** inside XSDs: use relative paths that
-  follow the mirrored layout (`../SCE/DC.xsd`, `DMNDI.xsd`, etc.). Do NOT
+  follow the mirrored layout (`DC.xsd`, `DMNDI.xsd`, etc.). Do NOT
   use absolute `https://www.omg.org/...` URLs — mixing URL and relative
   forms for the same namespace across different files makes libxml2 emit
   a "schema already imported" warning because it compares the raw
