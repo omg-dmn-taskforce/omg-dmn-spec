@@ -6,7 +6,7 @@ XSDS := xsd/DMN.xsd xsd/DMNDI.xsd SCE/DI.xsd SCE/DC.xsd
 
 export XML_CATALOG_FILES := $(CURDIR)/catalog.xml
 
-.PHONY: all validate lint-xsd lint-examples ci-local
+.PHONY: all validate lint-xsd lint-examples ci-local package clean
 
 all: lint-xsd lint-examples validate
 
@@ -27,3 +27,24 @@ validate:
 ci-local:
 	@command -v act >/dev/null || { echo "act not found — install from https://github.com/nektos/act"; exit 1; }
 	act push --workflows .github/workflows/main.yml
+
+package: submission submission/DMN-examples.zip submission/DMN-diagrams.zip
+	cp -f xsd/*.xsd submission/
+	cp -f xmi/*.xmi submission/
+	cp -f xmi/*.mdzip submission/
+
+submission:
+	mkdir -p submission
+
+submission/DMN-examples.zip: submission
+	@command -v zip >/dev/null || { echo "zip not found"; exit 1; }
+	rm -f $@
+	cd examples && zip -rq ../$@ .
+
+submission/DMN-diagrams.zip: submission
+	@command -v zip >/dev/null || { echo "zip not found"; exit 1; }
+	rm -f $@
+	zip -jq $@ meta-model/*.svg
+
+clean:
+	rm -rf submission
