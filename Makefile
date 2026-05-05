@@ -4,12 +4,22 @@
 
 export XML_CATALOG_FILES := $(CURDIR)/catalog.xml
 
-.PHONY: all lint-xsd lint-examples validate ci-local package clean
+.PHONY: all lint-xsd lint-examples lint-catalog validate ci-local package clean
 
 all: lint-xsd lint-examples validate
 
 lint-xsd:
 	xmllint --noout xsd/*.xsd
+
+# Checks well-formedness of both catalogs and verifies that every namespace
+# mapping in xsd/catalog.xml resolves to the expected public URL.
+lint-catalog:
+	xmllint --noout catalog.xml xsd/catalog.xml
+	@echo "Checking public catalog namespace mappings in xsd/catalog.xml:"
+	@xmlcatalog xsd/catalog.xml "https://www.omg.org/spec/DMN/" | grep -v "^No entry for SYSTEM "
+	@xmlcatalog xsd/catalog.xml "https://www.omg.org/spec/DMN/DMNDI/" | grep -v "^No entry for SYSTEM "
+	@xmlcatalog xsd/catalog.xml "https://www.omg.org/spec/SCE/DI/" | grep -v "^No entry for SYSTEM "
+	@xmlcatalog xsd/catalog.xml "https://www.omg.org/spec/SCE/DC/" | grep -v "^No entry for SYSTEM "
 
 lint-examples:
 	find examples -type f -name '*.dmn' -print0 | xargs -0 -n1 -t xmllint --noout
@@ -27,7 +37,7 @@ ci-local:
 	act push --workflows .github/workflows/main.yml
 
 package: submission submission/DMN-examples.zip submission/DMN-diagrams.zip
-	cp -f xsd/*.xsd submission/
+	cp -f xsd/*.xsd xsd/catalog.xml submission/
 	cp -f xmi/*.xmi submission/
 	cp -f xmi/*.mdzip submission/
 
