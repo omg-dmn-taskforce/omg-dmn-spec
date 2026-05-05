@@ -1,4 +1,4 @@
-DMN16-<ISSUE>/DMN16-<PROPOSAL> <SUMMARY>
+DMN17-<ISSUE>/DMN17-<PROPOSAL> <PROPOSAL TITLE>
 
-Issue: https://issues.omg.org/browse/DMN16-
-Proposal: https://issues.omg.org/browse/DMN16-
+Issue: https://issues.omg.org/browse/DMN17-<ISSUE>
+Proposal: https://issues.omg.org/browse/DMN17-<PROPOSAL>
