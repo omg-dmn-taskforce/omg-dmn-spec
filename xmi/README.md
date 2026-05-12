@@ -8,6 +8,26 @@
 - make the Package the top level element, by deleting the uml:Model and changing packagedElement to be uml:Package (Hint: this can also be done by reverting changes in Git, e.g. when on a branch compare with master [VSCode right-click on file -> Open Changes -> Open Changes with Branch or Tag...])
 - Run `./clean-xmi.sh`
 
+## Class diagrams via PlantUML
+
+`make diagrams` emits one PlantUML class diagram per XMI file into
+`diagrams/` and renders each as SVG: `DMN.svg` from
+`DMN.xmi`, `DMNDI.svg` from `DMNDI.xmi`. Nested UML packages within a
+file render as PlantUML `package` blocks inside the same diagram.
+
+These are auto-generated overviews — distinct from the hand-laid-out
+MagicDraw exports in `../meta-model/`.
+
+PlantUML's `-txmi` flag is export-only; `xmi2puml.py` is the minimum shim
+needed to translate the XMI to PlantUML text. It covers classes,
+attributes, generalizations, enums, and associations — Eclipse UML2 / MOF
+/ StandardProfile extensions outside the OMG UML 2.5.1 metamodel are
+ignored.
+
+Requires Java and Graphviz (`dot`). PlantUML's jar is fetched once into
+`~/.cache/plantuml/`; override `PLANTUML_JAR` to point at an existing
+install.
+
 ## Validation
 
 `make` (or `make all`) runs envelope validation against the locally patched
